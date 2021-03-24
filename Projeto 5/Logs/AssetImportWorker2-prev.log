@@ -15,11 +15,11 @@ C:/Users/User/OneDrive/Documentos/GitHub/TCC/Projeto 5
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-56020
+56619
 Successfully changed project path to: C:/Users/User/OneDrive/Documentos/GitHub/TCC/Projeto 5
 C:/Users/User/OneDrive/Documentos/GitHub/TCC/Projeto 5
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 75.69 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 322.24 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.7f1 (c53830e277f1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Resources/UnitySubsystems
@@ -35,256 +35,19 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56792
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56264
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004598 seconds.
+Registered in 0.006135 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 64.52 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 87.23 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.015 seconds
+- Completed reload, in 18.122 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002201 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 118.11 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.972 seconds
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.42 seconds
-Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1812 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 84.8 MB.
-System memory in use after: 84.9 MB.
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2259.
-Total: 11.590900 ms (FindLiveObjects: 0.555600 ms CreateObjectMapping: 0.124900 ms MarkObjects: 10.763900 ms  DeleteObjects: 0.143400 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Animations
-  artifactKey: Guid(02ce9ecfd1da1f24fa5095ba19a2e181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations using Guid(02ce9ecfd1da1f24fa5095ba19a2e181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38b8c72fb9f6bf75358de586afa815f3') in 0.260354 seconds
-  Import took 0.305126 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.710448 seconds.
-  path: Assets/Animations/PlaceHolders
-  artifactKey: Guid(1e0fd3924ad0d334a9e391f20015d27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders using Guid(1e0fd3924ad0d334a9e391f20015d27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f773bc1b5ddd8a112fa7a0472cdcbd41') in 0.066858 seconds
-  Import took 0.156570 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.459561 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Great Sword Jump Attack.fbx
-  artifactKey: Guid(fafa6a991c72c0c4aa8a016004dafe0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Great Sword Jump Attack.fbx using Guid(fafa6a991c72c0c4aa8a016004dafe0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78fec0b69d8590ed1ac3c47b5b8a27e7') in 2.842514 seconds
-  Import took 2.903669 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000368 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Running.fbx
-  artifactKey: Guid(921dc0cb616cd3046af01094d0026ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Running.fbx using Guid(921dc0cb616cd3046af01094d0026ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6353cf65154d72d62f5baa9aaeade07') in 0.448352 seconds
-  Import took 0.516470 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000368 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Idle 02 Looking 1.fbx
-  artifactKey: Guid(39e627ce2c60a3341a0b8baf0f5866fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Idle 02 Looking 1.fbx using Guid(39e627ce2c60a3341a0b8baf0f5866fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3bad46b2c7158392da75a8b4db6aa1b') in 0.356435 seconds
-  Import took 0.429727 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000467 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Idle 02 Looking.fbx
-  artifactKey: Guid(b3b00fc373fa4414f89ccbe84bd71b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Idle 02 Looking.fbx using Guid(b3b00fc373fa4414f89ccbe84bd71b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c38a28b120364b5a36331fb7abba861f') in 0.252378 seconds
-  Import took 0.272835 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000373 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Melee Attack Horizontal.fbx
-  artifactKey: Guid(a9e5d4eed2478a14ca23a3305b4c054d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Melee Attack Horizontal.fbx using Guid(a9e5d4eed2478a14ca23a3305b4c054d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68a746af8ce00d9bed1bb0006b31a2c7') in 0.286977 seconds
-  Import took 0.350504 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000359 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Melee Attack 360 High.fbx
-  artifactKey: Guid(0c8c91680559fb94b89bfde9eaebd991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Melee Attack 360 High.fbx using Guid(0c8c91680559fb94b89bfde9eaebd991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9aa830c8eba8aa211826718bbea41a22') in 0.562460 seconds
-  Import took 0.623451 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.622899 seconds.
-  path: Assets/Animations/PlayerPH.controller
-  artifactKey: Guid(7d8c88d72e0b723488db83c76e83bd66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlayerPH.controller using Guid(7d8c88d72e0b723488db83c76e83bd66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '681b344dc6f375e6e0d752c0b4edc25e') in 0.085507 seconds
-  Import took 0.097567 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 396.628222 seconds.
-  path: Assets/Scripts
-  artifactKey: Guid(d57febcb74fe95e4aa16e4ac1b41771a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts using Guid(d57febcb74fe95e4aa16e4ac1b41771a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c8436b9a7293fd0981ccda13ed2f58a') in 0.033828 seconds
-  Import took 0.093915 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 132.572987 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Melee Attack 360 High.fbx
-  artifactKey: Guid(0c8c91680559fb94b89bfde9eaebd991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Melee Attack 360 High.fbx using Guid(0c8c91680559fb94b89bfde9eaebd991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2da03d42fc8398d48a2dca05cd83483') in 0.072363 seconds
-  Import took 0.153315 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000324 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Running.fbx
-  artifactKey: Guid(921dc0cb616cd3046af01094d0026ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Running.fbx using Guid(921dc0cb616cd3046af01094d0026ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a14e875305c07f8747c7f5ee2237c60') in 0.060419 seconds
-  Import took 0.081194 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000351 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Idle 02 Looking 1.fbx
-  artifactKey: Guid(39e627ce2c60a3341a0b8baf0f5866fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Idle 02 Looking 1.fbx using Guid(39e627ce2c60a3341a0b8baf0f5866fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '360401bc1cfd5cd17afaecff8c1c39e1') in 0.061097 seconds
-  Import took 0.088787 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000327 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Idle 02 Looking.fbx
-  artifactKey: Guid(b3b00fc373fa4414f89ccbe84bd71b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Idle 02 Looking.fbx using Guid(b3b00fc373fa4414f89ccbe84bd71b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81af29fbe5cfb92762f4982c94b1fb37') in 0.062470 seconds
-  Import took 0.100032 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000367 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Melee Attack Horizontal.fbx
-  artifactKey: Guid(a9e5d4eed2478a14ca23a3305b4c054d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Melee Attack Horizontal.fbx using Guid(a9e5d4eed2478a14ca23a3305b4c054d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74662eede43225a811b2504aba9a8dfc') in 0.052246 seconds
-  Import took 0.122327 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000317 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Great Sword Jump Attack.fbx
-  artifactKey: Guid(fafa6a991c72c0c4aa8a016004dafe0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Great Sword Jump Attack.fbx using Guid(fafa6a991c72c0c4aa8a016004dafe0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2307c892b9640c009be13da2ad795230') in 0.048708 seconds
-  Import took 0.146005 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 27.177961 seconds.
-  path: Assets/3DModels
-  artifactKey: Guid(a84199695fd697f4585bafd37387d346) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DModels using Guid(a84199695fd697f4585bafd37387d346) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '906f30efd2fe2beea97092b7dbaba908') in 0.132506 seconds
-  Import took 0.276730 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.285112 seconds.
-  path: Assets/3DModels/PlaceHolders
-  artifactKey: Guid(95febe270a241814eba527ffcc02f178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DModels/PlaceHolders using Guid(95febe270a241814eba527ffcc02f178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92bea3aff92ed7d9f49e9404f7fc537e') in 0.047040 seconds
-  Import took 0.119930 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.310892 seconds.
-  path: Assets/3DModels/PlaceHolders/Ch36_nonPBR.fbx
-  artifactKey: Guid(e0e429474ba7e1849b0d0edd5c1e5b6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DModels/PlaceHolders/Ch36_nonPBR.fbx using Guid(e0e429474ba7e1849b0d0edd5c1e5b6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60ce97be73c3eb3909a1dd86a6869113') in 5.795022 seconds
-  Import took 5.893499 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 86.948556 seconds.
-  path: Assets/3DModels/PlaceHolders/Ch36_nonPBR.fbx
-  artifactKey: Guid(e0e429474ba7e1849b0d0edd5c1e5b6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DModels/PlaceHolders/Ch36_nonPBR.fbx using Guid(e0e429474ba7e1849b0d0edd5c1e5b6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9420efc2e03192abf80d596937decc7d') in 1.400150 seconds
-  Import took 1.431194 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 538.366722 seconds.
-  path: Assets/3DModels/PlaceHolders/Ch36_nonPBR.fbx
-  artifactKey: Guid(e0e429474ba7e1849b0d0edd5c1e5b6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3DModels/PlaceHolders/Ch36_nonPBR.fbx using Guid(e0e429474ba7e1849b0d0edd5c1e5b6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f206aeb404bf310bffee0d1f2af1bbcd') in 0.264171 seconds
-  Import took 0.279689 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 76.252803 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Running.fbx
-  artifactKey: Guid(921dc0cb616cd3046af01094d0026ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Running.fbx using Guid(921dc0cb616cd3046af01094d0026ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5f17e3701d1f0e9faca9bee7e1b1ed4') in 0.071808 seconds
-  Import took 0.120214 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000570 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Idle 02 Looking.fbx
-  artifactKey: Guid(b3b00fc373fa4414f89ccbe84bd71b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Idle 02 Looking.fbx using Guid(b3b00fc373fa4414f89ccbe84bd71b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '939c3f6c1337d8b9869d419bd79660b9') in 0.058493 seconds
-  Import took 0.074365 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.504083 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Running.fbx
-  artifactKey: Guid(921dc0cb616cd3046af01094d0026ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Running.fbx using Guid(921dc0cb616cd3046af01094d0026ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c136bc8f9fb8d084f14e6f5a15fef8ea') in 0.064046 seconds
-  Import took 0.082732 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000458 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Idle 02 Looking.fbx
-  artifactKey: Guid(b3b00fc373fa4414f89ccbe84bd71b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Idle 02 Looking.fbx using Guid(b3b00fc373fa4414f89ccbe84bd71b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d110d44586b5b9e849ef6a1d5ff4258') in 0.062789 seconds
-  Import took 0.082863 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 32.677064 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Running.fbx
-  artifactKey: Guid(921dc0cb616cd3046af01094d0026ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Running.fbx using Guid(921dc0cb616cd3046af01094d0026ec8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '151b51cbcbfb4a71ace8efca043b5f48') in 0.049828 seconds
-  Import took 0.072881 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 28.913701 seconds.
-  path: Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Idle 02 Looking.fbx
-  artifactKey: Guid(b3b00fc373fa4414f89ccbe84bd71b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlaceHolders/Ch36_nonPBR@Standing Idle 02 Looking.fbx using Guid(b3b00fc373fa4414f89ccbe84bd71b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67cfbde57935ac1d7b03530be80c0cf2') in 0.045818 seconds
-  Import took 0.073936 seconds .
-
+Registered in 0.002623 seconds.
