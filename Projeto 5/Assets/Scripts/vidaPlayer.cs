@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class vidaPlayer : MonoBehaviour
 {
+    GameOver GameOverScript;
+
     public float life = 100;
     public Image lifeBar; 
     
     
     void Start()
     {
-        //GameOverScript = FindObjectOfType<GameOver>();
+        GameOverScript = FindObjectOfType<GameOver>();
         
     }
 
@@ -25,7 +27,8 @@ public class vidaPlayer : MonoBehaviour
         if (life <= 0)
         {
             Debug.Log("Game Over");
-            //GameOverScript.openMorteMenu();
+            GameOverScript.openTelaGameOver();
+            Time.timeScale = 0;
         }
     }
 
@@ -33,5 +36,6 @@ public class vidaPlayer : MonoBehaviour
     public void Reviver()
     {
         life = 100;
+        Time.timeScale = 1;
     }
 }
