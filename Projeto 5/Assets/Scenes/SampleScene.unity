@@ -1910,7 +1910,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624939562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.27, y: 4.43, z: 3}
+  m_LocalPosition: {x: 2.27, y: 5.18, z: 3}
   m_LocalScale: {x: 4.4470634, y: 0.3725663, z: 7.7447033}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5031,9 +5031,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.23
-  m_Height: 2
+  m_Height: 1.8058783
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.90293914, z: 0}
 --- !u!54 &1745603945
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6314,7 +6314,6 @@ GameObject:
   - component: {fileID: 1745603946}
   - component: {fileID: 1745603949}
   - component: {fileID: 919132147641325189}
-  - component: {fileID: 919132147641325190}
   m_Layer: 0
   m_Name: PlayerPH
   m_TagString: Player
@@ -6334,19 +6333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42429c746eca70b42b3a5fb50765b4ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &919132147641325190
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132147641325188}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.8534839, z: 0.89758223}
-  m_Center: {x: -2.3535276e-16, y: 0.8705548, z: 0.08534858}
 --- !u!4 &1017971967434235017
 Transform:
   m_ObjectHideFlags: 0

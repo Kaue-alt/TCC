@@ -12,23 +12,17 @@ public class PlatRayCast : MonoBehaviour
     void RaycastDoPersonagem()
     {
         RaycastHit plataforma;
-        if (Physics.Raycast(transform.position, transform.up, out plataforma, Mathf.Infinity, LayerMask.GetMask("plataforma")))
+        if (Physics.Raycast(transform.position, transform.up, out plataforma, 3 , LayerMask.GetMask("plataforma")))
         {
             if (plataforma.collider != null && plataforma.collider.tag == "plataformatag")
             {
-                GetComponent<BoxCollider> () .isTrigger = true;
+                GetComponent<CapsuleCollider> () .isTrigger = true;
               
             }
-                //plataformateste.transform.collider.IsTrigger = true;
-                Debug.Log("funcionou");
         }
-        else
+        if (Physics.Raycast(transform.position + transform.up * -1, -transform.up, out plataforma, 3, LayerMask.GetMask("plataforma")))
         {
-            Debug.Log("não funcionou");
-        }
-        if (Physics.Raycast(transform.position + transform.up * -1, -transform.up, out plataforma, Mathf.Infinity, LayerMask.GetMask("plataforma")))
-        {
-            //plataformateste.transform.collider.IsTrigger = false;
+            GetComponent<CapsuleCollider>().isTrigger = false;
         }
     }
     
