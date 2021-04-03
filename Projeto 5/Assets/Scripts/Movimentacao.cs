@@ -34,15 +34,7 @@ public class Movimentacao : MonoBehaviour
         this.Animations();
         // =============================== CONTROLE PELO TECLADO E MOUSE =============================================================
 
-        // Pulo tecla Space
-        if (Input.GetButtonDown("Jump"))
-        {
-            //if (Physics2D.OverlapCircle(collisionPivot.position, radius, layer)) // Detecta se houve colisão com algum objeto
-            //{
-                //dir.y = 0;
-                rb.AddForce(Vector3.up * jumpForce);
-            //}
-        }
+
 
         // Movimentação horizontal no teclado teclas A e D
         dir.x = Input.GetAxisRaw("Horizontal") * speed;  // Eixo x
@@ -52,23 +44,48 @@ public class Movimentacao : MonoBehaviour
         //vertical = 0;
         horizontal = dir.x;
 
-        // Espelha o personagem no sentido que está indo quando se movimentar
-        //if (Input.GetAxisRaw("Horizontal") > 0)
-        //{
-        // mr.flipX = true;
-        //}
+        if (!Input.anyKeyDown)
+        {
+            this.animator.SetBool("bRun", false);
+            this.animator.SetBool("bIdle", true);
+            this.animator.SetBool("bJump", false);
+        }
 
-        //if (Input.GetAxisRaw("Horizontal") < 0)
-        //{
-        // mr.flipX = false;
-        //}
+        // Espelha o personagem no sentido que está indo quando se movimentar
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            transform.eulerAngles = new Vector3(0, 90, 0);
+            this.animator.SetBool("bRun", true);
+            this.animator.SetBool("bIdle", false);
+            this.animator.SetBool("bJump", false);
+        }
+        else if (Input.GetAxis("Horizontal") < 0)
+        {
+            transform.eulerAngles = new Vector3(0, 270, 0);
+            this.animator.SetBool("bRun", true);
+            this.animator.SetBool("bIdle", false);
+            this.animator.SetBool("bJump", false);
+        }
+
+        // Pulo tecla Space
+        if (Input.GetButtonDown("Jump"))
+        {
+            //if (Physics2D.OverlapCircle(collisionPivot.position, radius, layer)) // Detecta se houve colisão com algum objeto
+            //{
+            //dir.y = 0;
+            rb.AddForce(Vector3.up * jumpForce);
+            this.animator.SetBool("bRun", false);
+            this.animator.SetBool("bIdle", false);
+            this.animator.SetBool("bJump", true);
+            //}
+        }
 
         // =============================== CONTROLE PELO JOYSTICK ====================================================================
 
     }
     private void Animations()
     {
-        this.animator.SetFloat("Horizontal", horizontal);
+        //this.animator.SetFloat("Horizontal", horizontal);
         //this.animator.SetFloat("Vertical", vertical);
     }
 
