@@ -8,9 +8,13 @@ public class vidaPlayer : MonoBehaviour
     GameOver GameOverScript;
 
     public float life = 100;
-    public Image lifeBar; 
-    
-    
+    public Image lifeBar;
+
+    //Respawn
+    public GameObject player;
+    public GameObject reset;
+
+
     void Start()
     {
         GameOverScript = FindObjectOfType<GameOver>();
@@ -29,6 +33,7 @@ public class vidaPlayer : MonoBehaviour
             Debug.Log("Game Over");
             GameOverScript.openTelaGameOver();
             Time.timeScale = 0;
+            player.transform.position = reset.transform.position;
         }
     }
 
