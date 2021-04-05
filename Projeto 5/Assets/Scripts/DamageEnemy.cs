@@ -7,34 +7,56 @@ public class DamageEnemy : MonoBehaviour
 {
     vidaPlayer vidaPlayerScript;
 
-    public float damage = 20;
+    public float damage1 = 4;
+    public float damage2 = 8;
+    private int aleatorio;
     public GameObject player;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
-        vidaPlayerScript = FindObjectOfType<vidaPlayer>();
+        vidaPlayerScript = FindObjectOfType<vidaPlayer>(); // CHAMANDO O SCRIPT "vidaPlayer"
     }
 
-    // Update is called once per frame
+
+    // ------------------------------------ ATAQUES INIMIGO -----------------------------------------
+    public void Dano1()
+    {
+        vidaPlayerScript.life -= damage1;
+
+    }
+
+    public void Dano2()
+    {
+        vidaPlayerScript.life -= damage2;
+
+    }
+    // -----------------------------------------------------------------------------------------------
+    
     void Update()
     {
         
     }
 
-    public void Dano1()
-    {
-        vidaPlayerScript.life -= damage;
-        
-    }
-
-    void OnCollisionEnter(Collision collider)
+    void OnCollisionEnter(Collision collider) // O DANO É CAUSADO AO INIMIGO COLIDIR COM O JOGADOR
     {
         if (collider.gameObject.tag == "Player")
         {
-            //player.transform.position = reset.transform.position;
-            Debug.Log("Recebeu dano");
-            Dano1();
+            aleatorio = Random.Range(0, 2); // É FEITO UM SORTEIO DE QUAL ATAQUE O INIMIGO IRÁ USAR
+
+            if (aleatorio == 0) // CONDIÇÃO SE ATAQUE 1
+            {
+                //player.transform.position = reset.transform.position;
+                Debug.Log("Recebeu dano1");
+                Dano1();
+            }
+            else // CONDIÇÃO SE ATAQUE 2
+            {
+                //player.transform.position = reset.transform.position;
+                Debug.Log("Recebeu dano2");
+                Dano2();
+            }
+
         }
     }
 }

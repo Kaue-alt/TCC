@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent agent;
     public float distance = 3;
     
+    
     void Start()
     {
         // Inimigo encontra o player pela tag
@@ -20,10 +21,13 @@ public class Enemy : MonoBehaviour
     
     void Update()
     {
+        // ======================================= MOVIMENTAÇÃO DOS INIMIGOS =========================================
+
         // Segue o jogador a partir de uma determinada distância
-        if (Vector3.Distance (transform.position, player.transform.position) < distance)
-        {
-            agent.destination = player.transform.position;
-        }
+        if (Vector3.Distance(transform.position, player.transform.position) <= distance)
+         {
+                agent.destination = player.transform.position;
+         }
+        // =============================================================================================================
     }
 }

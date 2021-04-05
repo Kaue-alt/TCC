@@ -5,6 +5,7 @@ using UnityEngine;
 public class BreakingObjects : MonoBehaviour
 {
     public GameObject brokenObject;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class BreakingObjects : MonoBehaviour
             Vector3 oldPos = transform.position;
             Instantiate(brokenObject, oldPos, Quaternion.identity);
             Destroy(gameObject);
+            
         }
     }
 
@@ -29,6 +31,7 @@ public class BreakingObjects : MonoBehaviour
             Vector3 oldPos = transform.position;
             Instantiate(brokenObject, oldPos, Quaternion.identity);
             Destroy(gameObject);
+            
         }
     }
 }
