@@ -15,7 +15,7 @@ public class BreakingObjects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             Vector3 oldPos = transform.position;
             Instantiate(brokenObject, oldPos, Quaternion.identity);
