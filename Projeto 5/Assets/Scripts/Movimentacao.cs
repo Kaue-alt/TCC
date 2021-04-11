@@ -9,6 +9,7 @@ public class Movimentacao : MonoBehaviour
     public float radius;
     private float horizontal;
     //private float vertical;
+    private bool playingRunAudio = false;
 
     public LayerMask layer;
     public Vector3 dir;
@@ -33,8 +34,6 @@ public class Movimentacao : MonoBehaviour
     {
         this.Animations();
         // =============================== CONTROLE PELO TECLADO E MOUSE =============================================================
-
-
 
         // Movimentação horizontal no teclado teclas A e D
         dir.x = Input.GetAxisRaw("Horizontal") * speed;  // Eixo x
@@ -66,6 +65,39 @@ public class Movimentacao : MonoBehaviour
             this.animator.SetBool("bIdle", false);
             this.animator.SetBool("bJump", false);
         }
+
+        //Colocando som de corrida atrelado à animação
+
+        /*if(this.animator.GetBool("bRun") && !playingRunAudio)
+        {
+            GetComponent<AudioSource>().Play();
+            playingRunAudio = true;
+        }
+
+        if (this.animator.GetBool("bJump") && playingRunAudio)
+        {
+            GetComponent<AudioSource>().Stop();
+            playingRunAudio = false;
+        }
+
+        if (!this.animator.GetBool("bRun") && playingRunAudio)
+        {
+            GetComponent<AudioSource>().Stop();
+            playingRunAudio = false;
+        }*/
+
+        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Run") && !playingRunAudio)
+        {
+            GetComponent<AudioSource>().Play();
+            playingRunAudio = true;
+        }
+
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsName("Run") && playingRunAudio)
+        {
+            GetComponent<AudioSource>().Stop();
+            playingRunAudio = false;
+        }
+
 
         // Pulo tecla Space
         if (Input.GetButtonDown("Jump"))

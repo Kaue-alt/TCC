@@ -7,6 +7,8 @@ public class Combos : MonoBehaviour
     Animator animator;
     Rigidbody rb;
 
+    public GameObject soundAt1, soundAt3;
+
     public static int clicks;
     bool canClick;
 
@@ -36,6 +38,8 @@ public class Combos : MonoBehaviour
         if (clicks == 1)
         {
             animator.SetInteger("Attack", 1);
+
+            soundAt1.GetComponent<AudioSource>().PlayDelayed(0.15f);
         }
     }
 
@@ -53,6 +57,8 @@ public class Combos : MonoBehaviour
         {
             animator.SetInteger("Attack", 2);
             canClick = true;
+
+            soundAt1.GetComponent<AudioSource>().Play();
         }
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack_2") && clicks == 2)
         {
@@ -65,6 +71,7 @@ public class Combos : MonoBehaviour
             animator.SetInteger("Attack", 3);
             canClick = true;
 
+            soundAt1.GetComponent<AudioSource>().PlayDelayed(0.5f);
         }
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack_3"))
         {
