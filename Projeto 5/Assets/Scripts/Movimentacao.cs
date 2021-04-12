@@ -68,24 +68,6 @@ public class Movimentacao : MonoBehaviour
 
         //Colocando som de corrida atrelado à animação
 
-        /*if(this.animator.GetBool("bRun") && !playingRunAudio)
-        {
-            GetComponent<AudioSource>().Play();
-            playingRunAudio = true;
-        }
-
-        if (this.animator.GetBool("bJump") && playingRunAudio)
-        {
-            GetComponent<AudioSource>().Stop();
-            playingRunAudio = false;
-        }
-
-        if (!this.animator.GetBool("bRun") && playingRunAudio)
-        {
-            GetComponent<AudioSource>().Stop();
-            playingRunAudio = false;
-        }*/
-
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Run") && !playingRunAudio)
         {
             GetComponent<AudioSource>().Play();

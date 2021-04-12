@@ -7,9 +7,10 @@ public class DamageEnemy : MonoBehaviour
 {
     vidaPlayer vidaPlayerScript;
 
-    public float damage1 = 4;
-    public float damage2 = 8;
+    public float damage1;
+    public float damage2;
     private int aleatorio;
+    private bool canDmg = true;
     public GameObject player;
 
     
@@ -35,7 +36,7 @@ public class DamageEnemy : MonoBehaviour
     
     void Update()
     {
-        
+
     }
 
     void OnCollisionEnter(Collision collider) // O DANO É CAUSADO AO INIMIGO COLIDIR COM O JOGADOR
@@ -47,16 +48,42 @@ public class DamageEnemy : MonoBehaviour
             if (aleatorio == 0) // CONDIÇÃO SE ATAQUE 1
             {
                 //player.transform.position = reset.transform.position;
-                Debug.Log("Recebeu dano1");
-                Dano1();
+
+                GetComponent<Animator>().SetInteger("Attack", 1); // ATIVA ANIMAÇÃO DO ATAQUE 1
+
+                if (canDmg) // LIMITA UM DANO CAUSADO POR ANIMAÇÃO DE ATAQUE
+                {
+                    Dano1();
+                    Debug.Log("Recebeu dano1");
+
+                    canDmg = false;
+                }
             }
             else // CONDIÇÃO SE ATAQUE 2
             {
                 //player.transform.position = reset.transform.position;
-                Debug.Log("Recebeu dano2");
-                Dano2();
+
+                GetComponent<Animator>().SetInteger("Attack", 2); // ATIVA ANIMAÇÃO DO ATAQUE 2
+
+                if (canDmg) // LIMITA UM DANO CAUSADO POR ANIMAÇÃO DE ATAQUE
+                {
+                    Dano2();
+                    Debug.Log("Recebeu dano2");
+
+                    canDmg = false;
+                }
             }
 
         }
+        else
+        {
+            GetComponent<Animator>().SetInteger("Attack", 0); // RESETA CONTADOR DA ANIMAÇÃO DO ATAQUE
+        }
+    }
+
+    public void liberarDano() // LIBERA INIMIGO PARA CAUSAR DANO NOVAMENTE, NO FIM DA ANIMAÇÃO
+    {
+        canDmg = true;
+        GetComponent<Animator>().SetInteger("Attack", 0);
     }
 }

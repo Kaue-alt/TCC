@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 {
     private GameObject player;
     public NavMeshAgent agent;
-    public float distance = 3;
+    public float distance;
     
     
     void Start()
@@ -26,8 +26,24 @@ public class Enemy : MonoBehaviour
         // Segue o jogador a partir de uma determinada distância
         if (Vector3.Distance(transform.position, player.transform.position) <= distance)
          {
-                agent.destination = player.transform.position;
+            agent.destination = player.transform.position;
+            agent.isStopped = false;
+
+            GetComponent<Animator>().SetBool("bRun", true);
+            GetComponent<Animator>().SetBool("bIdle", false);
+        }
+
+        if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsTag("Attacking")) // DEIXA O INIMIGO PARADO ENQUANTO ATACA
+        {
+            agent.isStopped = true;
+        }
+
+        if (Vector3.Distance(transform.position, player.transform.position) > distance)
+         {
+            GetComponent<Animator>().SetBool("bRun", false);
+            GetComponent<Animator>().SetBool("bIdle", true);
          }
+
         // =============================================================================================================
     }
 }
