@@ -6,6 +6,14 @@ public class Movimentacao : MonoBehaviour
 {
     public float speed;
     public float jumpForce;
+    [SerializeField]
+    private float doubleJumpMultiplier = 0.5f;
+    [SerializeField]
+    //private float gravity = 9.81f;
+    private bool canDoubleJump = false;
+    //private CharacterController controller;
+    private float distToGround;
+    private bool isGrounded;
     public float radius;
     private float horizontal;
     //private float vertical;
@@ -15,8 +23,6 @@ public class Movimentacao : MonoBehaviour
     public Vector3 dir;
 
     public Rigidbody rb;
-    //public Transform collisionPivot;    
-    public MeshRenderer mr;
     public CapsuleCollider col;  
     private Animator animator;
 
@@ -27,11 +33,16 @@ public class Movimentacao : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         col = GetComponent<CapsuleCollider>();
         this.animator = GetComponent<Animator>();
+        //controller = GetComponent<CharacterController>();
+        distToGround = col.bounds.extents.y;
     }
+
     
+
     // Update is called once per frame
     void Update()
     {
+        
         this.Animations();
         // =============================== CONTROLE PELO TECLADO E MOUSE =============================================================
 
@@ -82,21 +93,33 @@ public class Movimentacao : MonoBehaviour
 
 
         // Pulo tecla Space
-        if (Input.GetButtonDown("Jump"))
+
+        isGrounded = Physics.Raycast (transform.position, - Vector3.up, distToGround + 0.1f);
+        
+        if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
-            //if (Physics2D.OverlapCircle(collisionPivot.position, radius, layer)) // Detecta se houve colisão com algum objeto
-            //{
-            //dir.y = 0;
-            rb.AddForce(Vector3.up * jumpForce);
-            this.animator.SetBool("bRun", false);
-            this.animator.SetBool("bIdle", false);
-            this.animator.SetBool("bJump", true);
-            //}
+                canDoubleJump = true;
+                rb.AddForce(Vector3.up * jumpForce);
+                this.animator.SetBool("bRun", false);
+                this.animator.SetBool("bIdle", false);
+                this.animator.SetBool("bJump", true);
+
+        
         }
-
-        // =============================== CONTROLE PELO JOYSTICK ====================================================================
-
+        else
+        {
+            if (Input.GetButtonDown("Jump") && canDoubleJump)
+            {
+                rb.AddForce(Vector3.up * jumpForce * doubleJumpMultiplier);
+                canDoubleJump = false;
+            }
+        }
     }
+
+
+            // =============================== CONTROLE PELO JOYSTICK ====================================================================
+
+    
     private void Animations()
     {
         //this.animator.SetFloat("Horizontal", horizontal);

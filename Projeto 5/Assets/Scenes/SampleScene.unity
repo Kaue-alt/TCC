@@ -3474,13 +3474,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 350
+  doubleJumpMultiplier: 0.5
+  canDoubleJump: 0
   radius: 0.5
   layer:
     serializedVersion: 2
     m_Bits: 8
   dir: {x: 0, y: 0, z: 0}
   rb: {fileID: 954279041}
-  mr: {fileID: 954279039}
   col: {fileID: 954279040}
 --- !u!114 &954279038
 MonoBehaviour:
@@ -7744,6 +7745,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyMM
+      objectReference: {fileID: 0}
+    - target: {fileID: 5455308582794063785, guid: 79df1e0109dcd774493b5976b11bd62b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79df1e0109dcd774493b5976b11bd62b, type: 3}
