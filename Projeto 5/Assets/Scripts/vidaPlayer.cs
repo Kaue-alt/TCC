@@ -14,6 +14,7 @@ public class vidaPlayer : MonoBehaviour
     public GameObject player;
     public GameObject reset;
 
+    public AudioSource audioSourceDeath;
 
     void Start()
     {
@@ -30,10 +31,11 @@ public class vidaPlayer : MonoBehaviour
 
         if (life <= 0)
         {
+            audioSourceDeath.Play();
             Debug.Log("Game Over");
             GameOverScript.openTelaGameOver();
             Time.timeScale = 0;
-            player.transform.position = reset.transform.position;
+            player.transform.position = reset.transform.position;          
         }
     }
 
