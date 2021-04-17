@@ -19,9 +19,10 @@ public class DamagePlayer : MonoBehaviour
 
 
     // ------------------------------------ ATAQUES PLAYER -----------------------------------------
-    public void Dano1(Collider enem)
+    public void Dano1(GameObject enem)
     {
-            vidaEnemyScript.life -= damage1;
+
+        enem.GetComponent<vidaEnemy>().life -= damage1; // REFERENCIA O OBJETO QUE FOI CRIADO A PARTIR DO COLLIDER DO INIMIGO
     }
 
     // -----------------------------------------------------------------------------------------------
@@ -39,13 +40,13 @@ public class DamagePlayer : MonoBehaviour
            
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider col)
     {
-        if (other.gameObject.CompareTag ("Enemy"))
+        if (col.gameObject.CompareTag ("Enemy"))
         {
-            Dano1(other);
+            GameObject enemyIns = col.gameObject; // ASSOCIA O COLLIDER DO INIMIGO AO QUE ESTÁ SENDO ATACADO REALMENTE
+            Dano1(enemyIns);
             Debug.Log("Inimigo Recebeu dano1");
-            Debug.Log(other);
                 
         }
     }

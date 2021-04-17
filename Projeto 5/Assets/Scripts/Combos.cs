@@ -10,7 +10,7 @@ public class Combos : MonoBehaviour
     public GameObject soundAt1, soundAt3;
 
     public static int clicks;
-    bool canClick;
+    public bool canClick;
 
 
     void Start()
@@ -23,6 +23,17 @@ public class Combos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Run") || animator.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
+        {
+            canClick = false;
+        }
+        else
+        {
+            canClick = true;
+        }
+
+
         if (Input.GetMouseButtonDown(0))
         {
             Combo();
@@ -76,6 +87,11 @@ public class Combos : MonoBehaviour
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack_3"))
         {
             animator.SetInteger("Attack", 0);
+            canClick = true;
+            clicks = 0;
+        }
+        else
+        {
             canClick = true;
             clicks = 0;
         }
