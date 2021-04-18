@@ -7,6 +7,7 @@ public class GameOver : MonoBehaviour
 {
     vidaPlayer vidaPlayerScript;
     public GameObject TelaGameOver;
+    
 
     void Start()
     {
@@ -21,8 +22,10 @@ public class GameOver : MonoBehaviour
 
     public void openTelaGameOver()
     {
+        
         TelaGameOver.SetActive(true);
     }
+
     public void goMainMenu()
     {
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
@@ -30,7 +33,8 @@ public class GameOver : MonoBehaviour
 
     public void Restart()
     {
-        TelaGameOver.SetActive(false);
-        vidaPlayerScript.Reviver();
+        //TelaGameOver.SetActive(false);
+        //vidaPlayerScript.Reviver();
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 }

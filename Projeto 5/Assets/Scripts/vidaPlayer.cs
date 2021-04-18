@@ -9,6 +9,8 @@ public class vidaPlayer : MonoBehaviour
 
     public float life = 100;
     public Image lifeBar;
+    public float tempoAparecer = 3f;
+    //private bool podeAparecer;
 
     //Respawn
     public GameObject player;
@@ -29,13 +31,21 @@ public class vidaPlayer : MonoBehaviour
         life = Mathf.Clamp(life, 0, 100);
         lifeBar.fillAmount = life / 100;
 
+        
+
+    }
+
+    void FixedUpdate()
+    {
+        
         if (life <= 0)
         {
             audioSourceDeath.Play();
             Debug.Log("Game Over");
-            GameOverScript.openTelaGameOver();
             Time.timeScale = 0;
-            player.transform.position = reset.transform.position;          
+
+            GameOverScript.openTelaGameOver();
+            //player.transform.position = reset.transform.position;          
         }
     }
 
@@ -45,4 +55,6 @@ public class vidaPlayer : MonoBehaviour
         life = 100;
         Time.timeScale = 1;
     }
+
+
 }
