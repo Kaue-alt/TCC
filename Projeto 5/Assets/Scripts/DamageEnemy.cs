@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class DamageEnemy : MonoBehaviour
 {
@@ -13,10 +14,14 @@ public class DamageEnemy : MonoBehaviour
     private bool canDmg = true;
     public GameObject player;
 
+    public float waitAttack;
+    private float speedEnemy;
     
     void Start()
     {
         vidaPlayerScript = FindObjectOfType<vidaPlayer>(); // CHAMANDO O SCRIPT "vidaPlayer"
+
+        speedEnemy = GetComponent<NavMeshAgent>().speed;
     }
 
 
@@ -43,12 +48,23 @@ public class DamageEnemy : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            aleatorio = Random.Range(0, 2); // É FEITO UM SORTEIO DE QUAL ATAQUE O INIMIGO IRÁ USAR
+            StartCoroutine(travarMov(waitAttack));
+        }
+        else
+        {
+            GetComponent<Animator>().SetInteger("Attack", 0); // RESETA CONTADOR DA ANIMAÇÃO DO ATAQUE
+        }
+    }
+
+    IEnumerator travarMov(float tempo)
+    {
+        GetComponent<NavMeshAgent>().isStopped = true;
+        GetComponent<NavMeshAgent>().speed = 0;
+
+        aleatorio = Random.Range(0, 2); // É FEITO UM SORTEIO DE QUAL ATAQUE O INIMIGO IRÁ USAR
 
             if (aleatorio == 0) // CONDIÇÃO SE ATAQUE 1
             {
-                //player.transform.position = reset.transform.position;
-
                 GetComponent<Animator>().SetInteger("Attack", 1); // ATIVA ANIMAÇÃO DO ATAQUE 1
 
                 if (canDmg) // LIMITA UM DANO CAUSADO POR ANIMAÇÃO DE ATAQUE
@@ -61,8 +77,6 @@ public class DamageEnemy : MonoBehaviour
             }
             else // CONDIÇÃO SE ATAQUE 2
             {
-                //player.transform.position = reset.transform.position;
-
                 GetComponent<Animator>().SetInteger("Attack", 2); // ATIVA ANIMAÇÃO DO ATAQUE 2
 
                 if (canDmg) // LIMITA UM DANO CAUSADO POR ANIMAÇÃO DE ATAQUE
@@ -74,11 +88,9 @@ public class DamageEnemy : MonoBehaviour
                 }
             }
 
-        }
-        else
-        {
-            GetComponent<Animator>().SetInteger("Attack", 0); // RESETA CONTADOR DA ANIMAÇÃO DO ATAQUE
-        }
+        yield return new WaitForSeconds(tempo);
+        GetComponent<NavMeshAgent>().isStopped = false;
+        GetComponent<NavMeshAgent>().speed = speedEnemy;
     }
 
     public void liberarDano() // LIBERA INIMIGO PARA CAUSAR DANO NOVAMENTE, NO FIM DA ANIMAÇÃO

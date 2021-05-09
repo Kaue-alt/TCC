@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class pauseInGame : MonoBehaviour
 {
@@ -44,5 +45,13 @@ public class pauseInGame : MonoBehaviour
         Time.timeScale = 1;
         GetComponent<Canvas>().enabled = false;
         paused = false;
+    }
+
+    public void OnClickButtonBackToMenu()
+    {
+        Time.timeScale = 1;
+        GetComponent<Canvas>().enabled = false;
+        paused = false;
+        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
 }
