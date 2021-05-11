@@ -11,10 +11,21 @@ public class DamagePlayer : MonoBehaviour
     public GameObject enemy;
     public CapsuleCollider colliderArma;
 
+    //Teste para alterar cor do player ao receber dano
+    public Material[] material;
+    public int x;
+    Renderer rend;
+
     void Start()
     {
         vidaEnemyScript = FindObjectOfType<vidaEnemy>(); // CHAMANDO O SCRIPT "vidaEnemy"
         colliderArma = GetComponent<CapsuleCollider>();
+
+        //Teste para alterar cor do player ao receber dano
+        x = 0;
+        rend = GetComponent<Renderer>();
+        rend.enabled = false;
+        rend.sharedMaterial = material[x];
     }
 
 
@@ -23,6 +34,9 @@ public class DamagePlayer : MonoBehaviour
     {
 
         enem.GetComponent<vidaEnemy>().life -= damage1; // REFERENCIA O OBJETO QUE FOI CRIADO A PARTIR DO COLLIDER DO INIMIGO
+
+        //Teste para alterar cor do player ao receber dano
+        rend.enabled = true;
     }
 
     // -----------------------------------------------------------------------------------------------
@@ -37,7 +51,9 @@ public class DamagePlayer : MonoBehaviour
         {
             colliderArma.isTrigger = false;
         }
-           
+
+        //Teste para alterar cor do player ao receber dano
+        rend.sharedMaterial = material[x];
     }
 
     void OnTriggerEnter(Collider col)

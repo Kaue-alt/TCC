@@ -16,19 +16,36 @@ public class DamageEnemy : MonoBehaviour
 
     public float waitAttack;
     private float speedEnemy;
+
+    //Teste para alterar cor do player ao receber dano
+    public Material[] material;
+    public int x;
+    Renderer rend;
     
     void Start()
     {
         vidaPlayerScript = FindObjectOfType<vidaPlayer>(); // CHAMANDO O SCRIPT "vidaPlayer"
 
         speedEnemy = GetComponent<NavMeshAgent>().speed;
+
+        //Teste para alterar cor do player ao receber dano
+        x = 0;
+        rend = GetComponent<Renderer>();
+        rend.enabled = true;
+        rend.sharedMaterial = material[x];
     }
 
+    void Update()
+    {
+        //Teste para alterar cor do player ao receber dano
+        rend.sharedMaterial = material[x];
+    }
 
     // ------------------------------------ ATAQUES INIMIGO -----------------------------------------
     public void Dano1()
     {
         vidaPlayerScript.life -= damage1;
+        //GetComponent<Renderer>().material.color = Color.red;
 
     }
 
@@ -39,11 +56,6 @@ public class DamageEnemy : MonoBehaviour
     }
     // -----------------------------------------------------------------------------------------------
     
-    void Update()
-    {
-
-    }
-
     void OnCollisionEnter(Collision collider) // O DANO É CAUSADO AO INIMIGO COLIDIR COM O JOGADOR
     {
         if (collider.gameObject.tag == "Player")
