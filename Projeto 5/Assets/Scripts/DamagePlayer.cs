@@ -10,29 +10,22 @@ public class DamagePlayer : MonoBehaviour
     public float damage1;
     public GameObject enemy;
     public CapsuleCollider colliderArma;
-
+    public bool recebeuDano;
     //Teste para alterar cor do player ao receber dano
-    //  public Material[] material;
-    //  public int x;
-    //  Renderer rend;
 
     public Color corInicial;
     Material materialPlayer;
-    float cronometro;
-    public float tempoTroca = 1;
-    public float tempoDeEsperaaa = 1f;
+
+    public float tempoDeEsperaaa = 2f;
 
     void Start()
     {
         vidaEnemyScript = FindObjectOfType<vidaEnemy>(); // CHAMANDO O SCRIPT "vidaEnemy"
         colliderArma = GetComponent<CapsuleCollider>();
-        cronometro = 0;
-        //Teste para alterar cor do player ao receber dano
-        //   x = 0;
-        //   rend = GetComponent<Renderer>();
-        //   rend.enabled = false;
-        //   rend.sharedMaterial = material[x];
 
+        //Teste para alterar cor do player ao receber dano
+        recebeuDano = false;
+        Debug.Log(recebeuDano);
         materialPlayer = GetComponent<MeshRenderer>().material;
         materialPlayer.color = corInicial;
     }
@@ -41,29 +34,43 @@ public class DamagePlayer : MonoBehaviour
     // ------------------------------------ ATAQUES PLAYER -----------------------------------------
     public void Dano1(GameObject enem)
     {
-
+        recebeuDano = true;
         enem.GetComponent<vidaEnemy>().life -= damage1; // REFERENCIA O OBJETO QUE FOI CRIADO A PARTIR DO COLLIDER DO INIMIGO
 
         //Teste para alterar cor do player ao receber dano
-        //   rend.enabled = true;
-
-
-        StartCoroutine(naoSei(tempoDeEsperaaa));
-            materialPlayer.color = corInicial;
- 
+        if (recebeuDano == true)
+        {
             materialPlayer.color = Color.red;
- 
+            recebeuDano = false;
+            Debug.Log(recebeuDano);
+            Debug.Log("corVERMELHA");
+            StartCoroutine("DeixarVerdadeira");
+        }
+        if (recebeuDano == false)
+        {
+            materialPlayer.color = Color.blue;  //corInicial;
+            Debug.Log("corNORMAL");
+        }
+        if (recebeuDano == false)
+        {
+            //materialPlayer.color = Color.red;
+            Debug.Log("corVERMELHA22");
+        }
     }
-    public IEnumerator naoSei (float tempoDeEspera)
+
+    public IEnumerator DeixarVerdadeira()
     {
-        yield return new WaitForSeconds(tempoDeEspera);
+        yield return new WaitForSeconds(tempoDeEsperaaa);
+        recebeuDano = true;
+        Debug.Log(recebeuDano);
     }
+   
 
     // -----------------------------------------------------------------------------------------------
 
     void Update()
     {
-        cronometro += Time.deltaTime;
+        
         if (Input.GetMouseButtonDown(0))
         {
             colliderArma.isTrigger = true;
@@ -74,7 +81,6 @@ public class DamagePlayer : MonoBehaviour
         }
 
         //Teste para alterar cor do player ao receber dano
-     //   rend.sharedMaterial = material[x];
     }
 
     void OnTriggerEnter(Collider col)

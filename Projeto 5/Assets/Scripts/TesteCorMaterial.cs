@@ -22,3 +22,5 @@ public class TesteCorMaterial : MonoBehaviour
         rend.sharedMaterial = material[x];
     }
 }
+
+
