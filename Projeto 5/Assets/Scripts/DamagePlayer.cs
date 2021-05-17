@@ -12,20 +12,29 @@ public class DamagePlayer : MonoBehaviour
     public CapsuleCollider colliderArma;
 
     //Teste para alterar cor do player ao receber dano
-    public Material[] material;
-    public int x;
-    Renderer rend;
+    //  public Material[] material;
+    //  public int x;
+    //  Renderer rend;
+
+    public Color corInicial;
+    Material materialPlayer;
+    float cronometro;
+    public float tempoTroca = 1;
+    public float tempoDeEsperaaa = 1f;
 
     void Start()
     {
         vidaEnemyScript = FindObjectOfType<vidaEnemy>(); // CHAMANDO O SCRIPT "vidaEnemy"
         colliderArma = GetComponent<CapsuleCollider>();
-
+        cronometro = 0;
         //Teste para alterar cor do player ao receber dano
-        x = 0;
-        rend = GetComponent<Renderer>();
-        rend.enabled = false;
-        rend.sharedMaterial = material[x];
+        //   x = 0;
+        //   rend = GetComponent<Renderer>();
+        //   rend.enabled = false;
+        //   rend.sharedMaterial = material[x];
+
+        materialPlayer = GetComponent<MeshRenderer>().material;
+        materialPlayer.color = corInicial;
     }
 
 
@@ -36,13 +45,25 @@ public class DamagePlayer : MonoBehaviour
         enem.GetComponent<vidaEnemy>().life -= damage1; // REFERENCIA O OBJETO QUE FOI CRIADO A PARTIR DO COLLIDER DO INIMIGO
 
         //Teste para alterar cor do player ao receber dano
-        rend.enabled = true;
+        //   rend.enabled = true;
+
+
+        StartCoroutine(naoSei(tempoDeEsperaaa));
+            materialPlayer.color = corInicial;
+ 
+            materialPlayer.color = Color.red;
+ 
+    }
+    public IEnumerator naoSei (float tempoDeEspera)
+    {
+        yield return new WaitForSeconds(tempoDeEspera);
     }
 
     // -----------------------------------------------------------------------------------------------
 
     void Update()
     {
+        cronometro += Time.deltaTime;
         if (Input.GetMouseButtonDown(0))
         {
             colliderArma.isTrigger = true;
@@ -53,7 +74,7 @@ public class DamagePlayer : MonoBehaviour
         }
 
         //Teste para alterar cor do player ao receber dano
-        rend.sharedMaterial = material[x];
+     //   rend.sharedMaterial = material[x];
     }
 
     void OnTriggerEnter(Collider col)

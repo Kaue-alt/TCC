@@ -18,9 +18,11 @@ public class DamageEnemy : MonoBehaviour
     private float speedEnemy;
 
     //Teste para alterar cor do player ao receber dano
-    public Material[] material;
-    public int x;
-    Renderer rend;
+    // public Material[] material;
+    // public int x;
+    // Renderer rend;
+
+    Material materialPlayer;
     
     void Start()
     {
@@ -29,16 +31,18 @@ public class DamageEnemy : MonoBehaviour
         speedEnemy = GetComponent<NavMeshAgent>().speed;
 
         //Teste para alterar cor do player ao receber dano
-        x = 0;
-        rend = GetComponent<Renderer>();
-        rend.enabled = true;
-        rend.sharedMaterial = material[x];
+        //   x = 0;
+        //   rend = GetComponent<Renderer>();
+        //  rend.enabled = true;
+        //  rend.sharedMaterial = material[x];
+
+        materialPlayer = GetComponent<MeshRenderer>().material;
     }
 
     void Update()
     {
         //Teste para alterar cor do player ao receber dano
-        rend.sharedMaterial = material[x];
+     //   rend.sharedMaterial = material[x];
     }
 
     // ------------------------------------ ATAQUES INIMIGO -----------------------------------------
@@ -46,6 +50,8 @@ public class DamageEnemy : MonoBehaviour
     {
         vidaPlayerScript.life -= damage1;
         //GetComponent<Renderer>().material.color = Color.red;
+
+        materialPlayer.color = Color.red;
 
     }
 
