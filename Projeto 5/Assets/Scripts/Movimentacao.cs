@@ -26,6 +26,9 @@ public class Movimentacao : MonoBehaviour
     public CapsuleCollider col;  
     private Animator animator;
 
+    public float dashSpeed;
+    public float dashTime;
+
 
 
     void Start()
@@ -113,6 +116,11 @@ public class Movimentacao : MonoBehaviour
                 rb.AddForce(Vector3.up * jumpForce * doubleJumpMultiplier);
                 canDoubleJump = false;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            transform.position += transform.forward * Time.deltaTime*dashSpeed;
         }
     }
 
