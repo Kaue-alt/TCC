@@ -18,12 +18,12 @@ public class DamageEnemy : MonoBehaviour
     private float speedEnemy;
 
     //Teste para alterar cor do player ao receber dano
-    // public Material[] material;
-    // public int x;
-    // Renderer rend;
-
+    public bool recebeuDano;
+    public Color corInicial;
     Material materialPlayer;
-    
+
+    public float tempoDeEsperaaa = 2f;
+
     void Start()
     {
         vidaPlayerScript = FindObjectOfType<vidaPlayer>(); // CHAMANDO O SCRIPT "vidaPlayer"
@@ -31,28 +31,43 @@ public class DamageEnemy : MonoBehaviour
         speedEnemy = GetComponent<NavMeshAgent>().speed;
 
         //Teste para alterar cor do player ao receber dano
-        //   x = 0;
-        //   rend = GetComponent<Renderer>();
-        //  rend.enabled = true;
-        //  rend.sharedMaterial = material[x];
-
+        recebeuDano = false;
+        Debug.Log(recebeuDano);
         materialPlayer = GetComponent<MeshRenderer>().material;
+        materialPlayer.color = corInicial;
     }
 
     void Update()
     {
-        //Teste para alterar cor do player ao receber dano
-     //   rend.sharedMaterial = material[x];
+    
     }
 
     // ------------------------------------ ATAQUES INIMIGO -----------------------------------------
     public void Dano1()
     {
         vidaPlayerScript.life -= damage1;
-        //GetComponent<Renderer>().material.color = Color.red;
 
-        materialPlayer.color = Color.red;
+        if (recebeuDano == false)
+        {
+            materialPlayer.color = corInicial;
+            Debug.Log("corNORMAL");
+        }
+        else
+        {
+            materialPlayer.color = Color.red;
+            recebeuDano = false;
+            Debug.Log(recebeuDano);
+            Debug.Log("corVERMELHA");
+            StartCoroutine("DeixarVerdadeira");
+        }
+    }
 
+    public IEnumerator DeixarVerdadeira()
+    {
+        yield return new WaitForSeconds(tempoDeEsperaaa);
+        recebeuDano = true;
+        materialPlayer.color = corInicial;
+        Debug.Log(recebeuDano);
     }
 
     public void Dano2()

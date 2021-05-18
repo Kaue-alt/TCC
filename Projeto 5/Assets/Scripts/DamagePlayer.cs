@@ -10,9 +10,10 @@ public class DamagePlayer : MonoBehaviour
     public float damage1;
     public GameObject enemy;
     public CapsuleCollider colliderArma;
-    public bool recebeuDano;
-    //Teste para alterar cor do player ao receber dano
 
+
+    //Teste para alterar cor do player ao receber dano
+    public bool recebeuDano;
     public Color corInicial;
     Material materialPlayer;
 
@@ -37,8 +38,13 @@ public class DamagePlayer : MonoBehaviour
         recebeuDano = true;
         enem.GetComponent<vidaEnemy>().life -= damage1; // REFERENCIA O OBJETO QUE FOI CRIADO A PARTIR DO COLLIDER DO INIMIGO
 
-        //Teste para alterar cor do player ao receber dano
-        if (recebeuDano == true)
+        //Teste para alterar cor do player ao receber dano       
+        if (recebeuDano == false)
+        {
+            materialPlayer.color = corInicial;
+            Debug.Log("corNORMAL");
+        }
+        else
         {
             materialPlayer.color = Color.red;
             recebeuDano = false;
@@ -46,22 +52,13 @@ public class DamagePlayer : MonoBehaviour
             Debug.Log("corVERMELHA");
             StartCoroutine("DeixarVerdadeira");
         }
-        if (recebeuDano == false)
-        {
-            materialPlayer.color = Color.blue;  //corInicial;
-            Debug.Log("corNORMAL");
-        }
-        if (recebeuDano == false)
-        {
-            //materialPlayer.color = Color.red;
-            Debug.Log("corVERMELHA22");
-        }
     }
 
     public IEnumerator DeixarVerdadeira()
     {
         yield return new WaitForSeconds(tempoDeEsperaaa);
         recebeuDano = true;
+        materialPlayer.color = corInicial;
         Debug.Log(recebeuDano);
     }
    
