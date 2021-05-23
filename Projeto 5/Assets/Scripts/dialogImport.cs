@@ -18,10 +18,10 @@ public class dialogImport : MonoBehaviour
 
     void Start()
     {
-
         combosScript = FindObjectOfType<Combos>();
         movScript = FindObjectOfType<Movimentacao>();
 
+        dialogBox.SetActive(true);
         combosScript.enabled = false;
         movScript.enabled = false;
 
@@ -38,11 +38,14 @@ public class dialogImport : MonoBehaviour
 
     void Update()
     {
-        showText.text = textLines[currentLine];
-
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (currentLine <= lastLine)
         {
-            currentLine += 1;
+            showText.text = textLines[currentLine];
+
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            {
+                currentLine += 1;
+            }
         }
 
         if(currentLine > lastLine)

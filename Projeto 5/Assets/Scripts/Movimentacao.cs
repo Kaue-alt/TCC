@@ -107,7 +107,6 @@ public class Movimentacao : MonoBehaviour
                 this.animator.SetBool("bIdle", false);
                 this.animator.SetBool("bJump", true);
 
-        
         }
         else
         {
@@ -118,7 +117,16 @@ public class Movimentacao : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (!isGrounded && !this.animator.GetBool("bJump"))
+        {
+            this.animator.SetBool("bFall", true);
+        }
+        else
+        {
+            this.animator.SetBool("bFall", false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift)) // REALIZANDO DASH
         {
             transform.position += transform.forward * Time.deltaTime*dashSpeed;
         }

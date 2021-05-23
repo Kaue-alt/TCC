@@ -22,6 +22,9 @@ public class DamageEnemy : MonoBehaviour
     public Color corInicial;
     Material materialPlayer;
 
+    public GameObject objSec;
+    Material matSec;
+
     public float tempoDeEsperaaa = 2f;
 
     void Start()
@@ -34,7 +37,10 @@ public class DamageEnemy : MonoBehaviour
         recebeuDano = false;
         Debug.Log(recebeuDano);
         materialPlayer = GetComponent<MeshRenderer>().material;
+        matSec = objSec.GetComponent<MeshRenderer>().material;
+
         materialPlayer.color = corInicial;
+        matSec.color = corInicial;
     }
 
     void Update()
@@ -54,7 +60,8 @@ public class DamageEnemy : MonoBehaviour
         }
         else
         {
-            materialPlayer.color = Color.red;
+            materialPlayer.SetColor("_Color", Color.red);
+            matSec.SetColor("_Color", Color.red);
             recebeuDano = false;
             Debug.Log(recebeuDano);
             Debug.Log("corVERMELHA");
@@ -67,6 +74,7 @@ public class DamageEnemy : MonoBehaviour
         yield return new WaitForSeconds(tempoDeEsperaaa);
         recebeuDano = true;
         materialPlayer.color = corInicial;
+        matSec.color = corInicial;
         Debug.Log(recebeuDano);
     }
 

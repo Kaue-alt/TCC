@@ -41,7 +41,7 @@ public class DamagePlayer : MonoBehaviour
         //Teste para alterar cor do player ao receber dano       
         if (recebeuDano == false)
         {
-            materialPlayer.color = corInicial;
+            //materialPlayer.color = corInicial;
             Debug.Log("corNORMAL");
         }
         else
