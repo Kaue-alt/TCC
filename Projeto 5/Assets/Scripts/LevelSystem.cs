@@ -1,32 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelSystem : MonoBehaviour
 {
-    private int level;
-    private int currentExp;
-    private int expNextLevel;
+    public int level=1;
+    public float experience { get; private set; }
 
-    public LevelSystem()
+    public Text levelText;
+
+    public Image expBar;
+
+ public static int ExpNeedToLvlUp(int currentLevel)
     {
-        level = 0;
-        currentExp = 0;
-        expNextLevel = 100;
-       
+        if (currentLevel == 0)
+            return 0;
+
+        return (currentLevel * currentLevel + currentLevel) * 5;
     }
-    public void AddExp(int amount)
+
+ public void SetExperience(float exp)
     {
-        currentExp += amount;
-        if (currentExp >= expNextLevel)
+        experience += exp;
+
+        float expNeeded = ExpNeedToLvlUp(level);
+        float previousExperience = ExpNeedToLvlUp(level - 1);
+
+        if (experience >= expNeeded)
         {
-            level++;
-            currentExp -= expNextLevel;
+            LevelUp();
+            expNeeded = ExpNeedToLvlUp(level);
+            previousExperience = ExpNeedToLvlUp(level - 1);
         }
-    }
 
-    public int LevelNumb()
+        expBar.fillAmount = (experience - previousExperience) / (expNeeded - previousExperience);
+
+        if (expBar.fillAmount == 1)
+        {
+            expBar.fillAmount = 0;
+        }
+    } 
+
+    public void LevelUp()
     {
-        return level;
+        level++;
+        levelText.text = level.ToString("");
     }
 }

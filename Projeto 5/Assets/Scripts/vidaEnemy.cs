@@ -8,6 +8,14 @@ public class vidaEnemy : MonoBehaviour
 
     public AudioSource audioSourceMonster;
 
+    private GameObject player;
+    public float expValue;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     void Update()
     {
         if (life <= 0f)
@@ -15,6 +23,7 @@ public class vidaEnemy : MonoBehaviour
             Debug.Log("Inimigo Morto");
             Destroy(gameObject);
             playAudio();
+            player.GetComponent<LevelSystem>().SetExperience(expValue);
         }
         void playAudio()
         {
