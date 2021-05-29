@@ -68,7 +68,7 @@ public class DamagePlayer : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             colliderArma.isTrigger = true;
         }
@@ -76,7 +76,7 @@ public class DamagePlayer : MonoBehaviour
         {
             colliderArma.isTrigger = false;
         }
-
+        */
         //Teste para alterar cor do player ao receber dano
     }
 

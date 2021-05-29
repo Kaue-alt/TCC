@@ -429,6 +429,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2751729059570558420, guid: 40357f4120c249043ab6b67da39e59f5,
         type: 3}
+      propertyPath: objSec
+      value: 
+      objectReference: {fileID: 1434443901}
+    - target: {fileID: 2751729059570558420, guid: 40357f4120c249043ab6b67da39e59f5,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 954279032}
@@ -5013,6 +5018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundAt1: {fileID: 1063845607}
   soundAt3: {fileID: 2077608719}
+  colliderArma: {fileID: 1063845608}
   canClick: 0
 --- !u!114 &954279036
 MonoBehaviour:
@@ -7436,6 +7442,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8d6a2d03634c97843ab5647d1af9223b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3ad91b50d58bcd4b9a3b57c9c0de2aa, type: 3}
+--- !u!1 &1434443901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5567567407113386993, guid: 40357f4120c249043ab6b67da39e59f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 94295965}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1474456019 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b3ad91b50d58bcd4b9a3b57c9c0de2aa,

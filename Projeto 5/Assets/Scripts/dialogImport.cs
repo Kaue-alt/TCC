@@ -21,10 +21,6 @@ public class dialogImport : MonoBehaviour
         combosScript = FindObjectOfType<Combos>();
         movScript = FindObjectOfType<Movimentacao>();
 
-        dialogBox.SetActive(true);
-        combosScript.enabled = false;
-        movScript.enabled = false;
-
         if (txtFile != null)
         {
             textLines = (txtFile.text.Split('\n'));
@@ -38,6 +34,14 @@ public class dialogImport : MonoBehaviour
 
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            dialogBox.SetActive(true);
+            combosScript.enabled = false;
+            movScript.enabled = false;
+        }
+
         if (currentLine <= lastLine)
         {
             showText.text = textLines[currentLine];

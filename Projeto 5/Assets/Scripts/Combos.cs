@@ -9,6 +9,8 @@ public class Combos : MonoBehaviour
 
     public GameObject soundAt1, soundAt3;
 
+    public CapsuleCollider colliderArma;
+
     public static int clicks;
     public bool canClick;
 
@@ -95,5 +97,15 @@ public class Combos : MonoBehaviour
             canClick = true;
             clicks = 0;
         }
+    }
+
+    public void ativarCol()
+    {
+        colliderArma.enabled = true;
+    }
+
+    public void desativarCol()
+    {
+        colliderArma.enabled = false;
     }
 }

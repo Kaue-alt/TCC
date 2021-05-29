@@ -37,7 +37,7 @@ public class DamageEnemy : MonoBehaviour
         recebeuDano = false;
         Debug.Log(recebeuDano);
         materialPlayer = GetComponent<MeshRenderer>().material;
-        matSec = objSec.GetComponent<MeshRenderer>().material;
+        matSec = objSec.GetComponent<SkinnedMeshRenderer>().material;
 
         materialPlayer.color = corInicial;
         matSec.color = corInicial;
