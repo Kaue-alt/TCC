@@ -18,15 +18,15 @@ public class TransicaoCena : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision col)
+    void OnCollisionStay(Collision col)
     {
         switch (col.gameObject.tag)
         {
             case "Fase2":
                 Debug.Log("Colidiu");
-                if (Input.GetKeyDown(KeyCode.Return))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
-                    SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+                    SceneManager.LoadScene("FaseEsgoto", LoadSceneMode.Single);
                 }
                 break;
         }
