@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class DamageEnemy : MonoBehaviour
 {
     vidaPlayer vidaPlayerScript;
+    feedbackPlayer fbPlayerScript;
 
     public float damage1;
     public float damage2;
@@ -17,30 +18,12 @@ public class DamageEnemy : MonoBehaviour
     public float waitAttack;
     private float speedEnemy;
 
-    //Teste para alterar cor do player ao receber dano
-    public bool recebeuDano;
-    public Color corInicial;
-    Material materialPlayer;
-
-    public GameObject objSec;
-    Material matSec;
-
-    public float tempoDeEsperaaa = 2f;
-
     void Start()
     {
         vidaPlayerScript = FindObjectOfType<vidaPlayer>(); // CHAMANDO O SCRIPT "vidaPlayer"
+        fbPlayerScript = FindObjectOfType<feedbackPlayer>();
 
         speedEnemy = GetComponent<NavMeshAgent>().speed;
-
-        //Teste para alterar cor do player ao receber dano
-        recebeuDano = false;
-        Debug.Log(recebeuDano);
-        materialPlayer = GetComponent<MeshRenderer>().material;
-        matSec = objSec.GetComponent<SkinnedMeshRenderer>().material;
-
-        materialPlayer.color = corInicial;
-        matSec.color = corInicial;
     }
 
     void Update()
@@ -53,38 +36,18 @@ public class DamageEnemy : MonoBehaviour
     {
         vidaPlayerScript.life -= damage1;
 
-        if (recebeuDano == false)
-        {
-            materialPlayer.color = corInicial;
-            Debug.Log("corNORMAL");
-        }
-        else
-        {
-            materialPlayer.SetColor("_Color", Color.red);
-            matSec.SetColor("_Color", Color.red);
-            recebeuDano = false;
-            Debug.Log(recebeuDano);
-            Debug.Log("corVERMELHA");
-            StartCoroutine("DeixarVerdadeira");
-        }
-    }
-
-    public IEnumerator DeixarVerdadeira()
-    {
-        yield return new WaitForSeconds(tempoDeEsperaaa);
-        recebeuDano = true;
-        materialPlayer.color = corInicial;
-        matSec.color = corInicial;
-        Debug.Log(recebeuDano);
+        fbPlayerScript.damage = true;
     }
 
     public void Dano2()
     {
         vidaPlayerScript.life -= damage2;
 
+        fbPlayerScript.damage = true;
     }
+
     // -----------------------------------------------------------------------------------------------
-    
+
     void OnCollisionEnter(Collision collider) // O DANO É CAUSADO AO INIMIGO COLIDIR COM O JOGADOR
     {
         if (collider.gameObject.tag == "Player")
