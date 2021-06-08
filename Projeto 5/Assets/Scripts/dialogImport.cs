@@ -32,15 +32,25 @@ public class dialogImport : MonoBehaviour
         }
     }
 
-    void Update()
+    void OnTriggerStay(Collider other)
     {
-
-        if (Input.GetKeyDown(KeyCode.F))
+        if (other.CompareTag("Player"))
         {
+;            Debug.Log("funfo");
             dialogBox.SetActive(true);
             combosScript.enabled = false;
             movScript.enabled = false;
         }
+    }
+
+    void Update()
+    {
+        //if (Input.GetKeyDown(KeyCode.F))
+       // {
+           // dialogBox.SetActive(true);
+          //  combosScript.enabled = false;
+           // movScript.enabled = false;
+       // }
 
         if (currentLine <= lastLine)
         {
@@ -52,7 +62,7 @@ public class dialogImport : MonoBehaviour
             }
         }
 
-        if(currentLine > lastLine)
+        if (currentLine > lastLine)
         {
             dialogBox.SetActive(false);
             movScript.enabled = true;
