@@ -12,12 +12,10 @@ public class DamagePlayer : MonoBehaviour
     //public GameObject enemy;
     public CapsuleCollider colliderArma;
 
-
     void Start()
     {
         vidaEnemyScript = FindObjectOfType<vidaEnemy>(); // CHAMANDO O SCRIPT "vidaEnemy"
         fbEnemyScript = FindObjectOfType<FeedbackEnemy>(); // CHAMANDO O SCRIPT "FeedbackEnemy"
-        colliderArma = GetComponent<CapsuleCollider>();
     }
 
 

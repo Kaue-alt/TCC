@@ -9,14 +9,18 @@ public class pauseInGame : MonoBehaviour
 
     private bool paused = false;
 
+    public GameObject telaPause, hud;
+
     void Start()
     {
-        GetComponent<Canvas>().enabled = false;
+        telaPause.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
-        //Pausando com Esc
+        //Pausando/Despausando com Esc
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             if (!paused)
@@ -26,8 +30,10 @@ public class pauseInGame : MonoBehaviour
             }
             else
             {
+                Cursor.lockState = CursorLockMode.Locked;
                 Time.timeScale = 1;
-                GetComponent<Canvas>().enabled = false;
+                telaPause.SetActive(false);
+                hud.SetActive(true);
                 paused = false;
             }
         }
@@ -35,22 +41,27 @@ public class pauseInGame : MonoBehaviour
         //Ativando Menu de pause
         if (paused)
         {
-            GetComponent<Canvas>().enabled = true;
+            telaPause.SetActive(true);
+            hud.SetActive(false);
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
     //Despausando com o botão no menu
     public void OnClickButtonBackToGame()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
-        GetComponent<Canvas>().enabled = false;
+        telaPause.SetActive(false);
+        hud.SetActive(true);
         paused = false;
     }
 
     public void OnClickButtonBackToMenu()
     {
+        Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 1;
-        GetComponent<Canvas>().enabled = false;
+        telaPause.SetActive(false);
         paused = false;
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }

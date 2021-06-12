@@ -22,7 +22,7 @@ public class GameOver : MonoBehaviour
 
     public void openTelaGameOver()
     {
-        
+        Cursor.lockState = CursorLockMode.None;
         TelaGameOver.SetActive(true);
     }
 
@@ -35,6 +35,7 @@ public class GameOver : MonoBehaviour
     {
         //TelaGameOver.SetActive(false);
         //vidaPlayerScript.Reviver();
+        Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 }
