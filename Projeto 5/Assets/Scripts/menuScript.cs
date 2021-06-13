@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class menuScript : MonoBehaviour
 {
+    public Fade fadeScript;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -13,8 +15,8 @@ public class menuScript : MonoBehaviour
     //Clique no botão para alterar cena para jogo
     public void OnClickButtonPlay()
     {
+        fadeScript.Transition("Tutorial");
         Cursor.lockState = CursorLockMode.Locked;
-        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 
     //Clique no botão para alterar cena para tela de opções

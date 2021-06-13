@@ -11,6 +11,8 @@ public class pauseInGame : MonoBehaviour
 
     public GameObject telaPause, hud;
 
+    public Fade fadeScript;
+
     void Start()
     {
         telaPause.SetActive(false);
@@ -63,6 +65,6 @@ public class pauseInGame : MonoBehaviour
         Time.timeScale = 1;
         telaPause.SetActive(false);
         paused = false;
-        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+        fadeScript.Transition("Menu");
     }
 }

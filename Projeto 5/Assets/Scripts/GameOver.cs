@@ -7,7 +7,8 @@ public class GameOver : MonoBehaviour
 {
     vidaPlayer vidaPlayerScript;
     public GameObject TelaGameOver;
-    
+    public Fade fadeScript;
+
 
     void Start()
     {
@@ -28,14 +29,14 @@ public class GameOver : MonoBehaviour
 
     public void goMainMenu()
     {
-        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+        fadeScript.Transition("Menu");
     }
 
     public void Restart()
     {
         //TelaGameOver.SetActive(false);
         //vidaPlayerScript.Reviver();
+        fadeScript.Transition("Tutorial");
         Cursor.lockState = CursorLockMode.Locked;
-        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 }

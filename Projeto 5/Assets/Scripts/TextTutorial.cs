@@ -10,20 +10,24 @@ public class TextTutorial : MonoBehaviour
     public Text textoAndar;
     public Text textoPular;
     public Text textoAtirar;
+    public Text textoInteragir;
 
     public GameObject _textoAndar;
     public GameObject _textoPular;
     public GameObject _textoAtirar;
+    public GameObject _textoInteragir;
 
     void Start()
     {
         textoAndar.enabled = false;
         textoAtirar.enabled = false;
         textoPular.enabled = false;
+        textoInteragir.enabled = false;
 
         _textoAndar.SetActive(true);
         _textoAtirar.SetActive(true);
         _textoPular.SetActive(true);
+        _textoInteragir.SetActive(true);
 
         Colisores = transform.GetComponentsInChildren<Collider>();
     }
@@ -75,6 +79,18 @@ public class TextTutorial : MonoBehaviour
             }
             yield return new WaitForSeconds(tempo);
             textoPular.enabled = false;
+        }
+
+        textoInteragir.enabled = true;
+
+        if (textoInteragir.enabled == true)
+        {
+            foreach (Collider coll in Colisores)
+            {
+                coll.enabled = false;
+            }
+            yield return new WaitForSeconds(tempo);
+            textoInteragir.enabled = false;
         }
 
         Destroy(gameObject);
