@@ -14,19 +14,31 @@ public class Combos : MonoBehaviour
     public static int clicks;
     public bool canClick;
 
+    Movimentacao movScript;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         clicks = 0;
         canClick = true;
+
+        movScript = FindObjectOfType<Movimentacao>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Run") || animator.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("standUp"))
+        {
+            movScript.enabled = false;
+        }
+        else
+        {
+            movScript.enabled = true;
+        }
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Run") || animator.GetCurrentAnimatorStateInfo(0).IsName("Jump") || animator.GetCurrentAnimatorStateInfo(0).IsName("standUp"))
         {
             canClick = false;
         }

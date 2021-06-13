@@ -9,14 +9,11 @@ public class Movimentacao : MonoBehaviour
     [SerializeField]
     private float doubleJumpMultiplier = 0.5f;
     [SerializeField]
-    //private float gravity = 9.81f;
     private bool canDoubleJump = false;
-    //private CharacterController controller;
     private float distToGround;
     private bool isGrounded;
     public float radius;
     private float horizontal;
-    //private float vertical;
     private bool playingRunAudio = false;
 
     public LayerMask layer;
@@ -36,13 +33,10 @@ public class Movimentacao : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         col = GetComponent<CapsuleCollider>();
         this.animator = GetComponent<Animator>();
-        //controller = GetComponent<CharacterController>();
         distToGround = col.bounds.extents.y;
     }
 
-    
 
-    // Update is called once per frame
     void Update()
     {
         
