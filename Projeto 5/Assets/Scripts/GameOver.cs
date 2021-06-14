@@ -29,13 +29,15 @@ public class GameOver : MonoBehaviour
 
     public void goMainMenu()
     {
+        TelaGameOver.SetActive(false);
         fadeScript.Transition("Menu");
+
     }
 
     public void Restart()
     {
-        //TelaGameOver.SetActive(false);
-        //vidaPlayerScript.Reviver();
+        TelaGameOver.SetActive(false);
+        vidaPlayerScript.Reviver();
         fadeScript.Transition("Tutorial");
         Cursor.lockState = CursorLockMode.Locked;
     }

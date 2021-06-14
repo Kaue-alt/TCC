@@ -11,6 +11,8 @@ public class Combos : MonoBehaviour
 
     public CapsuleCollider colliderArma;
 
+    public CapsuleCollider colliderArma2;
+
     public static int clicks;
     public bool canClick;
 
@@ -114,10 +116,12 @@ public class Combos : MonoBehaviour
     public void ativarCol()
     {
         colliderArma.enabled = true;
+        colliderArma2.enabled = true;
     }
 
     public void desativarCol()
     {
         colliderArma.enabled = false;
+        colliderArma2.enabled = false;
     }
 }

@@ -19,7 +19,8 @@ public class Fade : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneName,LoadSceneMode.Single);
+
     }
    
 }
