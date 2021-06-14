@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class TransicaoCena : MonoBehaviour
 {
+    public GameObject textoIntereacao;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +21,10 @@ public class TransicaoCena : MonoBehaviour
 
     void OnCollisionStay(Collision col)
     {
+        //textoIntereacao.SetActive(true);
         switch (col.gameObject.tag)
         {
             case "Fase2":
-                Debug.Log("Colidiu");
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     SceneManager.LoadScene("FaseEsgoto", LoadSceneMode.Single);
