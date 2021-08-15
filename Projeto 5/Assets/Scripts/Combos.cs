@@ -40,7 +40,7 @@ public class Combos : MonoBehaviour
             movScript.enabled = true;
         }
 
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Run") || animator.GetCurrentAnimatorStateInfo(0).IsName("Jump") || animator.GetCurrentAnimatorStateInfo(0).IsName("standUp"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jump") || animator.GetCurrentAnimatorStateInfo(0).IsName("standUp"))
         {
             canClick = false;
         }
@@ -49,6 +49,14 @@ public class Combos : MonoBehaviour
             canClick = true;
         }
 
+        if(animator.GetCurrentAnimatorStateInfo(0).IsTag("Attacking"))
+        {
+            movScript.enabled = false;
+        }
+        else
+        {
+            movScript.enabled = true;
+        }
 
         if (Input.GetMouseButtonDown(0))
         {

@@ -12,7 +12,7 @@ public class DamageEnemy : MonoBehaviour
     public float damage1;
     public float damage2;
     private int aleatorio;
-    private bool canDmg = true;
+    private bool canDmg = false;
     public GameObject player;
 
     public float waitAttack;
@@ -52,6 +52,38 @@ public class DamageEnemy : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
+            GetComponent<NavMeshAgent>().isStopped = true;
+            GetComponent<NavMeshAgent>().speed = 0;
+
+            aleatorio = Random.Range(0, 2); // É FEITO UM SORTEIO DE QUAL ATAQUE O INIMIGO IRÁ USAR
+
+            if (aleatorio == 0) // CONDIÇÃO SE ATAQUE 1
+            {
+                GetComponent<Animator>().SetInteger("Attack", 1); // ATIVA ANIMAÇÃO DO ATAQUE 1
+
+                if (collider.gameObject.tag == "Player" && canDmg) // LIMITA UM DANO CAUSADO POR ANIMAÇÃO DE ATAQUE
+                {
+                    Dano1();
+                    Debug.Log("Recebeu dano1");
+
+                    canDmg = false;
+                    GetComponent<Animator>().SetInteger("Attack", 0);
+                }
+            }
+            else // CONDIÇÃO SE ATAQUE 2
+            {
+                GetComponent<Animator>().SetInteger("Attack", 2); // ATIVA ANIMAÇÃO DO ATAQUE 2
+
+                if (collider.gameObject.tag == "Player" && canDmg) // LIMITA UM DANO CAUSADO POR ANIMAÇÃO DE ATAQUE
+                {
+                    Dano2();
+                    Debug.Log("Recebeu dano2");
+
+                    canDmg = false;
+                    GetComponent<Animator>().SetInteger("Attack", 0);
+                }
+            }
+
             StartCoroutine(travarMov(waitAttack));
         }
         else
@@ -62,36 +94,6 @@ public class DamageEnemy : MonoBehaviour
 
     IEnumerator travarMov(float tempo)
     {
-        GetComponent<NavMeshAgent>().isStopped = true;
-        GetComponent<NavMeshAgent>().speed = 0;
-
-        aleatorio = Random.Range(0, 2); // É FEITO UM SORTEIO DE QUAL ATAQUE O INIMIGO IRÁ USAR
-
-            if (aleatorio == 0) // CONDIÇÃO SE ATAQUE 1
-            {
-                GetComponent<Animator>().SetInteger("Attack", 1); // ATIVA ANIMAÇÃO DO ATAQUE 1
-
-                if (canDmg) // LIMITA UM DANO CAUSADO POR ANIMAÇÃO DE ATAQUE
-                {
-                    Dano1();
-                    Debug.Log("Recebeu dano1");
-
-                    canDmg = false;
-                }
-            }
-            else // CONDIÇÃO SE ATAQUE 2
-            {
-                GetComponent<Animator>().SetInteger("Attack", 2); // ATIVA ANIMAÇÃO DO ATAQUE 2
-
-                if (canDmg) // LIMITA UM DANO CAUSADO POR ANIMAÇÃO DE ATAQUE
-                {
-                    Dano2();
-                    Debug.Log("Recebeu dano2");
-
-                    canDmg = false;
-                }
-            }
-
         yield return new WaitForSeconds(tempo);
         GetComponent<NavMeshAgent>().isStopped = false;
         GetComponent<NavMeshAgent>().speed = speedEnemy;
@@ -100,6 +102,10 @@ public class DamageEnemy : MonoBehaviour
     public void liberarDano() // LIBERA INIMIGO PARA CAUSAR DANO NOVAMENTE, NO FIM DA ANIMAÇÃO
     {
         canDmg = true;
-        GetComponent<Animator>().SetInteger("Attack", 0);
+    }
+
+    public void bloquearDano() // LIMITA INIMIGO PARA CAUSAR DANO SOMENTE DURANTE O ATAQUE
+    {
+        canDmg = false;
     }
 }
