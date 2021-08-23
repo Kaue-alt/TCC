@@ -7,51 +7,60 @@ public class dashMove : MonoBehaviour
     private Rigidbody rb;
     private int direction;
     public float dashSpeed;
-    public float dashTime;
-    public float startDashTime;
+    public float cooldown;
+    public bool canDash = true;
+    private Animator animator;
+
+    Combos combosScript;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        dashTime = startDashTime;
 
+        this.animator = GetComponent<Animator>();
+        combosScript = FindObjectOfType<Combos>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (direction == 0)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKey(KeyCode.D) && canDash) // REALIZANDO DASH
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                direction = 1;
+            this.animator.SetBool("bDash", true);
+            transform.position += Vector3.right * dashSpeed;
 
-            }
-            if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                direction = 2;
-
-            }
-
-        }else if (dashTime <= 0)
-        {
-            direction = 0;
-            dashTime = startDashTime;
-            rb.velocity = Vector2.zero;
+            StartCoroutine(esperarCD(cooldown));
         }
-        else
-        {
-            dashTime -= Time.deltaTime;
 
-            if (direction == 1)
-            {
-                rb.velocity = Vector2.left * dashSpeed;
-            }
-            else if (direction == 2)
-            {
-                rb.velocity = Vector2.right * dashSpeed;
-            }
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKey(KeyCode.A) && canDash) // REALIZANDO DASH INVERTIDO
+        {
+            this.animator.SetBool("bDash", true);
+            transform.position += Vector3.left * dashSpeed;
+
+            StartCoroutine(esperarCD(cooldown));
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash) // REALIZANDO DASH
+        {
+            this.animator.SetBool("bDash", true);
+            transform.position += transform.forward * dashSpeed;
+
+            StartCoroutine(esperarCD(cooldown));
+        }
+    }
+
+    IEnumerator esperarCD(float tempo)
+    {
+        animator.SetInteger("Attack", 0);
+        combosScript.canClick = true;
+        combosScript.clicks = 0;
+        combosScript.colliderArma.enabled = false;
+        combosScript.colliderArma2.enabled = false;
+
+        canDash = false;
+
+        yield return new WaitForSeconds(tempo);
+        canDash = true;
     }
 }

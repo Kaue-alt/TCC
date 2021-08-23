@@ -13,7 +13,7 @@ public class Combos : MonoBehaviour
 
     public CapsuleCollider colliderArma2;
 
-    public static int clicks;
+    public int clicks;
     public bool canClick;
 
     Movimentacao movScript;

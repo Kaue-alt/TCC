@@ -198,12 +198,12 @@ PrefabInstance:
     - target: {fileID: -3274006528333456403, guid: ff9cc75e9c5206540891f1949e558a04,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.19
+      value: 15.2
       objectReference: {fileID: 0}
     - target: {fileID: -3274006528333456403, guid: ff9cc75e9c5206540891f1949e558a04,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: -3274006528333456403, guid: ff9cc75e9c5206540891f1949e558a04,
         type: 3}
@@ -6889,6 +6889,7 @@ MonoBehaviour:
   soundAt3: {fileID: 2077608719}
   colliderArma: {fileID: 1063845608}
   colliderArma2: {fileID: 291478163}
+  clicks: 0
   canClick: 0
 --- !u!114 &954279036
 MonoBehaviour:
@@ -7257,6 +7258,21 @@ MonoBehaviour:
   objSet: {fileID: 786521109}
   tempoDeEspera: 0.5
   damage: 0
+--- !u!114 &954279048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954279032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae6922d79a97734db59fec4b4e338b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 2.5
+  cooldown: 0.75
+  canDash: 1
 --- !u!1 &969629479
 GameObject:
   m_ObjectHideFlags: 0

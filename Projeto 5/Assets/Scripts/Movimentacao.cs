@@ -56,6 +56,7 @@ public class Movimentacao : MonoBehaviour
             this.animator.SetBool("bRun", false);
             this.animator.SetBool("bIdle", true);
             this.animator.SetBool("bJump", false);
+            this.animator.SetBool("bDash", false);
         }
 
         // Espelha o personagem no sentido que está indo quando se movimentar
@@ -65,6 +66,7 @@ public class Movimentacao : MonoBehaviour
             this.animator.SetBool("bRun", true);
             this.animator.SetBool("bIdle", false);
             this.animator.SetBool("bJump", false);
+            this.animator.SetBool("bDash", false);
         }
         else if (Input.GetAxis("Horizontal") < 0)
         {
@@ -72,6 +74,7 @@ public class Movimentacao : MonoBehaviour
             this.animator.SetBool("bRun", true);
             this.animator.SetBool("bIdle", false);
             this.animator.SetBool("bJump", false);
+            this.animator.SetBool("bDash", false);
         }
 
         //Colocando som de corrida atrelado à animação
@@ -100,6 +103,7 @@ public class Movimentacao : MonoBehaviour
                 this.animator.SetBool("bRun", false);
                 this.animator.SetBool("bIdle", false);
                 this.animator.SetBool("bJump", true);
+                this.animator.SetBool("bDash", false);
 
         }
         else
@@ -120,10 +124,12 @@ public class Movimentacao : MonoBehaviour
             this.animator.SetBool("bFall", false);
         }
 
+        /*
         if (Input.GetKeyDown(KeyCode.LeftShift)) // REALIZANDO DASH
         {
             transform.position += transform.forward * Time.deltaTime*dashSpeed;
         }
+        */
     }
 
 
