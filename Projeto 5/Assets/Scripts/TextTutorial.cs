@@ -11,11 +11,14 @@ public class TextTutorial : MonoBehaviour
     public Text textoPular;
     public Text textoAtirar;
     public Text textoInteragir;
+    public Image tutorialBackground;
+    
 
     public GameObject _textoAndar;
     public GameObject _textoPular;
     public GameObject _textoAtirar;
     public GameObject _textoInteragir;
+    public GameObject _tutorialBackground;
 
     void Start()
     {
@@ -23,11 +26,13 @@ public class TextTutorial : MonoBehaviour
         textoAtirar.enabled = false;
         textoPular.enabled = false;
         textoInteragir.enabled = false;
+        tutorialBackground.enabled = false;
 
         _textoAndar.SetActive(true);
         _textoAtirar.SetActive(true);
         _textoPular.SetActive(true);
         _textoInteragir.SetActive(true);
+        _tutorialBackground.SetActive(true);
 
         Colisores = transform.GetComponentsInChildren<Collider>();
     }
@@ -46,6 +51,7 @@ public class TextTutorial : MonoBehaviour
     IEnumerator EsperarTempo(float tempo)
     {
         textoAndar.enabled = true;
+        tutorialBackground.enabled = true;
 
         if (textoAndar.enabled == true)
         {
@@ -92,6 +98,7 @@ public class TextTutorial : MonoBehaviour
             yield return new WaitForSeconds(tempo);
             textoInteragir.enabled = false;
         }
+        tutorialBackground.enabled = false;
 
         Destroy(gameObject);
     }
