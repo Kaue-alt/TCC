@@ -15,13 +15,13 @@ public class vidaPlayer : MonoBehaviour
     //Respawn
     public GameObject player;
     public GameObject reset;
+    public int death = 0;
 
     public AudioSource audioSourceDeath;
 
     void Start()
     {
         GameOverScript = FindObjectOfType<GameOver>();
-        
     }
 
     
@@ -42,10 +42,13 @@ public class vidaPlayer : MonoBehaviour
         {
             audioSourceDeath.Play();
             Debug.Log("Game Over");
-            Time.timeScale = 0;
-
-            GameOverScript.openTelaGameOver();
+            death ++;
             //player.transform.position = reset.transform.position;          
+        }
+
+        if (death == 1)
+        {
+            GameOverScript.openTelaGameOver();
         }
     }
 

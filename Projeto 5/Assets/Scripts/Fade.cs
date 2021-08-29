@@ -17,10 +17,9 @@ public class Fade : MonoBehaviour
     {
         transitionAnim.SetTrigger("Start");
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
         SceneManager.LoadScene(sceneName,LoadSceneMode.Single);
-
     }
    
 }

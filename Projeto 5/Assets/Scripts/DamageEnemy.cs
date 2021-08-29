@@ -8,6 +8,7 @@ public class DamageEnemy : MonoBehaviour
 {
     vidaPlayer vidaPlayerScript;
     feedbackPlayer fbPlayerScript;
+    KnockBack kbScript;
 
     public float damage1;
     public float damage2;
@@ -22,6 +23,7 @@ public class DamageEnemy : MonoBehaviour
     {
         vidaPlayerScript = FindObjectOfType<vidaPlayer>(); // CHAMANDO O SCRIPT "vidaPlayer"
         fbPlayerScript = FindObjectOfType<feedbackPlayer>();
+        kbScript = FindObjectOfType<KnockBack>();
 
         speedEnemy = GetComponent<NavMeshAgent>().speed;
     }
@@ -36,6 +38,7 @@ public class DamageEnemy : MonoBehaviour
     {
         vidaPlayerScript.life -= damage1;
 
+        kbScript.active = true;
         fbPlayerScript.damage = true;
     }
 
@@ -43,12 +46,13 @@ public class DamageEnemy : MonoBehaviour
     {
         vidaPlayerScript.life -= damage2;
 
+        kbScript.active = true;
         fbPlayerScript.damage = true;
     }
 
     // -----------------------------------------------------------------------------------------------
 
-    void OnCollisionEnter(Collision collider) // O DANO É CAUSADO AO INIMIGO COLIDIR COM O JOGADOR
+    void OnCollisionStay(Collision collider) // O DANO É CAUSADO AO INIMIGO COLIDIR COM O JOGADOR
     {
         if (collider.gameObject.tag == "Player")
         {

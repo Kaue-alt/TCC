@@ -8,6 +8,7 @@ public class KnockBack : MonoBehaviour
 
     private Animator anim;
     private bool attacking = false;
+    public bool active = false;
     
     void Start()
     {
@@ -17,6 +18,7 @@ public class KnockBack : MonoBehaviour
     
     void Update()
     {
+        /*
         if(anim.GetInteger("Attack") == 0)
         {
             attacking = false;
@@ -25,18 +27,21 @@ public class KnockBack : MonoBehaviour
         {
             attacking = true;
         }
+        */
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         Rigidbody rb = collision.collider.GetComponent<Rigidbody>();
 
-        if(rb != null && attacking)
+        if(rb != null && active)
         {
             Vector3 direction = collision.transform.position - transform.position;
             direction.y = 0;
 
             rb.AddForce(direction.normalized * knockbackStrength, ForceMode.Impulse);
+
+            active = false;
         }
     }
 }

@@ -23,22 +23,25 @@ public class GameOver : MonoBehaviour
 
     public void openTelaGameOver()
     {
-        Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 0;
         TelaGameOver.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void goMainMenu()
     {
-        TelaGameOver.SetActive(false);
+        Time.timeScale = 1;
         fadeScript.Transition("Menu");
-
+        TelaGameOver.SetActive(false);
     }
 
     public void Restart()
     {
-        TelaGameOver.SetActive(false);
         vidaPlayerScript.Reviver();
         fadeScript.Transition("Tutorial");
+        TelaGameOver.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+
+        vidaPlayerScript.death = 0;
     }
 }
