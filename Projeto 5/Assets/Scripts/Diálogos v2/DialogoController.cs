@@ -21,6 +21,8 @@ public class DialogoController : MonoBehaviour
 
     public Animator animator;
 
+    public AudioSource runSound;
+
     public GameObject textoNPC, IconeCrianca, IconePlayer;
 
     // Start is called before the first frame update
@@ -85,6 +87,7 @@ public class DialogoController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         movScript.enabled = false;
         combosScript.enabled = false;
+        runSound.Stop();
         animator.SetBool("bIdle", true);
         animator.SetBool("bRun", false);
         falas = fala;

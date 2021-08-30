@@ -13,7 +13,7 @@ public class DamageEnemy : MonoBehaviour
     public float damage1;
     public float damage2;
     private int aleatorio;
-    private bool canDmg = false;
+    public bool canDmg = false;
     public GameObject player;
 
     public float waitAttack;
@@ -23,7 +23,7 @@ public class DamageEnemy : MonoBehaviour
     {
         vidaPlayerScript = FindObjectOfType<vidaPlayer>(); // CHAMANDO O SCRIPT "vidaPlayer"
         fbPlayerScript = FindObjectOfType<feedbackPlayer>();
-        kbScript = FindObjectOfType<KnockBack>();
+        kbScript = GetComponent<KnockBack>();
 
         speedEnemy = GetComponent<NavMeshAgent>().speed;
     }
@@ -69,6 +69,7 @@ public class DamageEnemy : MonoBehaviour
                 {
                     Dano1();
                     Debug.Log("Recebeu dano1");
+                    kbScript.active = true;
 
                     canDmg = false;
                     GetComponent<Animator>().SetInteger("Attack", 0);
@@ -82,6 +83,7 @@ public class DamageEnemy : MonoBehaviour
                 {
                     Dano2();
                     Debug.Log("Recebeu dano2");
+                    kbScript.active = true;
 
                     canDmg = false;
                     GetComponent<Animator>().SetInteger("Attack", 0);
@@ -106,10 +108,12 @@ public class DamageEnemy : MonoBehaviour
     public void liberarDano() // LIBERA INIMIGO PARA CAUSAR DANO NOVAMENTE, NO FIM DA ANIMAÇÃO
     {
         canDmg = true;
+        kbScript.active = true;
     }
 
     public void bloquearDano() // LIMITA INIMIGO PARA CAUSAR DANO SOMENTE DURANTE O ATAQUE
     {
         canDmg = false;
+        kbScript.active = false;
     }
 }

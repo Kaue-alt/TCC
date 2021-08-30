@@ -13,6 +13,8 @@ public class pauseInGame : MonoBehaviour
 
     public Fade fadeScript;
 
+    public AudioSource runSound;
+
     void Start()
     {
         telaPause.SetActive(false);
@@ -46,6 +48,8 @@ public class pauseInGame : MonoBehaviour
             telaPause.SetActive(true);
             hud.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
+
+            runSound.Stop();
         }
     }
 

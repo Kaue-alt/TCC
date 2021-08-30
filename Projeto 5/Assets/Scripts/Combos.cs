@@ -52,6 +52,7 @@ public class Combos : MonoBehaviour
         if(animator.GetCurrentAnimatorStateInfo(0).IsTag("Attacking"))
         {
             movScript.enabled = false;
+            GetComponent<AudioSource>().Stop();
         }
         else
         {

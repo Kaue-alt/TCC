@@ -9,7 +9,6 @@ public class GameOver : MonoBehaviour
     public GameObject TelaGameOver;
     public Fade fadeScript;
 
-
     void Start()
     {
         vidaPlayerScript = FindObjectOfType<vidaPlayer>();
@@ -32,16 +31,22 @@ public class GameOver : MonoBehaviour
     {
         Time.timeScale = 1;
         fadeScript.Transition("Menu");
-        TelaGameOver.SetActive(false);
+        StartCoroutine(waitForFade(1.0f));
     }
 
     public void Restart()
     {
         vidaPlayerScript.Reviver();
         fadeScript.Transition("Tutorial");
-        TelaGameOver.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+        StartCoroutine(waitForFade(1.0f));
 
         vidaPlayerScript.death = 0;
+    }
+
+    IEnumerator waitForFade(float tempo)
+    {
+        yield return new WaitForSeconds(tempo);
+        TelaGameOver.SetActive(false);
     }
 }

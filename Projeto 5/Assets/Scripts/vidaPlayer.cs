@@ -17,7 +17,7 @@ public class vidaPlayer : MonoBehaviour
     public GameObject reset;
     public int death = 0;
 
-    public AudioSource audioSourceDeath;
+    public AudioSource audioSourceDeath, audioSouceRun;
 
     void Start()
     {
@@ -31,8 +31,6 @@ public class vidaPlayer : MonoBehaviour
         life = Mathf.Clamp(life, 0, 100);
         lifeBar.fillAmount = life / 100;
 
-        
-
     }
 
     void FixedUpdate()
@@ -40,6 +38,7 @@ public class vidaPlayer : MonoBehaviour
         
         if (life <= 0)
         {
+            audioSouceRun.Stop();
             audioSourceDeath.Play();
             Debug.Log("Game Over");
             death ++;

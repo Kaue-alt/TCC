@@ -13,7 +13,7 @@ public class menuScript : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         vidaPlayerScript = FindObjectOfType<vidaPlayer>();
-        vidaPlayerScript.death = 0;
+        //vidaPlayerScript.death = 0;
     }
     //Clique no botao para alterar cena para jogo
     public void OnClickButtonPlay()
