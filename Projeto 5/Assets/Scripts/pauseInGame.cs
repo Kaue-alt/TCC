@@ -71,4 +71,9 @@ public class pauseInGame : MonoBehaviour
         paused = false;
         fadeScript.Transition("Menu");
     }
+
+    public void OnClickButtonSave()
+    {
+        gameManager.gm.Save();
+    }
 }
