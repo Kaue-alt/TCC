@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class dashMove : MonoBehaviour
 {
-    public ParticleSystem dashEffect;
     private Rigidbody rb;
     private int direction;
     public float dashSpeed;
@@ -30,7 +29,6 @@ public class dashMove : MonoBehaviour
         {
             this.animator.SetBool("bDash", true);
             transform.position += Vector3.right * dashSpeed;
-            dashEffect.Play();
 
             StartCoroutine(esperarCD(cooldown));
         }
@@ -39,7 +37,7 @@ public class dashMove : MonoBehaviour
         {
             this.animator.SetBool("bDash", true);
             transform.position += Vector3.left * dashSpeed;
-            dashEffect.Play();
+
             StartCoroutine(esperarCD(cooldown));
         }
 
@@ -47,7 +45,6 @@ public class dashMove : MonoBehaviour
         {
             this.animator.SetBool("bDash", true);
             transform.position += transform.forward * dashSpeed;
-            dashEffect.Play();
 
             StartCoroutine(esperarCD(cooldown));
         }
@@ -65,10 +62,5 @@ public class dashMove : MonoBehaviour
 
         yield return new WaitForSeconds(tempo);
         canDash = true;
-    }
-
-    void CreatEffect()
-    {
-        dashEffect.Play();
     }
 }
