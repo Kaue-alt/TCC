@@ -15,8 +15,10 @@ public class Combos : MonoBehaviour
 
     public int clicks;
     public bool canClick;
+    private bool firstAttack, secondAttack, thirdAttack;
 
     Movimentacao movScript;
+    WeaponSwitching weaponIdScript;
 
     void Start()
     {
@@ -25,11 +27,15 @@ public class Combos : MonoBehaviour
         canClick = true;
 
         movScript = FindObjectOfType<Movimentacao>();
+        weaponIdScript = FindObjectOfType<WeaponSwitching>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        animator.SetInteger("IdArma", weaponIdScript.selectedWeapon);
+        AttackState();
 
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("standUp"))
         {
@@ -40,7 +46,7 @@ public class Combos : MonoBehaviour
             movScript.enabled = true;
         }
 
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jump") || animator.GetCurrentAnimatorStateInfo(0).IsName("standUp"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jump") || animator.GetCurrentAnimatorStateInfo(0).IsName("standUp") || Cursor.lockState != CursorLockMode.Locked)
         {
             canClick = false;
         }
@@ -83,33 +89,33 @@ public class Combos : MonoBehaviour
     {
         canClick = false;
 
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Attack_1") && clicks == 1)
+        if(firstAttack && clicks == 1)
         {
             animator.SetInteger("Attack", 0);
             canClick = true;
             clicks = 0;
         }
-        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack_1") && clicks >= 2)
+        else if (firstAttack && clicks >= 2)
         {
             animator.SetInteger("Attack", 2);
             canClick = true;
 
             soundAt1.GetComponent<AudioSource>().Play();
         }
-        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack_2") && clicks == 2)
+        else if (secondAttack && clicks == 2)
         {
             animator.SetInteger("Attack", 0);
             canClick = true;
             clicks = 0;
         }
-        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack_2") && clicks >= 3)
+        else if (secondAttack && clicks >= 3)
         {
             animator.SetInteger("Attack", 3);
             canClick = true;
 
             soundAt1.GetComponent<AudioSource>().PlayDelayed(0.5f);
         }
-        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack_3"))
+        else if (thirdAttack)
         {
             animator.SetInteger("Attack", 0);
             canClick = true;
@@ -132,5 +138,35 @@ public class Combos : MonoBehaviour
     {
         colliderArma.enabled = false;
         colliderArma2.enabled = false;
+    }
+
+    public void AttackState()
+    {
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("AttackAxe_1") || animator.GetCurrentAnimatorStateInfo(0).IsName("AttackPipe_1"))
+        {
+            firstAttack = true;
+        }
+        else
+        {
+            firstAttack = false;
+        }
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("AttackAxe_2") || animator.GetCurrentAnimatorStateInfo(0).IsName("AttackPipe_2"))
+        {
+            secondAttack = true;
+        }
+        else
+        {
+            secondAttack = false;
+        }
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("AttackAxe_3") || animator.GetCurrentAnimatorStateInfo(0).IsName("AttackPipe_3"))
+        {
+            thirdAttack = true;
+        }
+        else
+        {
+            thirdAttack = false;
+        }
     }
 }

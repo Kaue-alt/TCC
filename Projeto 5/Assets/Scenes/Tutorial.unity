@@ -365,8 +365,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1561138122, guid: 40357f4120c249043ab6b67da39e59f5, type: 3}
+      propertyPath: life
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561138122, guid: 40357f4120c249043ab6b67da39e59f5, type: 3}
       propertyPath: expValue
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1561138122, guid: 40357f4120c249043ab6b67da39e59f5, type: 3}
       propertyPath: audioSourceMonster
@@ -8902,6 +8906,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 934251947, guid: 79df1e0109dcd774493b5976b11bd62b, type: 3}
+      propertyPath: life
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 934251947, guid: 79df1e0109dcd774493b5976b11bd62b, type: 3}
       propertyPath: expValue
       value: 5
       objectReference: {fileID: 0}
@@ -11812,6 +11820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedWeapon: 0
+  animPlayer: {fileID: 954279034}
 --- !u!1001 &1595862863
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -25,8 +25,6 @@ public class KnockBack : MonoBehaviour
     {
         Rigidbody rb = collision.collider.GetComponent<Rigidbody>();
 
-        //rb != null && 
-
         if (active)
         {
             Vector3 direction = collision.transform.position - transform.position;
@@ -34,10 +32,5 @@ public class KnockBack : MonoBehaviour
 
             rb.AddForce(direction.normalized * knockbackStrength, ForceMode.Impulse);
         }
-
-        /*if (rb == null)
-        {
-            active = false;
-        }*/
     }
 }

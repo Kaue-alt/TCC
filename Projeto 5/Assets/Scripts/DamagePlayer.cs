@@ -39,7 +39,6 @@ public class DamagePlayer : MonoBehaviour
         {
             GameObject enemyIns = col.gameObject; // ASSOCIA O COLLIDER DO INIMIGO AO QUE ESTÁ SENDO ATACADO REALMENTE
             Dano1(enemyIns);
-            Debug.Log("Inimigo Recebeu dano1");
         }
     }
 }
