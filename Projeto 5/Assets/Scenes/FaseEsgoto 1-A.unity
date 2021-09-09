@@ -282,6 +282,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5148817236446094103, guid: 586ee280bd3cf94429a1f78c5ddfccc3,
         type: 3}
+      propertyPath: m_Name
+      value: Saida
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148817236446094103, guid: 586ee280bd3cf94429a1f78c5ddfccc3,
+        type: 3}
       propertyPath: m_TagString
       value: Door
       objectReference: {fileID: 0}
@@ -1159,6 +1164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedWeapon: 0
+  animPlayer: {fileID: 0}
 --- !u!1001 &594991298
 PrefabInstance:
   m_ObjectHideFlags: 0

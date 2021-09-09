@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EndGame : MonoBehaviour
 {
-    public GameObject Endgame;
+    
     void Start()
     {
         
@@ -21,8 +22,10 @@ public class EndGame : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Cursor.lockState = CursorLockMode.None;
-            Endgame.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SceneManager.LoadScene("FaseEsgoto 1-A", LoadSceneMode.Single);
+            }
         }
     }
 }
