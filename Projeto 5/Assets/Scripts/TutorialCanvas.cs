@@ -10,7 +10,10 @@ public class TutorialCanvas : MonoBehaviour
 
     public Text textoAndar;
 
+    public GameObject _tutorialBackground;
     public GameObject _textoAndar;
+
+    public AudioSource runSound;
 
     private bool paused = false;
 
@@ -20,18 +23,12 @@ public class TutorialCanvas : MonoBehaviour
     {
         tutorialBackground.enabled = false;
         textoAndar.enabled = false;
+
+        _tutorialBackground.SetActive(true);
         _textoAndar.SetActive(true);
-
-        combosScript = FindObjectOfType<Combos>();
-        movScript = FindObjectOfType<Movimentacao>();
     }
 
-    void Update()
-    {
-        
-    }
-
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -44,32 +41,30 @@ public class TutorialCanvas : MonoBehaviour
             }
             else
             {
-                //Cursor.lockState = CursorLockMode.Locked;
-                //Time.timeScale = 1;
-                //textoAndar.enabled = false;
-                //tutorialBackground.enabled = false;
-                //paused = false;
-            }
-
-            //textoAndar.enabled = true;
-            //tutorialBackground.enabled = true;
-
-            Debug.Log("funfo");
-            //dialogBox.SetActive(true);
-            //combosScript.enabled = false;
-            // movScript.enabled = false;
-            if (Input.GetKeyUp(KeyCode.M) & paused == true)
-            {
-                Debug.Log("Enter");
+                Cursor.lockState = CursorLockMode.Locked;
                 Time.timeScale = 1;
                 paused = false;
-                //dialogBox.SetActive(false);
-                //movScript.enabled = true;
-                //combosScript.enabled = true;
+            }
+
+            if (paused)
+            {
+                Debug.Log("Detecção do Pause");
+                if (Input.GetKeyDown(KeyCode.M))
+                {
+                    Debug.Log("Apertou M");
+                    Time.timeScale = 1;
+                    paused = false;
+                    Cursor.lockState = CursorLockMode.None;
+                    runSound.Stop();
+                    //dialogBox.SetActive(false);
+                    //movScript.enabled = true;
+                    //combosScript.enabled = true;
+                }
             }
         }
 
     }
+
     public void OnClickButtonDespausar()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -78,4 +73,5 @@ public class TutorialCanvas : MonoBehaviour
         tutorialBackground.enabled = true;
         paused = false;
     }
+
 }
