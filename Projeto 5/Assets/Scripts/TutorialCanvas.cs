@@ -17,8 +17,6 @@ public class TutorialCanvas : MonoBehaviour
 
     private bool paused = false;
 
-    Combos combosScript;
-    Movimentacao movScript;
     void Start()
     {
         tutorialBackground.enabled = false;
@@ -28,6 +26,20 @@ public class TutorialCanvas : MonoBehaviour
         _textoAndar.SetActive(true);
     }
 
+    void Update()
+    {
+        if (paused)
+        {
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                Debug.Log("Apertou L");
+                Time.timeScale = 1;
+                paused = false;
+                Cursor.lockState = CursorLockMode.None;
+                runSound.Stop();
+            }
+        }
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -45,33 +57,6 @@ public class TutorialCanvas : MonoBehaviour
                 Time.timeScale = 1;
                 paused = false;
             }
-
-            if (paused)
-            {
-                Debug.Log("Detecção do Pause");
-                if (Input.GetKeyDown(KeyCode.M))
-                {
-                    Debug.Log("Apertou M");
-                    Time.timeScale = 1;
-                    paused = false;
-                    Cursor.lockState = CursorLockMode.None;
-                    runSound.Stop();
-                    //dialogBox.SetActive(false);
-                    //movScript.enabled = true;
-                    //combosScript.enabled = true;
-                }
-            }
         }
-
     }
-
-    public void OnClickButtonDespausar()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Time.timeScale = 1;
-        textoAndar.enabled = true;
-        tutorialBackground.enabled = true;
-        paused = false;
-    }
-
 }
