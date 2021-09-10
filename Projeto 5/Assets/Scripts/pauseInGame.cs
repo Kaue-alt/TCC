@@ -9,7 +9,7 @@ public class pauseInGame : MonoBehaviour
 
     private bool paused = false;
 
-    public GameObject telaPause, hud;
+    public GameObject telaPause, hud, MenuOpcoes;
 
     public Fade fadeScript;
 
@@ -18,6 +18,8 @@ public class pauseInGame : MonoBehaviour
     void Start()
     {
         telaPause.SetActive(false);
+
+        MenuOpcoes.SetActive(false);
 
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -76,4 +78,16 @@ public class pauseInGame : MonoBehaviour
     {
         gameManager.gm.Save();
     }
+
+    public void OnClickButtonOptions()
+    {
+        MenuOpcoes.SetActive(true);
+    }
+
+    public void OnClickButtonFechar()
+    {
+        MenuOpcoes.SetActive(false);
+    }
+
+
 }

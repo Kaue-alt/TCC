@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 class PlayerData
@@ -15,6 +16,7 @@ class PlayerData
 }
 public class gameManager : MonoBehaviour
 {
+    public Fade fadeScript;
 
     public float life;
     public float playerPosX, playerPosY;
@@ -60,7 +62,33 @@ public class gameManager : MonoBehaviour
         Debug.Log("Jogo Salvo!");
     }
 
-    
+    public void Load()
+    {
+        if (File.Exists(filePath))
+        {
+            fadeScript.Transition("Tutorial");
+            Cursor.lockState = CursorLockMode.Locked;
+
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(filePath, FileMode.Open);
+
+            PlayerData data = (PlayerData)bf.Deserialize(file);
+            file.Close();
+
+            life = data.life;
+            playerPosX = data.playerPosX;
+            playerPosY = data.playerPosY;
+
+            Debug.Log("Jogo carregado!");
+
+        }
+        else
+        {
+            Debug.Log("Não há jogo salvo para ser carregado!");
+        }
+    }
+
+
 
     /*public string objectID;
     // Start is called before the first frame update

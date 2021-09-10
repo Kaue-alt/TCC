@@ -7,10 +7,14 @@ using UnityEngine.UI;
 public class menuScript : MonoBehaviour
 {
     public Fade fadeScript;
+    public gameManager gameManagerScript;
+    public GameObject MenuOpcoes;
     vidaPlayer vidaPlayerScript;
+    //gameManagerScript = FindObjectOfType<gameManager>();
    
     private void Start()
     {
+        MenuOpcoes.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         vidaPlayerScript = FindObjectOfType<vidaPlayer>();
         //vidaPlayerScript.death = 0;
@@ -25,6 +29,16 @@ public class menuScript : MonoBehaviour
     //Clique no botao para alterar cena para tela de opcoes
     public void OnClickButtonOptions()
     {
-        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+        MenuOpcoes.SetActive(true);
+    }
+
+    public void OnClickButtonFechar()
+    {
+        MenuOpcoes.SetActive(false);
+    }
+
+    public void OnClickButtonLoad()
+    {
+        gameManagerScript.Load();
     }
 }
