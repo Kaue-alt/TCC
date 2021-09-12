@@ -46,7 +46,7 @@ public class Combos : MonoBehaviour
             movScript.enabled = true;
         }
 
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jump") || animator.GetCurrentAnimatorStateInfo(0).IsName("standUp") || Cursor.lockState != CursorLockMode.Locked)
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jump") || animator.GetCurrentAnimatorStateInfo(0).IsName("standUp") || Time.timeScale == 0)
         {
             canClick = false;
         }

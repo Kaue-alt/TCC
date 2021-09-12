@@ -23,14 +23,17 @@ public class KnockBack : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        Rigidbody rb = collision.collider.GetComponent<Rigidbody>();
-
-        if (active)
+        if (collision.gameObject.tag == "Player")
         {
-            Vector3 direction = collision.transform.position - transform.position;
-            direction.y = 0;
+            Rigidbody rb = collision.collider.GetComponent<Rigidbody>();
 
-            rb.AddForce(direction.normalized * knockbackStrength, ForceMode.Impulse);
+            if (active)
+            {
+                Vector3 direction = collision.transform.position - transform.position;
+                direction.y = 0;
+
+                rb.AddForce(direction.normalized * knockbackStrength, ForceMode.Impulse);
+            }
         }
     }
 }

@@ -30,17 +30,24 @@ public class TutorialCanvas : MonoBehaviour
     {
         if (paused)
         {
-            if (Input.GetKeyDown(KeyCode.L))
+            if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("Apertou L");
+                Debug.Log("Saiu do Tutorial");
                 Time.timeScale = 1;
+                Cursor.lockState = CursorLockMode.Locked;
                 paused = false;
-                Cursor.lockState = CursorLockMode.None;
-                runSound.Stop();
+
+                tutorialBackground.enabled = true;
+                textoAndar.enabled = true;
+                _tutorialBackground.SetActive(false);
+                _textoAndar.SetActive(false);
+
+                Destroy(gameObject);
             }
         }
     }
-    void OnTriggerEnter(Collider other)
+
+    void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -49,6 +56,7 @@ public class TutorialCanvas : MonoBehaviour
                 Time.timeScale = 0;
                 textoAndar.enabled = true;
                 tutorialBackground.enabled = true;
+                runSound.Stop();
                 paused = true;
             }
             else
@@ -57,6 +65,7 @@ public class TutorialCanvas : MonoBehaviour
                 Time.timeScale = 1;
                 paused = false;
             }
+            
         }
     }
 }
