@@ -8,7 +8,7 @@ public class AnwserButton : MonoBehaviour
 
     public void ProximaFala()
     {
-        FindObjectOfType<DialogoController>().ProximaFala(respostaData.proximaFala);
+        FindObjectOfType<KidController>().ProximaFala(respostaData.proximaFala);
     }
 
     public void Setup (Resposta resposta)
