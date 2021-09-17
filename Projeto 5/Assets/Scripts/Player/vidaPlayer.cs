@@ -22,6 +22,11 @@ public class vidaPlayer : MonoBehaviour
     void Start()
     {
         GameOverScript = FindObjectOfType<GameOver>();
+
+        if(ValorCenas.vida != 0)
+        {
+            life = ValorCenas.vida;
+        }
     }
 
     
@@ -49,6 +54,8 @@ public class vidaPlayer : MonoBehaviour
         {
             GameOverScript.openTelaGameOver();
         }
+
+        ValorCenas.vida = life;
     }
 
     

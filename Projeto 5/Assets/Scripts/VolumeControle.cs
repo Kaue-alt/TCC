@@ -4,16 +4,31 @@ using UnityEngine;
 
 public class VolumeControle : MonoBehaviour
 {
-    public float volumeMaster, volumeEfeito, volumeMusica;
+    public float volumeMaster=1, volumeEfeito=1, volumeMusica=1;
   
     void Start()
     {
+        if(ValorCenas.volumeGeral != 1)
+        {
+            volumeMaster = ValorCenas.volumeGeral;
+        }
+        if (ValorCenas.volumeEfeito != 1)
+        {
+            volumeEfeito = ValorCenas.volumeEfeito;
+        }
+        if (ValorCenas.volumeMusica != 1)
+        {
+            volumeMusica = ValorCenas.volumeMusica;
+        }
+
         
     }
 
     void Update()
     {
-        
+        ValorCenas.volumeGeral = volumeMaster;
+        ValorCenas.volumeEfeito = volumeEfeito;
+        ValorCenas.volumeMusica = volumeMusica;
     }
 
     public void VolumeMaster (float volume)
@@ -30,6 +45,12 @@ public class VolumeControle : MonoBehaviour
         {
             Fxs[i].GetComponent<AudioSource>().volume = volumeEfeito;
         }
+
+        GameObject[] Fxs1 = GameObject.FindGameObjectsWithTag("Player");
+        for (int i = 0; i < Fxs1.Length; i++)
+        {
+            Fxs1[i].GetComponent<AudioSource>().volume = volumeEfeito;
+        }
     }
 
     public void VolumeMusica (float volume)
@@ -41,10 +62,6 @@ public class VolumeControle : MonoBehaviour
             Musicas[i].GetComponent<AudioSource>().volume = volumeMusica;
         }
 
-        GameObject[] Musicas1 = GameObject.FindGameObjectsWithTag("Player");
-        for (int i = 0; i < Musicas1.Length; i++)
-        {
-            Musicas1[i].GetComponent<AudioSource>().volume = volumeMusica;
-        }
+        
     }
 }
