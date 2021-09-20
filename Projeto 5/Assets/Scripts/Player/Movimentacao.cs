@@ -7,9 +7,9 @@ public class Movimentacao : MonoBehaviour
     public float speed;
     public float jumpForce;
     [SerializeField]
-    private float doubleJumpMultiplier = 0.5f;
-    [SerializeField]
-    private bool canDoubleJump = false;
+    //private float doubleJumpMultiplier = 0.5f;
+    //[SerializeField]
+    //private bool canDoubleJump = false;
     private float distToGround;
     private bool isGrounded;
     public float radius;

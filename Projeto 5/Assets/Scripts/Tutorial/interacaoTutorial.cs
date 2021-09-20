@@ -13,6 +13,9 @@ public class interacaoTutorial : MonoBehaviour
     public GameObject _tutorialBackgroundddd;
     public GameObject _textInteragir;
 
+    dashMove dashScript;
+    PlayerJump jumpScript;
+
     public AudioSource runSound;
 
     private bool pausedddd = false;
@@ -24,12 +27,18 @@ public class interacaoTutorial : MonoBehaviour
 
         _tutorialBackgroundddd.SetActive(true);
         _textInteragir.SetActive(true);
+
+        dashScript = FindObjectOfType<dashMove>();
+        jumpScript = FindObjectOfType<PlayerJump>();
     }
 
     void Update()
     {
         if (pausedddd)
         {
+            jumpScript.enabled = false;
+            dashScript.enabled = false;
+
             if (Input.GetMouseButtonDown(0)) //(Input.GetKeyDown(KeyCode.L))
             {
                 Debug.Log("Saiu do Tutorial");
@@ -41,6 +50,9 @@ public class interacaoTutorial : MonoBehaviour
                 textoInteragir.enabled = true;
                 _tutorialBackgroundddd.SetActive(false);
                 _textInteragir.SetActive(false);
+
+                jumpScript.enabled = true;
+                dashScript.enabled = true;
 
                 //Destroy(gameObject);
             }

@@ -9,6 +9,7 @@ public class PlayerJump : MonoBehaviour
     private bool onGround = true;
     private const int MAX_JUMP = 2;
     private int currentJump = 0;
+    private bool cooldown = false;
 
     private Animator animaPlayer;
 
@@ -22,9 +23,11 @@ public class PlayerJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && (onGround || MAX_JUMP > currentJump))
+        if (Input.GetKeyDown(KeyCode.Space) && (onGround || MAX_JUMP > currentJump) && !cooldown)
         {
-            rigidBody.AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);
+            cooldown = true;
+            StartCoroutine("PausaSpam");
+            rigidBody.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
             onGround = false;
             currentJump++;
 
@@ -51,5 +54,10 @@ public class PlayerJump : MonoBehaviour
             onGround = true;
             currentJump = 0;
         }
+    }
+    public IEnumerator PausaSpam()
+    {
+        yield return new WaitForSeconds(0.22f);
+        cooldown = false;
     }
 }

@@ -13,6 +13,9 @@ public class TutorialCanvas : MonoBehaviour
     public GameObject _tutorialBackground;
     public GameObject _textoAndar;
 
+    dashMove dashScript;
+    PlayerJump jumpScript;
+
     public AudioSource runSound;
 
     private bool paused = false;
@@ -24,12 +27,19 @@ public class TutorialCanvas : MonoBehaviour
 
         _tutorialBackground.SetActive(true);
         _textoAndar.SetActive(true);
+
+        dashScript = FindObjectOfType<dashMove>();
+        jumpScript = FindObjectOfType<PlayerJump>();
     }
 
     void Update()
     {
         if (paused)
         {
+
+            jumpScript.enabled = false;
+            dashScript.enabled = false;
+
             if (Input.GetMouseButtonDown(0)) //(Input.GetKeyDown(KeyCode.L)) //(Input.GetMouseButtonDown(0))
             {
                 Debug.Log("Saiu do Tutorial");
@@ -41,6 +51,9 @@ public class TutorialCanvas : MonoBehaviour
                 textoAndar.enabled = true;
                 _tutorialBackground.SetActive(false);
                 _textoAndar.SetActive(false);
+
+                jumpScript.enabled = true;
+                dashScript.enabled = true;
 
                 //Destroy(gameObject);
             }

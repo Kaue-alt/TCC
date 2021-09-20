@@ -13,6 +13,9 @@ public class puloTutorial : MonoBehaviour
     public GameObject _tutorialBackgroundd;
     public GameObject _textPular;
 
+    dashMove dashScript;
+    PlayerJump jumpScript;
+
     public AudioSource runSound;
 
     private bool pausedd = false;
@@ -24,12 +27,18 @@ public class puloTutorial : MonoBehaviour
 
         _tutorialBackgroundd.SetActive(true);
         _textPular.SetActive(true);
+
+        dashScript = FindObjectOfType<dashMove>();
+        jumpScript = FindObjectOfType<PlayerJump>();
     }
 
     void Update()
     {
         if (pausedd)
         {
+            jumpScript.enabled = false;
+            dashScript.enabled = false;
+
             if (Input.GetMouseButtonDown(0)) //(Input.GetKeyDown(KeyCode.L))
             {
                 Debug.Log("Saiu do Tutorial");
@@ -41,6 +50,9 @@ public class puloTutorial : MonoBehaviour
                 textoPular.enabled = true;
                 _tutorialBackgroundd.SetActive(false);
                 _textPular.SetActive(false);
+
+                jumpScript.enabled = true;
+                dashScript.enabled = true;
 
                 //Destroy(gameObject);
             }

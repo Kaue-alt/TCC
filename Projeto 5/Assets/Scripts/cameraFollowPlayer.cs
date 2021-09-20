@@ -6,6 +6,7 @@ public class cameraFollowPlayer : MonoBehaviour
 {
 
     public GameObject player, holder;
+    public float horizontal, vertical;
 
     void Start()
     {
@@ -14,7 +15,6 @@ public class cameraFollowPlayer : MonoBehaviour
 
     void Update()
     {
-        //0.33f, 2.79f, 6.81f
-        holder.transform.SetPositionAndRotation(new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z), Quaternion.Euler(0.0f, 0.0f, 0.0f));
+        holder.transform.SetPositionAndRotation(new Vector3(player.transform.position.x + horizontal, player.transform.position.y + vertical, player.transform.position.z), Quaternion.Euler(0.0f, 0.0f, 0.0f));
     }
 }

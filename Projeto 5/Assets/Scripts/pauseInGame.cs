@@ -15,6 +15,11 @@ public class pauseInGame : MonoBehaviour
 
     public AudioSource runSound;
 
+    Movimentacao movScript;
+    Combos combosScript;
+    dashMove dashScript;
+    PlayerJump jumpScript;
+
     void Start()
     {
         telaPause.SetActive(false);
@@ -22,6 +27,11 @@ public class pauseInGame : MonoBehaviour
         MenuOpcoes.SetActive(false);
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        movScript = FindObjectOfType<Movimentacao>();
+        combosScript = FindObjectOfType<Combos>();
+        dashScript = FindObjectOfType<dashMove>();
+        jumpScript = FindObjectOfType<PlayerJump>();
     }
 
     void Update()
@@ -41,6 +51,11 @@ public class pauseInGame : MonoBehaviour
                 telaPause.SetActive(false);
                 hud.SetActive(true);
                 paused = false;
+
+                movScript.enabled = true;
+                combosScript.enabled = true;
+                jumpScript.enabled = true;
+                dashScript.enabled = true;
             }
         }
 
@@ -63,6 +78,11 @@ public class pauseInGame : MonoBehaviour
         telaPause.SetActive(false);
         hud.SetActive(true);
         paused = false;
+
+        movScript.enabled = true;
+        combosScript.enabled = true;
+        jumpScript.enabled = true;
+        dashScript.enabled = true;
     }
 
     public void OnClickButtonBackToMenu()

@@ -13,6 +13,9 @@ public class ataqueTutorial : MonoBehaviour
     public GameObject _tutorialBackgrounddd;
     public GameObject _textAtacar;
 
+    dashMove dashScript;
+    PlayerJump jumpScript;
+
     public AudioSource runSound;
 
     private bool pauseddd = false;
@@ -24,12 +27,18 @@ public class ataqueTutorial : MonoBehaviour
 
         _tutorialBackgrounddd.SetActive(true);
         _textAtacar.SetActive(true);
+
+        dashScript = FindObjectOfType<dashMove>();
+        jumpScript = FindObjectOfType<PlayerJump>();
     }
 
     void Update()
     {
         if (pauseddd)
         {
+            jumpScript.enabled = false;
+            dashScript.enabled = false;
+
             if (Input.GetMouseButtonDown(0)) //(Input.GetKeyDown(KeyCode.L))
             {
                 Debug.Log("Saiu do Tutorial");
@@ -41,6 +50,9 @@ public class ataqueTutorial : MonoBehaviour
                 textoAtacar.enabled = true;
                 _tutorialBackgrounddd.SetActive(false);
                 _textAtacar.SetActive(false);
+
+                jumpScript.enabled = true;
+                dashScript.enabled = true;
 
                 //Destroy(gameObject);
             }
