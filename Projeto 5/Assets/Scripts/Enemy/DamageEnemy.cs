@@ -37,6 +37,7 @@ public class DamageEnemy : MonoBehaviour
     public void Dano1()
     {
         vidaPlayerScript.life -= damage1;
+        CameraShake.instance.ShakeLeve();
 
         kbScript.active = true;
         fbPlayerScript.damage = true;
@@ -45,6 +46,7 @@ public class DamageEnemy : MonoBehaviour
     public void Dano2()
     {
         vidaPlayerScript.life -= damage2;
+        CameraShake.instance.ShakeForte();
 
         kbScript.active = true;
         fbPlayerScript.damage = true;
