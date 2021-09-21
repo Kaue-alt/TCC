@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class FalaVelho : ScriptableObject
 {
-    [TextArea(1, 11)]
+    [TextArea (1, 11)]
     public string falinha;
-    public Resposta[] respostinha;
+    public RespostaVelho[] respostinha;
 }

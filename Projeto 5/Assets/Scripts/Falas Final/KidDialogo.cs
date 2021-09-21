@@ -12,28 +12,26 @@ public class KidDialogo : MonoBehaviour
 
     Combos combosScript;
 
-    KidController dialogoController;
+    KidController dialogoKidController;
 
     void Start()
     {
-        dialogoController = FindObjectOfType<KidController>();
+        dialogoKidController = FindObjectOfType<KidController>();
         movScript = FindObjectOfType<Movimentacao>();
         combosScript = FindObjectOfType<Combos>();
-
     }
 
     void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
-          
+        {          
             if (!dialogoConcluido)
             {
-                dialogoController.ProximaFala(falas[0]);
+                dialogoKidController.ProximaFala(falas[0]);
             }
             else
             {
-                dialogoController.ProximaFala(falas[1]);
+                dialogoKidController.ProximaFala(falas[1]);
             }
             dialogoConcluido = true;
         }

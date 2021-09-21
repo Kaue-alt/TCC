@@ -7,7 +7,7 @@ public class VelhoController : MonoBehaviour
 {
     public GameObject painelDeDialogoVelho;
 
-    public Text falaNPC;
+    public Text falaVelhoNPC; //public Text falaNPC;
 
     public GameObject resposta;
 
@@ -62,7 +62,7 @@ public class VelhoController : MonoBehaviour
             {
                 falaAtiva = false;
                 painelDeDialogoVelho.SetActive(false);
-                falaNPC.gameObject.SetActive(false);
+                falaVelhoNPC.gameObject.SetActive(false);
                 movScript.enabled = true;
                 combosScript.enabled = true;
                 jumpScript.enabled = true;
@@ -74,14 +74,14 @@ public class VelhoController : MonoBehaviour
 
     void MostrarRespostas()
     {
-        falaNPC.gameObject.SetActive(false);
+        falaVelhoNPC.gameObject.SetActive(false);
         falaAtiva = false;
 
         for (int i = 0; i < falona.respostinha.Length; i++)
         {
-            GameObject tempResposta = Instantiate(resposta, painelDeDialogoVelho.transform) as GameObject;
-            tempResposta.GetComponent<Text>().text = falona.respostinha[i].resposta;
-            tempResposta.GetComponent<AnwserButton>().Setup(falona.respostinha[i]);
+            GameObject tempRespostaa = Instantiate(resposta, painelDeDialogoVelho.transform) as GameObject;
+            tempRespostaa.GetComponent<Text>().text = falona.respostinha[i].respostaaa; //respostaaa é a string do script "RespostaVelho"
+            tempRespostaa.GetComponent<AnwserButtonVelho>().Setup(falona.respostinha[i]); //script AnwserButtonVelho
         }
     }
     public void ProximaFalaVelho(FalaVelho falinha)
@@ -100,15 +100,15 @@ public class VelhoController : MonoBehaviour
 
         falaAtiva = true;
         painelDeDialogoVelho.SetActive(true);
-        falaNPC.gameObject.SetActive(true);
+        falaVelhoNPC.gameObject.SetActive(true);
 
-        falaNPC.text = falona.falinha;
+        falaVelhoNPC.text = falona.falinha;
     }
 
     void LimparRespostas()
     {
-        AnwserButton[] buttons = FindObjectsOfType<AnwserButton>();
-        foreach (AnwserButton button in buttons)
+        AnwserButtonVelho[] buttons = FindObjectsOfType<AnwserButtonVelho>();
+        foreach (AnwserButtonVelho button in buttons)
         {
             Destroy(button.gameObject);
         }

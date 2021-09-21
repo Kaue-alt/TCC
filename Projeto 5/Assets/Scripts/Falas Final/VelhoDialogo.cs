@@ -12,28 +12,26 @@ public class VelhoDialogo : MonoBehaviour
 
     Combos combosScript;
 
-    VelhoController dialogoController;
+    VelhoController dialogoVelhoController;
 
     void Start()
     {
-        dialogoController = FindObjectOfType<VelhoController>();
+        dialogoVelhoController = FindObjectOfType<VelhoController>();
         movScript = FindObjectOfType<Movimentacao>();
         combosScript = FindObjectOfType<Combos>();
-
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerStay(Collider otheer)
     {
-        if (other.CompareTag("Player"))
+        if (otheer.CompareTag("Player"))
         {
-
             if (!dialogoConcluido)
             {
-                dialogoController.ProximaFalaVelho(falona[0]);
+                dialogoVelhoController.ProximaFalaVelho(falona[0]);
             }
             else
             {
-                dialogoController.ProximaFalaVelho(falona[1]);
+                dialogoVelhoController.ProximaFalaVelho(falona[1]);
             }
             dialogoConcluido = true;
         }

@@ -36,12 +36,12 @@ public class KidController : MonoBehaviour
 
     void Update()
     {
-        if(!painelDeDialogo.activeInHierarchy)
+        if (!painelDeDialogo.activeInHierarchy)
         {
             IconeCrianca.SetActive(false);
             IconePlayer.SetActive(false);
         }
-        if(textoNPC.activeInHierarchy)
+        if (textoNPC.activeInHierarchy)
         {
             IconeCrianca.SetActive(true);
             IconePlayer.SetActive(false);          
@@ -52,9 +52,9 @@ public class KidController : MonoBehaviour
             IconePlayer.SetActive(true);
         }
 
-        if(Input.GetMouseButtonDown(0) && falaAtiva)
+        if (Input.GetMouseButtonDown(0) && falaAtiva)
         {
-            if(falas.respostas.Length > 0)
+            if (falas.respostas.Length > 0)
             {
                 MostrarRespostas();
             }
@@ -81,7 +81,7 @@ public class KidController : MonoBehaviour
         {
             GameObject tempResposta = Instantiate(resposta, painelDeDialogo.transform) as GameObject;
             tempResposta.GetComponent<Text>().text = falas.respostas[i].resposta;
-            tempResposta.GetComponent<AnwserButton>().Setup(falas.respostas[i]);
+            tempResposta.GetComponent<AnwserButtonKid>().Setup(falas.respostas[i]);
         }
     }
     public void ProximaFala(FalaNPC fala)
@@ -107,8 +107,8 @@ public class KidController : MonoBehaviour
 
     void LimparRespostas()
     {
-        AnwserButton[] buttons = FindObjectsOfType<AnwserButton>();
-        foreach (AnwserButton button in buttons)
+        AnwserButtonKid[] buttons = FindObjectsOfType<AnwserButtonKid>();
+        foreach (AnwserButtonKid button in buttons)
         {
             Destroy(button.gameObject);
         }

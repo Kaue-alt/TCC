@@ -7,5 +7,5 @@ public class FalaNPC : ScriptableObject
 {
     [TextArea (1,10)]
     public string fala;
-    public Resposta[] respostas;
+    public RespostaKid[] respostas;
 }

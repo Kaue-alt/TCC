@@ -11241,7 +11241,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f61e6155c1e1c0a4c874603b77e8ebb9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -46.08
+      value: -20.34
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f61e6155c1e1c0a4c874603b77e8ebb9,
         type: 3}
@@ -20931,7 +20931,6 @@ GameObject:
   - component: {fileID: 1940039675}
   - component: {fileID: 1940039674}
   - component: {fileID: 1940039673}
-  - component: {fileID: 1940039672}
   - component: {fileID: 1940039677}
   m_Layer: 0
   m_Name: VelhoNPC
@@ -20940,20 +20939,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1940039672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940039671}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62b5ff1a33cb3d341b64dc422eb43623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  falas:
-  - {fileID: 11400000, guid: 41a74d44e163a8144948d47c7dae5ed3, type: 2}
 --- !u!65 &1940039673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21024,7 +21009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940039671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.25, y: 3.42, z: -2.61}
+  m_LocalPosition: {x: -15.31, y: 3.42, z: -2.61}
   m_LocalScale: {x: 0.75, y: 6, z: 6.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -21043,8 +21028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   falona:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: fe5c4a0bfbd258c44acee62b0d0a12f1, type: 2}
 --- !u!1 &1950586421
 GameObject:
   m_ObjectHideFlags: 0
