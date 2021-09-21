@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class puloTutorial : MonoBehaviour
 {
-    public GameObject textoTutorial;
     public Image tutorialBackgroundd;
 
     public Text textoPular;
@@ -14,7 +13,7 @@ public class puloTutorial : MonoBehaviour
     public GameObject _textPular;
 
     dashMove dashScript;
-    PlayerJump jumpScript;
+    PlayerJump jumpScript; 
 
     public AudioSource runSound;
 
@@ -25,7 +24,6 @@ public class puloTutorial : MonoBehaviour
         tutorialBackgroundd.enabled = false;
         textoPular.enabled = false;
 
-        _tutorialBackgroundd.SetActive(true);
         _textPular.SetActive(true);
 
         dashScript = FindObjectOfType<dashMove>();
@@ -34,27 +32,24 @@ public class puloTutorial : MonoBehaviour
 
     void Update()
     {
-        if (pausedd)
+        if (pausedd == true)
         {
             jumpScript.enabled = false;
             dashScript.enabled = false;
 
-            if (Input.GetMouseButtonDown(0)) //(Input.GetKeyDown(KeyCode.L))
+            if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("Saiu do Tutorial");
                 Time.timeScale = 1;
-                Cursor.lockState = CursorLockMode.Locked;
                 pausedd = false;
 
-                tutorialBackgroundd.enabled = true;
-                textoPular.enabled = true;
-                _tutorialBackgroundd.SetActive(false);
-                _textPular.SetActive(false);
+                tutorialBackgroundd.enabled = false;
+                textoPular.enabled = false;
 
                 jumpScript.enabled = true;
                 dashScript.enabled = true;
 
-                //Destroy(gameObject);
+                Destroy(gameObject);
             }
         }
     }
@@ -63,7 +58,7 @@ public class puloTutorial : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (!pausedd)
+            if (pausedd == false)
             {
                 Time.timeScale = 0;
                 textoPular.enabled = true;
@@ -72,13 +67,6 @@ public class puloTutorial : MonoBehaviour
                 pausedd = true;
                 Debug.Log("pausou");
             }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Time.timeScale = 1;
-                pausedd = false;
-            }
-
         }
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ataqueTutorial : MonoBehaviour
 {
-    public GameObject textoTutorial;
     public Image tutorialBackgrounddd;
 
     public Text textoAtacar;
@@ -24,8 +23,7 @@ public class ataqueTutorial : MonoBehaviour
     {
         tutorialBackgrounddd.enabled = false;
         textoAtacar.enabled = false;
-
-        _tutorialBackgrounddd.SetActive(true);
+      
         _textAtacar.SetActive(true);
 
         dashScript = FindObjectOfType<dashMove>();
@@ -34,27 +32,24 @@ public class ataqueTutorial : MonoBehaviour
 
     void Update()
     {
-        if (pauseddd)
+        if (pauseddd == true)
         {
             jumpScript.enabled = false;
             dashScript.enabled = false;
 
-            if (Input.GetMouseButtonDown(0)) //(Input.GetKeyDown(KeyCode.L))
+            if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("Saiu do Tutorial");
                 Time.timeScale = 1;
-                Cursor.lockState = CursorLockMode.Locked;
                 pauseddd = false;
 
-                tutorialBackgrounddd.enabled = true;
-                textoAtacar.enabled = true;
-                _tutorialBackgrounddd.SetActive(false);
-                _textAtacar.SetActive(false);
+                tutorialBackgrounddd.enabled = false;
+                textoAtacar.enabled = false;
 
                 jumpScript.enabled = true;
                 dashScript.enabled = true;
 
-                //Destroy(gameObject);
+                Destroy(gameObject);
             }
         }
     }
@@ -63,7 +58,7 @@ public class ataqueTutorial : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (!pauseddd)
+            if (pauseddd == false)
             {
                 Time.timeScale = 0;
                 textoAtacar.enabled = true;
@@ -72,13 +67,6 @@ public class ataqueTutorial : MonoBehaviour
                 pauseddd = true;
                 Debug.Log("pausou");
             }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Time.timeScale = 1;
-                pauseddd = false;
-            }
-
         }
     }
 }

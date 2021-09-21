@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class interacaoTutorial : MonoBehaviour
 {
-    public GameObject textoTutorial;
     public Image tutorialBackgroundddd;
 
     public Text textoInteragir;
@@ -25,7 +24,6 @@ public class interacaoTutorial : MonoBehaviour
         tutorialBackgroundddd.enabled = false;
         textoInteragir.enabled = false;
 
-        _tutorialBackgroundddd.SetActive(true);
         _textInteragir.SetActive(true);
 
         dashScript = FindObjectOfType<dashMove>();
@@ -39,22 +37,19 @@ public class interacaoTutorial : MonoBehaviour
             jumpScript.enabled = false;
             dashScript.enabled = false;
 
-            if (Input.GetMouseButtonDown(0)) //(Input.GetKeyDown(KeyCode.L))
+            if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("Saiu do Tutorial");
                 Time.timeScale = 1;
-                Cursor.lockState = CursorLockMode.Locked;
                 pausedddd = false;
 
-                tutorialBackgroundddd.enabled = true;
-                textoInteragir.enabled = true;
-                _tutorialBackgroundddd.SetActive(false);
-                _textInteragir.SetActive(false);
+                tutorialBackgroundddd.enabled = false;
+                textoInteragir.enabled = false;
 
                 jumpScript.enabled = true;
                 dashScript.enabled = true;
 
-                //Destroy(gameObject);
+                Destroy(gameObject);
             }
         }
     }
@@ -63,22 +58,14 @@ public class interacaoTutorial : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (!pausedddd)
+            if (pausedddd == false)
             {
                 Time.timeScale = 0;
                 textoInteragir.enabled = true;
                 tutorialBackgroundddd.enabled = true;
                 //runSound.Stop();
                 pausedddd = true;
-                Debug.Log("pausou");
             }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Time.timeScale = 1;
-                pausedddd = false;
-            }
-
         }
     }
 }

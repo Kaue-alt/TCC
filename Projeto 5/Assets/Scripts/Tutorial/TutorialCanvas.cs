@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class TutorialCanvas : MonoBehaviour
 {
-    public GameObject textoTutorial;
+    //public GameObject textoAndarTutorial;
     public Image tutorialBackground;
 
     public Text textoAndar;
 
     public GameObject _tutorialBackground;
     public GameObject _textoAndar;
+    public GameObject _textoPular;
 
     dashMove dashScript;
     PlayerJump jumpScript;
@@ -27,6 +28,7 @@ public class TutorialCanvas : MonoBehaviour
 
         _tutorialBackground.SetActive(true);
         _textoAndar.SetActive(true);
+        // _textoPular.SetActive(true);
 
         dashScript = FindObjectOfType<dashMove>();
         jumpScript = FindObjectOfType<PlayerJump>();
@@ -34,28 +36,28 @@ public class TutorialCanvas : MonoBehaviour
 
     void Update()
     {
-        if (paused)
+        if (paused == true)
         {
 
             jumpScript.enabled = false;
             dashScript.enabled = false;
 
-            if (Input.GetMouseButtonDown(0)) //(Input.GetKeyDown(KeyCode.L)) //(Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("Saiu do Tutorial");
                 Time.timeScale = 1;
-                Cursor.lockState = CursorLockMode.Locked;
+                //Cursor.lockState = CursorLockMode.Locked;
                 paused = false;
 
-                tutorialBackground.enabled = true;
-                textoAndar.enabled = true;
-                _tutorialBackground.SetActive(false);
-                _textoAndar.SetActive(false);
+                tutorialBackground.enabled = false;
+                textoAndar.enabled = false;
+                //_tutorialBackground.SetActive(false);
+               // _textoAndar.SetActive(false);
 
                 jumpScript.enabled = true;
                 dashScript.enabled = true;
 
-                //Destroy(gameObject);
+                Destroy(gameObject);
             }
         }
     }
@@ -64,7 +66,8 @@ public class TutorialCanvas : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (!paused)
+            //Congela o tempo
+            if (paused == false)
             {
                 Time.timeScale = 0;
                 textoAndar.enabled = true;
@@ -73,12 +76,12 @@ public class TutorialCanvas : MonoBehaviour
                 paused = true;
                 Debug.Log("pausou");
             }
-            else
+            /*else
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Time.timeScale = 1;
                 paused = false;
-            }
+            }*/
             
         }
     }
