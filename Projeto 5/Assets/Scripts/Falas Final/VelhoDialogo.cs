@@ -6,7 +6,7 @@ public class VelhoDialogo : MonoBehaviour
 {
     public FalaVelho[] falona = new FalaVelho[2];
 
-    private bool dialogoConcluido = false;
+    private bool dialoguinhoConcluido = false;
 
     Movimentacao movScript;
 
@@ -25,7 +25,7 @@ public class VelhoDialogo : MonoBehaviour
     {
         if (otheer.CompareTag("Player"))
         {
-            if (!dialogoConcluido)
+            if (dialoguinhoConcluido == false)
             {
                 dialogoVelhoController.ProximaFalaVelho(falona[0]);
             }
@@ -33,7 +33,7 @@ public class VelhoDialogo : MonoBehaviour
             {
                 dialogoVelhoController.ProximaFalaVelho(falona[1]);
             }
-            dialogoConcluido = true;
+            dialoguinhoConcluido = true;
         }
     }
 }

@@ -25,7 +25,7 @@ public class KidDialogo : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {          
-            if (!dialogoConcluido)
+            if (dialogoConcluido == false)
             {
                 dialogoKidController.ProximaFala(falas[0]);
             }
