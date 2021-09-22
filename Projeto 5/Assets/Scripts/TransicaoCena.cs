@@ -30,6 +30,24 @@ public class TransicaoCena : MonoBehaviour
                     SceneManager.LoadScene("FaseEsgoto", LoadSceneMode.Single);
                 }
                 break;
+            case "Fase3":
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    SceneManager.LoadScene("FaseEsgoto 1-A", LoadSceneMode.Single);
+                }
+                break;
+            case "Fase4":
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    SceneManager.LoadScene("FaseEsgoto 2-A", LoadSceneMode.Single);
+                }
+                break;
+            case "Fase5":
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    SceneManager.LoadScene("FaseEsgoto 3-A", LoadSceneMode.Single);
+                }
+                break;
         }
     }
 }
