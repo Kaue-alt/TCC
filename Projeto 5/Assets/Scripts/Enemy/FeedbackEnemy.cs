@@ -7,6 +7,7 @@ public class FeedbackEnemy : MonoBehaviour
     public Color corInicial;
     Material matPri, matSec;
     public GameObject objSec;
+    public ParticleSystem effect;
 
     public float tempoDeEspera = 0.5f;
 
@@ -33,8 +34,14 @@ public class FeedbackEnemy : MonoBehaviour
     {
         matPri.color = Color.red;
         matSec.color = Color.red;
+        CreatEffect();
         yield return new WaitForSeconds(tempoDeEspera);
         matPri.color = corInicial;
         matSec.color = corInicial;
+    }
+
+    void CreatEffect()
+    {
+        effect.Play();
     }
 }
