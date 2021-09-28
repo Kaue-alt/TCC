@@ -556,7 +556,7 @@ PrefabInstance:
     - target: {fileID: -7655063785921015561, guid: 586ee280bd3cf94429a1f78c5ddfccc3,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967263
       objectReference: {fileID: 0}
     - target: {fileID: -6924939202700417878, guid: 586ee280bd3cf94429a1f78c5ddfccc3,
         type: 3}
@@ -2604,10 +2604,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 740af1b0c9306164aa218ee4edb863bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 740af1b0c9306164aa218ee4edb863bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 740af1b0c9306164aa218ee4edb863bc,
         type: 3}
       propertyPath: m_Name
       value: Barricade B
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 740af1b0c9306164aa218ee4edb863bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513859187771203891, guid: 740af1b0c9306164aa218ee4edb863bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 740af1b0c9306164aa218ee4edb863bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 740af1b0c9306164aa218ee4edb863bc, type: 3}
@@ -3558,10 +3583,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 740af1b0c9306164aa218ee4edb863bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 740af1b0c9306164aa218ee4edb863bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 740af1b0c9306164aa218ee4edb863bc,
         type: 3}
       propertyPath: m_Name
       value: Barricade A
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 740af1b0c9306164aa218ee4edb863bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513859187771203891, guid: 740af1b0c9306164aa218ee4edb863bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 740af1b0c9306164aa218ee4edb863bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 740af1b0c9306164aa218ee4edb863bc, type: 3}
@@ -4006,8 +4056,8 @@ GameObject:
   m_Name: Solo.001 (1)
   m_TagString: plataformatag
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &1114531723
 Transform:
@@ -6069,8 +6119,8 @@ GameObject:
   m_Name: Solo.001 (2)
   m_TagString: plataformatag
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &1694590904
 Transform:
@@ -7531,6 +7581,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CollidersSewer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695452143231284297, guid: c56dbff675fcb4d40a7b8ab585694d5e,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695452143231284297, guid: c56dbff675fcb4d40a7b8ab585694d5e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c56dbff675fcb4d40a7b8ab585694d5e, type: 3}

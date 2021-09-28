@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 3abde2aa3150f5b42a74416aa8f7adb7, type: 2}
 --- !u!1 &95594497
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,8 +139,8 @@ GameObject:
   m_Name: Solo.002 (2)
   m_TagString: plataformatag
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &95594498
 Transform:
@@ -311,10 +311,25 @@ PrefabInstance:
       propertyPath: m_TagString
       value: plataformatag
       objectReference: {fileID: 0}
+    - target: {fileID: -7655063785921015561, guid: 586ee280bd3cf94429a1f78c5ddfccc3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -7493596028755563170, guid: 586ee280bd3cf94429a1f78c5ddfccc3,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3770.4307
+      objectReference: {fileID: 0}
     - target: {fileID: -7493596028755563170, guid: 586ee280bd3cf94429a1f78c5ddfccc3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: -6.3587
+      objectReference: {fileID: 0}
+    - target: {fileID: -7493596028755563170, guid: 586ee280bd3cf94429a1f78c5ddfccc3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 26.1
       objectReference: {fileID: 0}
     - target: {fileID: -7493596028755563170, guid: 586ee280bd3cf94429a1f78c5ddfccc3,
         type: 3}
@@ -380,6 +395,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: plataformatag
+      objectReference: {fileID: 0}
+    - target: {fileID: 2582613149887902769, guid: 586ee280bd3cf94429a1f78c5ddfccc3,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2582613149887902769, guid: 586ee280bd3cf94429a1f78c5ddfccc3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5148817236446094103, guid: 586ee280bd3cf94429a1f78c5ddfccc3,
         type: 3}
@@ -820,8 +845,8 @@ GameObject:
   m_Name: Solo.002 (1)
   m_TagString: plataformatag
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &705129535
 Transform:
