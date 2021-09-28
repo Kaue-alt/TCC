@@ -81,7 +81,7 @@ public class VelhoController : MonoBehaviour
         {
             GameObject tempRespostaa = Instantiate(resposta, painelDeDialogoVelho.transform) as GameObject;
             tempRespostaa.GetComponent<Text>().text = falona.respostinha[i].respostaaa; //respostaaa é a string do script "RespostaVelho"
-            tempRespostaa.GetComponent<AnwserButtonVelho>().Setup(falona.respostinha[i]); //script AnwserButtonVelho
+            tempRespostaa.GetComponent<AnswerButtonVelho>().Setup(falona.respostinha[i]); //script AnwserButtonVelho
         }
     }
     public void ProximaFalaVelho(FalaVelho falinha)
@@ -107,8 +107,8 @@ public class VelhoController : MonoBehaviour
 
     void LimparRespostas()
     {
-        AnwserButtonVelho[] buttons = FindObjectsOfType<AnwserButtonVelho>();
-        foreach (AnwserButtonVelho button in buttons)
+        AnswerButtonVelho[] buttons = FindObjectsOfType<AnswerButtonVelho>();
+        foreach (AnswerButtonVelho button in buttons)
         {
             Destroy(button.gameObject);
         }

@@ -81,7 +81,7 @@ public class KidController : MonoBehaviour
         {
             GameObject tempResposta = Instantiate(resposta, painelDeDialogo.transform) as GameObject;
             tempResposta.GetComponent<Text>().text = falas.respostas[i].resposta;
-            tempResposta.GetComponent<AnwserButtonKid>().Setup(falas.respostas[i]);
+            tempResposta.GetComponent<AnswerButtonKid>().Setup(falas.respostas[i]);
         }
     }
     public void ProximaFala(FalaNPC fala)
@@ -107,8 +107,8 @@ public class KidController : MonoBehaviour
 
     void LimparRespostas()
     {
-        AnwserButtonKid[] buttons = FindObjectsOfType<AnwserButtonKid>();
-        foreach (AnwserButtonKid button in buttons)
+        AnswerButtonKid[] buttons = FindObjectsOfType<AnswerButtonKid>();
+        foreach (AnswerButtonKid button in buttons)
         {
             Destroy(button.gameObject);
         }
