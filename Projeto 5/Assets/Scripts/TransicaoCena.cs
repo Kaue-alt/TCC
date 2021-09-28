@@ -19,7 +19,7 @@ public class TransicaoCena : MonoBehaviour
 
     }
 
-    void OnCollisionStay(Collision col)
+    void OnTriggerStay(Collider col)
     {
         //textoIntereacao.SetActive(true);
         switch (col.gameObject.tag)
