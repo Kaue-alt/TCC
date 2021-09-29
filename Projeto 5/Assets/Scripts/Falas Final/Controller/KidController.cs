@@ -17,6 +17,7 @@ public class KidController : MonoBehaviour
     Combos combosScript;
     dashMove dashScript;
     PlayerJump jumpScript;
+    pauseInGame pauseScript;
 
     FalaNPC falas;
 
@@ -32,6 +33,7 @@ public class KidController : MonoBehaviour
         combosScript = FindObjectOfType<Combos>();
         dashScript = FindObjectOfType<dashMove>();
         jumpScript = FindObjectOfType<PlayerJump>();
+        pauseScript = FindObjectOfType<pauseInGame>();
     }
 
     void Update()
@@ -67,6 +69,7 @@ public class KidController : MonoBehaviour
                 combosScript.enabled = true;
                 jumpScript.enabled = true;
                 dashScript.enabled = true;
+                pauseScript.enabled = true;
                 Cursor.lockState = CursorLockMode.Locked;
             }
         }
@@ -91,6 +94,7 @@ public class KidController : MonoBehaviour
         combosScript.enabled = false;
         jumpScript.enabled = false;
         dashScript.enabled = false;
+        pauseScript.enabled = false;
         runSound.Stop();
         animator.SetBool("bIdle", true);
         animator.SetBool("bRun", false);

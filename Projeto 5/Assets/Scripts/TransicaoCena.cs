@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,7 +12,20 @@ public class TransicaoCena : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            GetComponent<Animator>().SetBool("bTutorial", true);
 
+            if(GetComponent<Animator>().GetInteger("countStand") == 0)
+            {
+                StartCoroutine(waitStand());
+            }
+
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("bTutorial", false);
+        }
     }
 
     // Update is called once per frame
@@ -48,6 +63,18 @@ public class TransicaoCena : MonoBehaviour
                     SceneManager.LoadScene("FaseEsgoto 3-A", LoadSceneMode.Single);
                 }
                 break;
+            case "Fase6":
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    SceneManager.LoadScene("FaseCidadeQuebrada", LoadSceneMode.Single);
+                }
+                break;
         }
+    }
+
+    IEnumerator waitStand()
+    {
+        yield return new WaitForSeconds(1.0f);
+        GetComponent<Animator>().SetInteger("countStand", 1);
     }
 }

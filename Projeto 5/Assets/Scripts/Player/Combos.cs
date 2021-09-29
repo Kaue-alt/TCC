@@ -19,6 +19,8 @@ public class Combos : MonoBehaviour
 
     Movimentacao movScript;
     WeaponSwitching weaponIdScript;
+    dashMove dashScript;
+    PlayerJump jumpScript;
 
     void Start()
     {
@@ -28,6 +30,8 @@ public class Combos : MonoBehaviour
 
         movScript = FindObjectOfType<Movimentacao>();
         weaponIdScript = FindObjectOfType<WeaponSwitching>();
+        dashScript = FindObjectOfType<dashMove>();
+        jumpScript = FindObjectOfType<PlayerJump>();
     }
 
     // Update is called once per frame
@@ -40,10 +44,14 @@ public class Combos : MonoBehaviour
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("standUp"))
         {
             movScript.enabled = false;
+            jumpScript.enabled = false;
+            dashScript.enabled = false;
         }
         else
         {
             movScript.enabled = true;
+            jumpScript.enabled = true;
+            dashScript.enabled = true;
         }
 
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jump") || animator.GetCurrentAnimatorStateInfo(0).IsName("standUp") || Time.timeScale == 0)
@@ -54,11 +62,11 @@ public class Combos : MonoBehaviour
         {
             canClick = true;
         }
-
+        /*
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Run")){
             canClick = true;
         }
-
+        */
         if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attacking"))
         {
             movScript.enabled = false;

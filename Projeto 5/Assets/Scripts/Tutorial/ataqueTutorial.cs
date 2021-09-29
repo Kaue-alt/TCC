@@ -14,6 +14,7 @@ public class ataqueTutorial : MonoBehaviour
 
     dashMove dashScript;
     PlayerJump jumpScript;
+    Combos attackScript;
 
     public AudioSource runSound;
 
@@ -28,6 +29,7 @@ public class ataqueTutorial : MonoBehaviour
 
         dashScript = FindObjectOfType<dashMove>();
         jumpScript = FindObjectOfType<PlayerJump>();
+        attackScript = FindObjectOfType<Combos>();
     }
 
     void Update()
@@ -36,6 +38,7 @@ public class ataqueTutorial : MonoBehaviour
         {
             jumpScript.enabled = false;
             dashScript.enabled = false;
+            attackScript.enabled = false;
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -48,6 +51,7 @@ public class ataqueTutorial : MonoBehaviour
 
                 jumpScript.enabled = true;
                 dashScript.enabled = true;
+                attackScript.enabled = true;
 
                 Destroy(gameObject);
             }
