@@ -35,6 +35,7 @@ public class triggerTraps : MonoBehaviour
         {
             
             trap.transform.position = new Vector3(trap.transform.position.x, trap.transform.position.y + 50 * Time.deltaTime, trap.transform.position.z);
+            this.gameObject.SetActive(false);
         }
     }
 }
