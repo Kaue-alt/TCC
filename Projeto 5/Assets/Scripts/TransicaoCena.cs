@@ -9,6 +9,9 @@ using UnityEngine.UI;
 public class TransicaoCena : MonoBehaviour
 {
     public GameObject textoIntereacao;
+
+    public Fade fadeScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,8 @@ public class TransicaoCena : MonoBehaviour
         {
             GetComponent<Animator>().SetBool("bTutorial", false);
         }
+
+        fadeScript = FindObjectOfType<Fade>();
     }
 
     // Update is called once per frame
@@ -42,31 +47,31 @@ public class TransicaoCena : MonoBehaviour
             case "Fase2":
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    SceneManager.LoadScene("FaseEsgoto", LoadSceneMode.Single);
+                    fadeScript.Transition("FaseEsgoto");
                 }
                 break;
             case "Fase3":
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    SceneManager.LoadScene("FaseEsgoto 1-A", LoadSceneMode.Single);
+                    fadeScript.Transition("FaseEsgoto 1-A");
                 }
                 break;
             case "Fase4":
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    SceneManager.LoadScene("FaseEsgoto 2-A", LoadSceneMode.Single);
+                    fadeScript.Transition("FaseEsgoto 2-A");
                 }
                 break;
             case "Fase5":
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    SceneManager.LoadScene("FaseEsgoto 3-A", LoadSceneMode.Single);
+                    fadeScript.Transition("FaseEsgoto 3-A");
                 }
                 break;
             case "Fase6":
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    SceneManager.LoadScene("FaseCidadeQuebrada", LoadSceneMode.Single);
+                    fadeScript.Transition("FaseCidadeQuebrada");
                 }
                 break;
         }
