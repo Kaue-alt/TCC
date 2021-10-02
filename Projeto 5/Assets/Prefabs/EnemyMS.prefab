@@ -5571,8 +5571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cfaf0aa4e0a7b249884264c7d5e065d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage1: 15
-  damage2: 30
+  damage1: 12
+  damage2: 25
   canDmg: 0
   player: {fileID: 0}
   waitAttack: 2
@@ -5641,6 +5641,7 @@ MonoBehaviour:
   life: 100
   audioSourceMonster: {fileID: 912687175}
   expValue: 6
+  inimigoMorto: 0
 --- !u!82 &912687175
 AudioSource:
   m_ObjectHideFlags: 0

@@ -37,7 +37,7 @@ public class GameOver : MonoBehaviour
     public void Restart()
     {
         vidaPlayerScript.Reviver();
-        fadeScript.Transition("Tutorial");
+        fadeScript.Transition(SceneManager.GetActiveScene().name);
         Cursor.lockState = CursorLockMode.Locked;
         StartCoroutine(waitForFade(1.0f));
 
