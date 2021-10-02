@@ -15,7 +15,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Hips' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -45,7 +46,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -77,7 +78,47 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Chief(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Corpo
+      parentName: Chief(Clone)
+      position: {x: 1.3525, y: 1.2865585, z: 0.2998805}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 7.951109, y: 8.718257, z: 9.092507}
+    - name: Peitoral
+      parentName: Chief(Clone)
+      position: {x: 1.3444316, y: 0.59872174, z: 0.2998805}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 8.677331, y: 9.514547, z: 9.92298}
+    - name: Calca
+      parentName: Chief(Clone)
+      position: {x: 1.3525, y: -0.022188306, z: 0.2998805}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 7.951109, y: 8.718257, z: 9.092507}
+    - name: Sapatos
+      parentName: Chief(Clone)
+      position: {x: 1.3525, y: -1.2365047, z: 0.30606663}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 7.951109, y: 8.718257, z: 9.092507}
+    - name: Bracadeira
+      parentName: Chief(Clone)
+      position: {x: 0.9304753, y: 0.7418472, z: 0.2998805}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 10.467862, y: 11.477834, z: 11.970546}
+    - name: Torso
+      parentName: Chief(Clone)
+      position: {x: 1.3525, y: 0.34323883, z: 0.2998805}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 8.702543, y: 9.5421915, z: 9.951812}
+    - name: Circle.006
+      parentName: Chief(Clone)
+      position: {x: 1.3525, y: 1.1923913, z: 0.2998805}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 7.951109, y: 8.718257, z: 9.092507}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
