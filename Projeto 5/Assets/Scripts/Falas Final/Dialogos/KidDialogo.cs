@@ -34,6 +34,8 @@ public class KidDialogo : MonoBehaviour
                 dialogoKidController.ProximaFala(falas[1]);
             }
             dialogoConcluido = true;
+
         }
+
     }
 }

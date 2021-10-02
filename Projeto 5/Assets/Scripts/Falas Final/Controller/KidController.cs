@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class KidController : MonoBehaviour
 {
@@ -19,21 +20,43 @@ public class KidController : MonoBehaviour
     PlayerJump jumpScript;
     pauseInGame pauseScript;
 
+    //CHAMAR TRANSIÇÃO
+    TransicaoParaODia transicaoParaODia;
+    public Fade fadeScript;
+
     FalaNPC falas;
 
     public Animator animator;
 
     public AudioSource runSound;
 
-    public GameObject textoNPC, IconeCrianca, IconePlayer, IconeVelho;
+    public GameObject textoNPC, IconeCrianca, IconePlayer;
 
     void Start()
     {
+        //DECLAÇÃO DE VARIÁVEIS P/ DIÁLOGO
         movScript = FindObjectOfType<Movimentacao>();
         combosScript = FindObjectOfType<Combos>();
         dashScript = FindObjectOfType<dashMove>();
         jumpScript = FindObjectOfType<PlayerJump>();
         pauseScript = FindObjectOfType<pauseInGame>();
+
+        //CHAMAR TRANSIÇÃO
+        transicaoParaODia = FindObjectOfType<TransicaoParaODia>();
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            GetComponent<Animator>().SetBool("bTutorial", true);
+
+            if (GetComponent<Animator>().GetInteger("countStand") == 0)
+            {
+                StartCoroutine(waitStand());
+            }
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("bTutorial", false);
+        }
+        fadeScript = FindObjectOfType<Fade>();
     }
 
     void Update()
@@ -71,6 +94,12 @@ public class KidController : MonoBehaviour
                 dashScript.enabled = true;
                 pauseScript.enabled = true;
                 Cursor.lockState = CursorLockMode.Locked;
+
+                if (transicaoParaODia.ganchoTransicao >= 2)
+                {
+                    fadeScript.Transition("TutorialDia");
+                    Debug.Log("Transição");
+                }
             }
         }
     }
@@ -116,5 +145,12 @@ public class KidController : MonoBehaviour
         {
             Destroy(button.gameObject);
         }
+    }
+
+    //CHAMAR TRANSIÇÃO
+    IEnumerator waitStand()
+    {
+        yield return new WaitForSeconds(1.0f);
+        GetComponent<Animator>().SetInteger("countStand", 1);
     }
 }

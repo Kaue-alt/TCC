@@ -13,6 +13,7 @@ public class vidaEnemy : MonoBehaviour
     private GameObject player;
     private NavMeshAgent navEnemy;
     public float expValue;
+    public bool inimigoMorto = false;
 
     Enemy enemyScript;
 
@@ -21,6 +22,7 @@ public class vidaEnemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         enemyScript = GetComponent<Enemy>();
         navEnemy = GetComponent<NavMeshAgent>();
+
     }
 
     void Update()
@@ -30,6 +32,11 @@ public class vidaEnemy : MonoBehaviour
             dead++;
             GetComponent<Animator>().SetInteger("Death", dead);
             StartCoroutine(enemyDeath(2.0f));
+            inimigoMorto = true;
+        }
+        if(inimigoMorto == true)
+        {
+            inimigoMorto = false;
         }
     }
     
