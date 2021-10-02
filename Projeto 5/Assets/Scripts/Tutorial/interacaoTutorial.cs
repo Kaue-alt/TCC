@@ -20,7 +20,7 @@ public class interacaoTutorial : MonoBehaviour
 
     private bool pausedddd = false;
 
-    void Start()
+    void Start ()
     {
         tutorialBackgroundddd.enabled = false;
         textoInteragir.enabled = false;

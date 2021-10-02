@@ -44,12 +44,12 @@ public class TransicaoCena : MonoBehaviour
         //textoIntereacao.SetActive(true);
         switch (col.gameObject.tag)
         {
-            /*case "Fase2":
+            case "Fase2":
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     fadeScript.Transition("FaseEsgoto");
                 }
-                break;*/
+                break;
             case "Fase3":
                 if (Input.GetKeyDown(KeyCode.E))
                 {
