@@ -62,11 +62,7 @@ public class Combos : MonoBehaviour
         {
             canClick = true;
         }
-        /*
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Run")){
-            canClick = true;
-        }
-        */
+
         if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attacking"))
         {
             movScript.enabled = false;
@@ -103,9 +99,9 @@ public class Combos : MonoBehaviour
 
         if(firstAttack && clicks == 1)
         {
+            clicks = 0;
             animator.SetInteger("Attack", 0);
             canClick = true;
-            clicks = 0;
         }
         else if (firstAttack && clicks >= 2)
         {
@@ -116,9 +112,9 @@ public class Combos : MonoBehaviour
         }
         else if (secondAttack && clicks == 2)
         {
+            clicks = 0;
             animator.SetInteger("Attack", 0);
             canClick = true;
-            clicks = 0;
         }
         else if (secondAttack && clicks >= 3)
         {
@@ -129,14 +125,14 @@ public class Combos : MonoBehaviour
         }
         else if (thirdAttack)
         {
+            clicks = 0;
             animator.SetInteger("Attack", 0);
             canClick = true;
-            clicks = 0;
         }
         else
         {
-            canClick = true;
             clicks = 0;
+            canClick = true;
         }
     }
 
