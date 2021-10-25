@@ -22,6 +22,9 @@ public class Combos : MonoBehaviour
     dashMove dashScript;
     PlayerJump jumpScript;
 
+    //public int contador;
+    public bool podeBater = true;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -75,7 +78,13 @@ public class Combos : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Combo();
+            //Ao atacar vem um bloqueio de 0.5 sec, após esse tempo é permitido um outro click para o segundo ataque, e o mesmo serve para o terceiro.
+            if (podeBater == true)
+            {
+                Combo();
+                //A coroutine é o que chama o bloqueio através da bool "podeBater"
+                StartCoroutine(controleCombo());
+            }
         }
     }
 
@@ -176,5 +185,13 @@ public class Combos : MonoBehaviour
         {
             thirdAttack = false;
         }
+    }
+
+    IEnumerator controleCombo()
+    {
+        //É chamada ao clicar com o botão de ataque
+        podeBater = false;
+        yield return new WaitForSecondsRealtime(0.5f);
+        podeBater = true;
     }
 }
