@@ -82,7 +82,7 @@ public class Combos : MonoBehaviour
             if (podeBater == true)
             {
                 Combo();
-                //A coroutine é o que chama o bloqueio através da bool "podeBater"
+                //A coroutine é o que chama o bloqueio através da bool "podeBater".
                 StartCoroutine(controleCombo());
             }
         }
@@ -189,7 +189,7 @@ public class Combos : MonoBehaviour
 
     IEnumerator controleCombo()
     {
-        //É chamada ao clicar com o botão de ataque
+        //É chamada ao clicar com o botão de ataque.
         podeBater = false;
         yield return new WaitForSecondsRealtime(0.5f);
         podeBater = true;
