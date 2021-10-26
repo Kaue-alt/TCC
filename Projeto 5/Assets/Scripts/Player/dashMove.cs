@@ -11,6 +11,7 @@ public class dashMove : MonoBehaviour
     public float cooldown;
     public bool canDash = true;
     private Animator animator;
+    public timeManager TimeManager;
 
     Combos combosScript;
 
@@ -31,6 +32,7 @@ public class dashMove : MonoBehaviour
             this.animator.SetBool("bDash", true);
             transform.position += Vector3.right * dashSpeed;
             CreatEffect();
+            TimeManager.SlowMotion();
 
             StartCoroutine(esperarCD(cooldown));
         }
@@ -40,6 +42,7 @@ public class dashMove : MonoBehaviour
             this.animator.SetBool("bDash", true);
             transform.position += Vector3.left * dashSpeed;
             CreatEffect();
+            TimeManager.SlowMotion();
 
             StartCoroutine(esperarCD(cooldown));
         }
@@ -49,6 +52,7 @@ public class dashMove : MonoBehaviour
             this.animator.SetBool("bDash", true);
             transform.position += transform.forward * dashSpeed;
             CreatEffect();
+            TimeManager.SlowMotion();
 
             StartCoroutine(esperarCD(cooldown));
         }
