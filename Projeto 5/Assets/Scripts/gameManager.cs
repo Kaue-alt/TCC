@@ -23,6 +23,8 @@ public class gameManager : MonoBehaviour
     public int[] weaponId;
     public int currentWeaponId;
 
+    public GameObject MensagemLoad;
+
     public static gameManager gm;
 
     private string filePath;
@@ -40,7 +42,7 @@ public class gameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-        filePath = Application.persistentDataPath + "/playerInfo.dat";
+        filePath = Application.persistentDataPath + "/saveGame.dat"; //ficará salvo em: exemplo(C:\Users\T-Gamer\AppData\LocalLow\DefaultCompany\Projeto 5)
     }
 
     public void Save()
@@ -85,6 +87,16 @@ public class gameManager : MonoBehaviour
         else
         {
             Debug.Log("Não há jogo salvo para ser carregado!");
+            MensagemLoad.SetActive(true);
+            StartCoroutine(FechaMensagem());
+        }
+
+        IEnumerator FechaMensagem()
+        {
+            
+            yield return new WaitForSeconds(3.5f);
+
+            MensagemLoad.SetActive(false);
         }
     }
 

@@ -25,14 +25,16 @@ public class vidaEnemy : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (life <= 0f)
         {
             dead++;
-            GetComponent<Animator>().SetInteger("Death", dead);
+            //GetComponent<Animator>().SetInteger("Death", dead);
+            
             StartCoroutine(enemyDeath(2.0f));
             inimigoMorto = true;
+            
         }
         if(inimigoMorto == true)
         {
@@ -42,11 +44,14 @@ public class vidaEnemy : MonoBehaviour
     
     IEnumerator enemyDeath(float tempo)
     {
-        audioSourceMonster.Play();
-        enemyScript.enabled = false;
-        navEnemy.enabled = false;
+        GetComponent<Animator>().SetInteger("Death", dead);
+        //audioSourceMonster.Play();
+        //enemyScript.enabled = false;
+        //navEnemy.enabled = false;
         yield return new WaitForSeconds(tempo);
+        audioSourceMonster.Play();
         Destroy(gameObject);
-        player.GetComponent<LevelSystem>().SetExperience(expValue);
+        //Destroy(gameObject);
+        //player.GetComponent<LevelSystem>().SetExperience(expValue);
     }
 }
