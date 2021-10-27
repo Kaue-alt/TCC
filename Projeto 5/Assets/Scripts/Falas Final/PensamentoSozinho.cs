@@ -18,6 +18,8 @@ public class PensamentoSozinho : MonoBehaviour
 
     TransicaoParaODia transicaoParaODia;
 
+    public bool pensamentoTrueFalse = true;
+
     public Text falaSozinho;
     void Start()
     {
@@ -32,24 +34,20 @@ public class PensamentoSozinho : MonoBehaviour
 
     void OnTriggerStay (Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && pensamentoTrueFalse == true)
         {
-            Debug.Log("Está dentro do Pensamento");
-            painelDialogoSozinho.SetActive(true);
-            iconePlayer.SetActive(true);
+            StartCoroutine(aparecerPensamento());
         }
-        //SOLUÇÃO TEMPORÁRIA PARA DESATIVAÇÃO
-        if(transicaoParaODia.ganchoTransicao >= 120)
-        {
-            Debug.Log("Cont passou dos 120");
-            painelDialogoSozinho.SetActive(false);
-            iconePlayer.SetActive(false);
-        }
-
-
-
     }
-   //void OnTriggerEnter(Collider other)
+    IEnumerator aparecerPensamento()
+    {
+        painelDialogoSozinho.SetActive(true);
+        iconePlayer.SetActive(true);
+        yield return new WaitForSecondsRealtime(4);
+        painelDialogoSozinho.SetActive(false);
+        iconePlayer.SetActive(false);
+        pensamentoTrueFalse = false;
+    }
 }
 
 
