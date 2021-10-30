@@ -9,7 +9,7 @@ public class pauseInGame : MonoBehaviour
 
     private bool paused = false;
 
-    public GameObject telaPause, hud, MenuOpcoes;
+    public GameObject telaPause, hud, MenuOpcoes, dashIcon,weaponIcon;
 
     public Fade fadeScript;
 
@@ -50,6 +50,8 @@ public class pauseInGame : MonoBehaviour
                 Time.timeScale = 1;
                 telaPause.SetActive(false);
                 hud.SetActive(true);
+                dashIcon.SetActive(true);
+                weaponIcon.SetActive(true);
                 paused = false;
 
                 movScript.enabled = true;
@@ -64,6 +66,8 @@ public class pauseInGame : MonoBehaviour
         {
             telaPause.SetActive(true);
             hud.SetActive(false);
+            dashIcon.SetActive(false);
+            weaponIcon.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
 
             runSound.Stop();
@@ -77,6 +81,8 @@ public class pauseInGame : MonoBehaviour
         Time.timeScale = 1;
         telaPause.SetActive(false);
         hud.SetActive(true);
+        dashIcon.SetActive(true);
+        weaponIcon.SetActive(true);
         paused = false;
 
         movScript.enabled = true;
