@@ -11,7 +11,7 @@ public class AnswerButtonComandante : MonoBehaviour
         FindObjectOfType<ComandanteController>().ProximaFalaComandante(respostaData.proximaFalaComandante);
     }
 
-    public void Setup(RespostaComandante respostaComandante)
+    public void Setup (RespostaComandante respostaComandante)
     {
         respostaData = respostaComandante;
     }
