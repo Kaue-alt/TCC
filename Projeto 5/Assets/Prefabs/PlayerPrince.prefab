@@ -1829,6 +1829,7 @@ MonoBehaviour:
   colliderArma2: {fileID: 7936579343820787467}
   clicks: 0
   canClick: 0
+  podeBater: 1
 --- !u!114 &7936579344247992804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1951,6 +1952,10 @@ MonoBehaviour:
   dashSpeed: 2.5
   cooldown: 1.7
   canDash: 1
+  TimeManager: {fileID: 0}
+  signalDash: {fileID: 0}
+  coolDownIcon: 1
+  isCoolDownIcon: 0
 --- !u!114 &7936579344247992593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7532,6 +7537,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedWeapon: 0
   animPlayer: {fileID: 7936579344247992802}
+  swap: 1
+  signal: {fileID: 0}
+  coolDown: 1
+  isCoolDown: 0
 --- !u!1 &7936579345339801239
 GameObject:
   m_ObjectHideFlags: 0
