@@ -10,11 +10,15 @@ public class SpawnJuninho : MonoBehaviour
     public GameObject SpawnKid;
     public GameObject kidGame;
 
+    
+
     TransicaoParaODia transicaoParaODia;
 
     void Start()
     {
         transicaoParaODia = FindObjectOfType<TransicaoParaODia>();
+
+        
     }
 
     void OnTriggerStay(Collider other)
@@ -25,6 +29,7 @@ public class SpawnJuninho : MonoBehaviour
             kidGame.gameObject.SetActive(false);
             transicaoParaODia.ganchoTransicao += 1;
             Debug.Log("Cont = " + transicaoParaODia.ganchoTransicao);
+            
         }
     }
 }

@@ -32,6 +32,8 @@ public class KidController : MonoBehaviour
 
     public GameObject textoNPC, IconeCrianca, IconePlayer;
 
+    
+
     void Start()
     {
         //DECLAÇÃO DE VARIÁVEIS P/ DIÁLOGO
@@ -40,6 +42,7 @@ public class KidController : MonoBehaviour
         dashScript = FindObjectOfType<dashMove>();
         jumpScript = FindObjectOfType<PlayerJump>();
         pauseScript = FindObjectOfType<pauseInGame>();
+        
 
         //CHAMAR TRANSIÇÃO
         transicaoParaODia = FindObjectOfType<TransicaoParaODia>();
@@ -51,12 +54,15 @@ public class KidController : MonoBehaviour
             {
                 StartCoroutine(waitStand());
             }
+
+            GetComponent<Animator>().SetBool("bStretch", true);
         }
         else
         {
             GetComponent<Animator>().SetBool("bTutorial", false);
         }
         fadeScript = FindObjectOfType<Fade>();
+        
     }
 
     void Update()
