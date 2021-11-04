@@ -103,6 +103,7 @@ public class DamageEnemy : MonoBehaviour
     IEnumerator travarMov(float tempo)
     {
         yield return new WaitForSeconds(tempo);
+        GetComponent<Animator>().SetInteger("Attack", 0);
         GetComponent<NavMeshAgent>().isStopped = false;
         GetComponent<NavMeshAgent>().speed = speedEnemy;
     }

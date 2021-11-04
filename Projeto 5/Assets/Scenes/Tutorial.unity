@@ -21582,7 +21582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &689552820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86379,6 +86379,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7936579343820787479, guid: a1e78e8fd576e3146a480eda446a0ddd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7936579344247992592, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}
       propertyPath: signalDash
@@ -86409,6 +86414,11 @@ PrefabInstance:
       propertyPath: lifeBar
       value: 
       objectReference: {fileID: 714790785}
+    - target: {fileID: 7936579344323013503, guid: a1e78e8fd576e3146a480eda446a0ddd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7936579344865420158, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}
       propertyPath: signal

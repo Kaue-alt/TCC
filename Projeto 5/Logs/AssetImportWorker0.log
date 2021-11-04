@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.2/staging' branch; Version is '2020.2.7f1 (c53830e277f1) revision 12924976'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19043.1288; Version 2009; 64bit' Language: 'pt' Physical Memory: 16315 MB
+OS: 'Windows 10 Pro; OS build 19043.1288; Version 2009; 64bit' Language: 'pt' Physical Memory: 8140 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -11,868 +11,132 @@ C:\Program Files\Unity\Hub\Editor\2020.2.7f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/T-Gamer/Documents/GitHub/Projeto4/Projeto4/TCC/Projeto 5
+E:/Program Files (x86)/Trabalhos/PUCC/TCC/Projeto 5
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63202
-Successfully changed project path to: C:/Users/T-Gamer/Documents/GitHub/Projeto4/Projeto4/TCC/Projeto 5
-C:/Users/T-Gamer/Documents/GitHub/Projeto4/Projeto4/TCC/Projeto 5
+57755
+Successfully changed project path to: E:/Program Files (x86)/Trabalhos/PUCC/TCC/Projeto 5
+E:/Program Files (x86)/Trabalhos/PUCC/TCC/Projeto 5
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 51.87 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 59.17 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.7f1 (c53830e277f1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/T-Gamer/Documents/GitHub/Projeto4/Projeto4/TCC/Projeto 5/Assets
+[Subsystems] Discovering subsystems at path E:/Program Files (x86)/Trabalhos/PUCC/TCC/Projeto 5/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Radeon RX 580 Series (ID=0x67df)
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c82)
     Vendor:   
-    VRAM:     8171 MB
-    Driver:   30.0.13017.5006
+    VRAM:     4018 MB
+    Driver:   30.0.14.9613
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56576
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56360
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004050 seconds.
+Registered in 0.003953 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 48.65 ms, found 1 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 54.05 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.576 seconds
+- Completed reload, in  1.938 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001691 seconds.
+Registered in 0.001454 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001487EBE6020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014879FFED30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A6A60 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487CEEC490 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E7F5250 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D2CF010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487CFC0F40 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E7F5250 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487EC0AC30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487CE90080 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487CEBDA90 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E8C7660 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B6537F0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D59DC10 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487A02E400 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D2FC030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B50C010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E8C7660 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D7DD010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D3CA690 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D1A0A20 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D7DD010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487ECDC040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B74C070 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D240210 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E868A90 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D66EC30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 52.20 ms, found 1 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 66.16 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.199 seconds
+- Completed reload, in  1.823 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2000 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 103.2 MB.
-System memory in use after: 103.3 MB.
+Unloading 2002 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 103.4 MB.
+System memory in use after: 103.4 MB.
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2458.
-Total: 2.386500 ms (FindLiveObjects: 0.292400 ms CreateObjectMapping: 0.050400 ms MarkObjects: 1.912900 ms  DeleteObjects: 0.129300 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Scenes/FaseCidadeQuebrada.unity
-  artifactKey: Guid(6f9c80742f98b0e42a3898433938b417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/FaseCidadeQuebrada.unity using Guid(6f9c80742f98b0e42a3898433938b417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '554b29496d55fb6bcdc1a522204f8713') in 0.014213 seconds
-  Import took 0.019080 seconds .
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2460.
+Total: 4.104500 ms (FindLiveObjects: 1.416000 ms CreateObjectMapping: 0.200600 ms MarkObjects: 2.339100 ms  DeleteObjects: 0.147000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.212471 seconds.
-  path: Assets/Scenes/Tutorial.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Tutorial.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '380a2e34e048240937291b03b35d54fe') in 0.004470 seconds
-  Import took 0.009183 seconds .
+  path: Assets/HDRPDefaultResources
+  artifactKey: Guid(13501f4a73a0eac4d8c5202845f36252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HDRPDefaultResources using Guid(13501f4a73a0eac4d8c5202845f36252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34f40bffe8692e36791b57074a15166d') in 0.014106 seconds
+  Import took 0.030631 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/Day-Night Skyboxes
+  artifactKey: Guid(ee19e4b52e096f242aea404af479f140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Day-Night Skyboxes using Guid(ee19e4b52e096f242aea404af479f140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '368831cfafbdb50844f4ddc4e8574e18') in 0.008653 seconds
+  Import took 0.020630 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002175 seconds.
+Registered in 0.001558 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DCD7C70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3E8020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E6A32F0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487ECD2A30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E825C70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B40D3D0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E7E2040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E7E2040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E3AC010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E7E2040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A07AFC30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5D9050 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0D4F020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E841090 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B40D3D0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B50C010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A07AFC30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9DA7C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D5A2C10 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5E2050 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D735010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0351030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000014852546FD0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E8B5020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0C03A20 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E5F7C30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.089 seconds
+- Completed reload, in  1.273 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1965 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 100.8 MB.
-System memory in use after: 100.9 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2462.
-Total: 1.985700 ms (FindLiveObjects: 0.207200 ms CreateObjectMapping: 0.048000 ms MarkObjects: 1.709200 ms  DeleteObjects: 0.019900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 122.757505 seconds.
-  path: Assets/Scripts/Enemy/EnemyBaby.cs
-  artifactKey: Guid(e35cac41e74c04940b6c01a371898144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Enemy/EnemyBaby.cs using Guid(e35cac41e74c04940b6c01a371898144) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0254f226adca8ca16071be071e97f53b') in 0.032076 seconds
-  Import took 0.037248 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.607535 seconds.
-  path: Assets/Scripts/Boss
-  artifactKey: Guid(7ef39e0c737fb3e48bd85d9fc5d6202a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Boss using Guid(7ef39e0c737fb3e48bd85d9fc5d6202a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd337b991fc46ed2febf1525cc4899192') in 0.056592 seconds
-  Import took 0.063698 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.738760 seconds.
-  path: Assets/Scripts/Boss/Boss.cs
-  artifactKey: Guid(48a8e7b8ae14d9145b77b7144525ba0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Boss/Boss.cs using Guid(48a8e7b8ae14d9145b77b7144525ba0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f09626861f29ad8886f22bfe2ebd54b') in 0.004032 seconds
-  Import took 0.008813 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001895 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DCADC70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F440F0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A7DA0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487EF96020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D107040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D3BB6B0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487EF96020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487ECC8020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E5DF020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487ECC8020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F440F0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3E4010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5D4020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B578350 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487ECD62A0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBA2020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F440F0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487ECDCC60 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1408C30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487CF0E640 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A12AF3D0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EA2A0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A126EB30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D2F4E20 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F440F0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0D38010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.186 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 100.9 MB.
 System memory in use after: 101.0 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2466.
-Total: 3.459900 ms (FindLiveObjects: 0.429100 ms CreateObjectMapping: 0.093400 ms MarkObjects: 2.913100 ms  DeleteObjects: 0.022600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001775 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D95CC60 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B4F7B70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F035C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A151C020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A151C020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A151C020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A151C020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487F23D020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A151C020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E603C30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0DB6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D639010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1551430 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1264FA0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1764060 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A07AF900 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E8B1020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9BEA50 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5E2050 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DAA6020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F035C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A05F91B0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9EBBC0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B4F7B70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9F3410 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.164 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 100.9 MB.
-System memory in use after: 101.0 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2469.
-Total: 2.303800 ms (FindLiveObjects: 0.247800 ms CreateObjectMapping: 0.048800 ms MarkObjects: 1.985200 ms  DeleteObjects: 0.020000 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2463.
+Total: 4.765100 ms (FindLiveObjects: 0.384500 ms CreateObjectMapping: 0.088000 ms MarkObjects: 4.219600 ms  DeleteObjects: 0.070400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 290.076239 seconds.
-  path: Assets/Scripts/Boss/Boss.cs
-  artifactKey: Guid(48a8e7b8ae14d9145b77b7144525ba0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Boss/Boss.cs using Guid(48a8e7b8ae14d9145b77b7144525ba0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e38a2342d226dd2c88152bdf6e7a2819') in 0.006575 seconds
-  Import took 0.011382 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1080.406065 seconds.
-  path: Assets/Scripts/Boss/Boss.cs
-  artifactKey: Guid(48a8e7b8ae14d9145b77b7144525ba0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Boss/Boss.cs using Guid(48a8e7b8ae14d9145b77b7144525ba0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b2e9438600db1eb6097777cf5563511') in 0.004013 seconds
-  Import took 0.009040 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.023645 seconds.
-  path: Assets/Scripts/Boss/Boss.cs
-  artifactKey: Guid(48a8e7b8ae14d9145b77b7144525ba0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Boss/Boss.cs using Guid(48a8e7b8ae14d9145b77b7144525ba0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b2e9438600db1eb6097777cf5563511') in 0.004129 seconds
-  Import took 0.009234 seconds .
+  Time since last request: 206.193148 seconds.
+  path: Assets/Scripts/Enemy
+  artifactKey: Guid(9654dfe7f6ab4d7439b77169c5ca77d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemy using Guid(9654dfe7f6ab4d7439b77169c5ca77d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e4320997d3a71f3b8d5b35768e3572e') in 0.013992 seconds
+  Import took 0.033634 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001773 seconds.
+Registered in 0.001759 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487EC205C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A126CFB0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F035C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0C8A020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0C8A020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487F23D020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E603C30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1984010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487EB40010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A013D430 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A05C9020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1836010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E603C30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A13F0020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9BEA50 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A17BF710 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D272940 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F035C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D1F2D10 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9EBBC0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487BA69620 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1347020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.81 ms, found 1 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.236 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.93 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 100.9 MB.
-System memory in use after: 101.0 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2472.
-Total: 2.382500 ms (FindLiveObjects: 0.236800 ms CreateObjectMapping: 0.048500 ms MarkObjects: 2.074300 ms  DeleteObjects: 0.021500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010102 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E9EAB70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E3401A0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B4EFB60 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D17C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B4EFB60 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0AEA030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E5DF020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B74A010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D2AC020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0239420 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A05C9020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBA2020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A07AF900 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E8B1020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9BEA50 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A17BF710 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DC2A010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F06760 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D7749C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3E4010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8A5020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.344 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 100.9 MB.
-System memory in use after: 101.0 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2475.
-Total: 2.354800 ms (FindLiveObjects: 0.227900 ms CreateObjectMapping: 0.049100 ms MarkObjects: 2.055400 ms  DeleteObjects: 0.020800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001815 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B446A50 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F07F00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F06760 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E338190 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487BA5C010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B4EFB60 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487BA5C010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E5DF020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F07F00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9B2650 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E338190 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B578350 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1B10010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBA2020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A07AF900 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A13F0020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9BEA50 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A17BF710 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1C62020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F06760 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D39C5E0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E465020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F07F00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487EF96020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.115 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 100.9 MB.
-System memory in use after: 101.0 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2478.
-Total: 2.226600 ms (FindLiveObjects: 0.249800 ms CreateObjectMapping: 0.049200 ms MarkObjects: 1.907500 ms  DeleteObjects: 0.017900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003564 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B4F8320 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A126CFB0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F06760 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E338190 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D2A4010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0F9AD90 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1B95020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487F23D020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A126CFB0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E465020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487CECA020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0741440 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A05C9020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBA2020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A126CFB0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E825C70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9BEA50 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DAC5720 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001489FC42020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F06760 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A013CC90 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0DB6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1C62020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.168 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 100.9 MB.
-System memory in use after: 101.1 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2481.
-Total: 2.233800 ms (FindLiveObjects: 0.231900 ms CreateObjectMapping: 0.049700 ms MarkObjects: 1.929200 ms  DeleteObjects: 0.021700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002036 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1A74F50 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0AF6040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E338190 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D2A4010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0F9AD90 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D2A4010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487F23D020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9B2650 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DABE040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B4F8FC0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A05C9020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBA2020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D897020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9BEA50 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A17BF710 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001489FCC6020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F06760 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A05F8080 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E465020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487EB40010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.086 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.1 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2484.
-Total: 2.506000 ms (FindLiveObjects: 0.251400 ms CreateObjectMapping: 0.051200 ms MarkObjects: 2.179000 ms  DeleteObjects: 0.021600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002093 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B446A50 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9F0470 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F06760 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E338190 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D2A4010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DADE050 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D2A4010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487F23D020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A126CFB0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E465020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1E72020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D379440 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A05C9020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBA2020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9F0470 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E825C70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9BEA50 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A17BF710 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A0012010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F06760 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D567600 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0DB6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B8BA000 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1C62020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.289 seconds
+- Completed reload, in  1.205 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -880,700 +144,751 @@ Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 101.0 MB.
 System memory in use after: 101.1 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2487.
-Total: 2.266500 ms (FindLiveObjects: 0.327200 ms CreateObjectMapping: 0.067700 ms MarkObjects: 1.854800 ms  DeleteObjects: 0.015700 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2466.
+Total: 7.668400 ms (FindLiveObjects: 1.130800 ms CreateObjectMapping: 0.518900 ms MarkObjects: 5.990500 ms  DeleteObjects: 0.025900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 147.274274 seconds.
+  path: Assets/Scripts/Enemy/DamageEnemy.cs
+  artifactKey: Guid(2cfaf0aa4e0a7b249884264c7d5e065d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemy/DamageEnemy.cs using Guid(2cfaf0aa4e0a7b249884264c7d5e065d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd462c5dbca53cf1ad69fbd40bc8327bc') in 0.113650 seconds
+  Import took 0.119181 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007478 seconds.
+Registered in 0.001863 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E6B6B70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9F1A20 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E338190 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1F8A020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B4EFB60 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1F8A020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487F23D020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9B2650 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1E72020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1BA2630 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A05C9020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBA2020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D897020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9BEA50 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A17BF710 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBA2020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F06760 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A013CE30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E465020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487EF96020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.91 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.552 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.83 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.0 MB.
+System memory in use after: 101.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2469.
+Total: 38.298800 ms (FindLiveObjects: 4.630200 ms CreateObjectMapping: 0.793800 ms MarkObjects: 32.845000 ms  DeleteObjects: 0.027600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001524 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.404 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.0 MB.
+System memory in use after: 101.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2472.
+Total: 5.506600 ms (FindLiveObjects: 0.692500 ms CreateObjectMapping: 0.469500 ms MarkObjects: 4.318400 ms  DeleteObjects: 0.024100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001615 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.271 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.0 MB.
+System memory in use after: 101.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2475.
+Total: 4.162500 ms (FindLiveObjects: 0.414400 ms CreateObjectMapping: 0.120900 ms MarkObjects: 3.593500 ms  DeleteObjects: 0.031000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001651 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.250 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.0 MB.
+System memory in use after: 101.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2478.
+Total: 4.642300 ms (FindLiveObjects: 0.333800 ms CreateObjectMapping: 0.102400 ms MarkObjects: 4.164300 ms  DeleteObjects: 0.039500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.126912 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.348 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.0 MB.
+System memory in use after: 101.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2481.
+Total: 3.320700 ms (FindLiveObjects: 0.342100 ms CreateObjectMapping: 0.068800 ms MarkObjects: 2.878600 ms  DeleteObjects: 0.029200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1054.669124 seconds.
+  path: Assets/Animations/Player/animatorPlayer.controller
+  artifactKey: Guid(93607635017f5bc44aa83ad987028562) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Player/animatorPlayer.controller using Guid(93607635017f5bc44aa83ad987028562) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '514c24fc5cda1a785c9a8e0e2dacc206') in 0.737914 seconds
+  Import took 0.746968 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 220.056497 seconds.
+  path: Assets/Scripts/Player/WeaponSwitching.cs
+  artifactKey: Guid(e4f4aa26a8fea8d448c3f77398d69dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/WeaponSwitching.cs using Guid(e4f4aa26a8fea8d448c3f77398d69dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2944d81329469e5021d7f7bfc58a6ff') in 0.019761 seconds
+  Import took 0.026916 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007807 seconds.
+  path: Assets/Scripts/Player/WeaponSwitching.cs
+  artifactKey: Guid(e4f4aa26a8fea8d448c3f77398d69dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/WeaponSwitching.cs using Guid(e4f4aa26a8fea8d448c3f77398d69dc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2944d81329469e5021d7f7bfc58a6ff') in 0.012775 seconds
+  Import took 0.024267 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006232 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.346 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.1 MB.
+System memory in use after: 101.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2484.
+Total: 2.803800 ms (FindLiveObjects: 0.272900 ms CreateObjectMapping: 0.064000 ms MarkObjects: 2.439900 ms  DeleteObjects: 0.024000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 87.027722 seconds.
+  path: Assets/Scripts/Player/Combos.cs
+  artifactKey: Guid(1aee0d1a98b61f048a8a8b3b7267d7b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Combos.cs using Guid(1aee0d1a98b61f048a8a8b3b7267d7b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b7bd2498ac637d955703d2ee0789ac8') in 0.043775 seconds
+  Import took 0.049139 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.026607 seconds.
+  path: Assets/Scripts/Player/Combos.cs
+  artifactKey: Guid(1aee0d1a98b61f048a8a8b3b7267d7b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/Combos.cs using Guid(1aee0d1a98b61f048a8a8b3b7267d7b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b7bd2498ac637d955703d2ee0789ac8') in 0.007067 seconds
+  Import took 0.018704 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001460 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.945 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.21 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.1 MB.
+System memory in use after: 101.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2487.
+Total: 4.916600 ms (FindLiveObjects: 0.945400 ms CreateObjectMapping: 0.356100 ms MarkObjects: 3.584700 ms  DeleteObjects: 0.028400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001414 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.896 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.27 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.1 MB.
+System memory in use after: 101.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2490.
+Total: 18.695900 ms (FindLiveObjects: 2.651200 ms CreateObjectMapping: 0.738600 ms MarkObjects: 15.267700 ms  DeleteObjects: 0.036000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001864 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.956 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.1 MB.
+System memory in use after: 101.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2493.
+Total: 2.680300 ms (FindLiveObjects: 0.298900 ms CreateObjectMapping: 0.083500 ms MarkObjects: 2.272300 ms  DeleteObjects: 0.023600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001644 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.414 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.1 MB.
+System memory in use after: 101.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2496.
+Total: 4.524800 ms (FindLiveObjects: 1.285100 ms CreateObjectMapping: 0.306300 ms MarkObjects: 2.902600 ms  DeleteObjects: 0.027900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002530 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.81 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.173 seconds
+- Completed reload, in  1.815 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.21 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.1 MB.
+System memory in use before: 101.1 MB.
+System memory in use after: 101.2 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2490.
-Total: 2.288300 ms (FindLiveObjects: 0.216400 ms CreateObjectMapping: 0.051400 ms MarkObjects: 1.998600 ms  DeleteObjects: 0.020700 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2499.
+Total: 6.591000 ms (FindLiveObjects: 0.453100 ms CreateObjectMapping: 0.163300 ms MarkObjects: 5.932600 ms  DeleteObjects: 0.039900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003894 seconds.
+Registered in 0.001763 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9C3C60 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8AF040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F06760 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E338190 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1F8A020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B4EFB60 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1F8A020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487F23D020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9B2650 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A039C010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1BA2630 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A05C9020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBA2020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8AF040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E825C70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F1F9C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A17BF710 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBA2020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F06760 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D567260 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0DB6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487EB40010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.58 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.285 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.1 MB.
+System memory in use after: 101.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2502.
+Total: 4.391500 ms (FindLiveObjects: 0.435000 ms CreateObjectMapping: 0.077200 ms MarkObjects: 3.850600 ms  DeleteObjects: 0.026800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002022 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.160 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.1 MB.
+System memory in use after: 101.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2505.
+Total: 5.027400 ms (FindLiveObjects: 0.683400 ms CreateObjectMapping: 0.087900 ms MarkObjects: 4.211900 ms  DeleteObjects: 0.041700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001512 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.675 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.88 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.1 MB.
+System memory in use after: 101.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2508.
+Total: 11.980600 ms (FindLiveObjects: 0.435400 ms CreateObjectMapping: 0.219100 ms MarkObjects: 11.277900 ms  DeleteObjects: 0.046300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001527 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.853 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.03 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.1 MB.
+System memory in use after: 101.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2511.
+Total: 15.177200 ms (FindLiveObjects: 7.209100 ms CreateObjectMapping: 0.619600 ms MarkObjects: 7.318300 ms  DeleteObjects: 0.028100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001509 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.684 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.94 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.1 MB.
+System memory in use after: 101.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2514.
+Total: 8.564800 ms (FindLiveObjects: 2.197700 ms CreateObjectMapping: 0.694600 ms MarkObjects: 5.643900 ms  DeleteObjects: 0.026600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001554 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.639 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.16 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.2 MB.
+System memory in use after: 101.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2517.
+Total: 11.121900 ms (FindLiveObjects: 0.377200 ms CreateObjectMapping: 0.105000 ms MarkObjects: 10.603200 ms  DeleteObjects: 0.034400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003554 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.695 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.82 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.2 MB.
+System memory in use after: 101.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2520.
+Total: 10.941800 ms (FindLiveObjects: 0.933000 ms CreateObjectMapping: 0.921800 ms MarkObjects: 9.053400 ms  DeleteObjects: 0.030500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001485 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.733 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.25 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.2 MB.
+System memory in use after: 101.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2523.
+Total: 7.137000 ms (FindLiveObjects: 0.471600 ms CreateObjectMapping: 0.148800 ms MarkObjects: 6.486700 ms  DeleteObjects: 0.028000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002592 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.516 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.2 MB.
+System memory in use after: 101.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2526.
+Total: 4.033500 ms (FindLiveObjects: 0.693300 ms CreateObjectMapping: 0.310300 ms MarkObjects: 3.004000 ms  DeleteObjects: 0.023200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1212.985887 seconds.
+  path: Assets/Animations/Player/AttackAxe_1.anim
+  artifactKey: Guid(c9f7f274a4fdd874684eda3518079b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Player/AttackAxe_1.anim using Guid(c9f7f274a4fdd874684eda3518079b53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '303cf61b14814ea7ba6592415062b021') in 0.087852 seconds
+  Import took 0.093975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 81.399926 seconds.
+  path: Assets/Animations/Player/AttackAxe_2.anim
+  artifactKey: Guid(b581b545b6458aa4780bcbe03d20727d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Player/AttackAxe_2.anim using Guid(b581b545b6458aa4780bcbe03d20727d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58fa207db5f6eccb6f714934e6c6cb55') in 0.058075 seconds
+  Import took 0.066558 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 92.261493 seconds.
+  path: Assets/Animations/Player/AttackAxe_3.anim
+  artifactKey: Guid(d188f7cfb36181a45a2d48eaa9b05217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Player/AttackAxe_3.anim using Guid(d188f7cfb36181a45a2d48eaa9b05217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bb298c0a5129eae451b14f6404e4716') in 0.081995 seconds
+  Import took 0.086965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 207.558425 seconds.
+  path: Assets/Animations/Player/AttackPipe_1.anim
+  artifactKey: Guid(785970714c694414e911dc0ad0668643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Player/AttackPipe_1.anim using Guid(785970714c694414e911dc0ad0668643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '833c448f8b1d174638ec1bd78e51e4b4') in 0.063474 seconds
+  Import took 0.071109 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 106.119860 seconds.
+  path: Assets/Animations/Player/AttackPipe_2.anim
+  artifactKey: Guid(8c17e6ebc6fc0d64bb210f206c4b4d5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Player/AttackPipe_2.anim using Guid(8c17e6ebc6fc0d64bb210f206c4b4d5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e0415b4e3b34c55fad0f3d2b99ea993') in 0.075714 seconds
+  Import took 0.081642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.263388 seconds.
+  path: Assets/Animations/Player/AttackPipe_3.anim
+  artifactKey: Guid(300e5674070a5bd42a2ebf08e6d6c55e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Player/AttackPipe_3.anim using Guid(300e5674070a5bd42a2ebf08e6d6c55e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4896f9fbd5c6b8d8a5812a24eff52098') in 0.095058 seconds
+  Import took 0.100572 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001432 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.847 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.62 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.2 MB.
+System memory in use after: 101.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2529.
+Total: 3.038800 ms (FindLiveObjects: 0.332100 ms CreateObjectMapping: 0.072100 ms MarkObjects: 2.606300 ms  DeleteObjects: 0.026500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002418 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.131 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.2 MB.
+System memory in use after: 101.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2532.
+Total: 11.790700 ms (FindLiveObjects: 0.512600 ms CreateObjectMapping: 0.859000 ms MarkObjects: 10.384900 ms  DeleteObjects: 0.031100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001531 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.761 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.2 MB.
+System memory in use after: 101.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2535.
+Total: 3.736000 ms (FindLiveObjects: 0.407700 ms CreateObjectMapping: 0.074000 ms MarkObjects: 3.219000 ms  DeleteObjects: 0.032900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001554 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.742 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.2 MB.
+System memory in use after: 101.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2538.
+Total: 3.124700 ms (FindLiveObjects: 0.393100 ms CreateObjectMapping: 0.142600 ms MarkObjects: 2.564300 ms  DeleteObjects: 0.023100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001478 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.371 seconds
+- Completed reload, in  1.852 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.21 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.1 MB.
+System memory in use before: 101.2 MB.
+System memory in use after: 101.3 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2493.
-Total: 3.416500 ms (FindLiveObjects: 0.358300 ms CreateObjectMapping: 0.072600 ms MarkObjects: 2.965500 ms  DeleteObjects: 0.019000 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2541.
+Total: 33.890000 ms (FindLiveObjects: 0.431100 ms CreateObjectMapping: 0.123200 ms MarkObjects: 33.300400 ms  DeleteObjects: 0.032800 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001727 seconds.
+Registered in 0.001487 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0E297E0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8AF040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9F1A20 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E338190 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1F8A020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1264FA0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A00AB010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487F23D020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DCD0020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D817040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9F1A20 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A05C9020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBA2020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8AF040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E825C70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9BEA50 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487CF0E640 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBA2020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A090CB90 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5B9630 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0DB6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B50C010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.749 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.2 MB.
+System memory in use after: 101.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2544.
+Total: 13.465300 ms (FindLiveObjects: 0.998800 ms CreateObjectMapping: 1.025400 ms MarkObjects: 11.397100 ms  DeleteObjects: 0.041100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001901 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.073 seconds
+- Completed reload, in  1.483 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.1 MB.
+System memory in use before: 101.2 MB.
+System memory in use after: 101.3 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2496.
-Total: 2.270300 ms (FindLiveObjects: 0.236600 ms CreateObjectMapping: 0.051300 ms MarkObjects: 1.961800 ms  DeleteObjects: 0.019200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002119 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A033EF20 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8AF040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0AF6040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E338190 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A18E8020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D66F020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A00AB010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487F23D020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A126CFB0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DCD0020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D817040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A08E3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1B10010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A06C1050 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8AF040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001489FD4A020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F1F9C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A17BF710 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A088D230 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A090CB90 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1654E60 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3E4010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBF00F0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A18E8020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.730 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.1 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2499.
-Total: 2.199800 ms (FindLiveObjects: 0.236100 ms CreateObjectMapping: 0.048500 ms MarkObjects: 1.893200 ms  DeleteObjects: 0.020700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003174 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A01BDA30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8AF040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9F1A20 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E338190 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D68D010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001489FD861A0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D68D010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487F23D020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1BDC670 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1F92030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D817040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A08E3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1B10010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A02A2020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8AF040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E825C70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F1F9C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A17BF710 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A088D230 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A090CB90 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A10A44A0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DCA6040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1BDC670 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001489FD4A020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.578 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.1 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2502.
-Total: 4.237800 ms (FindLiveObjects: 0.391100 ms CreateObjectMapping: 0.081400 ms MarkObjects: 3.733600 ms  DeleteObjects: 0.029800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002982 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E7E0690 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8AF040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9F1A20 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E338190 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A08BF020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001489FD861A0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A08BF020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487F23D020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A126CFB0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1F92030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D817040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487ECDB510 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1B10010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B8191F0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8AF040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E825C70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F1F9C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A17BF710 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBA2020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A090CB90 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E798990 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DCA6040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBF00F0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1179010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.374 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.1 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2505.
-Total: 2.425900 ms (FindLiveObjects: 0.259700 ms CreateObjectMapping: 0.050400 ms MarkObjects: 2.091700 ms  DeleteObjects: 0.020700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001648 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F45760 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001489FD8E1B0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9F1A20 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E338190 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A08BF020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0F9AD90 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBE2090 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487F23D020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001489FD8E1B0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9B2650 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1790030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A08E3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1B10010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A0C80010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001489FD8E1B0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E825C70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F1F9C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A17BF710 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A0C80010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A090CB90 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A00B80A0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1F92030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DE5C030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487EB40010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.202 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.1 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2508.
-Total: 2.484300 ms (FindLiveObjects: 0.247100 ms CreateObjectMapping: 0.053700 ms MarkObjects: 2.163600 ms  DeleteObjects: 0.017800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004059 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A01BCB70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8AF040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9F1A20 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E338190 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A022A020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A0F9AD90 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1181020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487F23D020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A0CCE0E0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9B2650 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1790030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A08E3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1B10010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B8191F0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8AF040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E825C70 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F1F9C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A17BF710 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A0C80010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A090CB90 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A02DABE0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1F92030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A0CCE0E0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A06FD1C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.180 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.1 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2511.
-Total: 2.054000 ms (FindLiveObjects: 0.238300 ms CreateObjectMapping: 0.048900 ms MarkObjects: 1.747500 ms  DeleteObjects: 0.017200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001701 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000146A0BD6010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E6B72D0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8AF040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B9F1A20 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487E338190 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\PsdPlugin.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DCC8010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B5A3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A0C34060 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1181020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487F23D020 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487B3EBF00 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A126CFB0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1F92030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001489FC7C040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A08E3030 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1B10010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A0D12010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487D8AF040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DBDA080 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146B1F1F9C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A0B93D30 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A0D12010 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487BA89490 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A19A8E10 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001487DCA6040 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000146A1BDC670 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-00000148A06FD1C0 doesn't match image C:\Users\T-Gamer\Documents\GitHub\Projeto4\Projeto4\TCC\Projeto 5\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.035 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1966 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.0 MB.
-System memory in use after: 101.1 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2514.
-Total: 2.018300 ms (FindLiveObjects: 0.210800 ms CreateObjectMapping: 0.051600 ms MarkObjects: 1.738400 ms  DeleteObjects: 0.015900 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2547.
+Total: 3.137600 ms (FindLiveObjects: 0.361900 ms CreateObjectMapping: 0.102100 ms MarkObjects: 2.647400 ms  DeleteObjects: 0.024200 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
