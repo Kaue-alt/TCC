@@ -8,7 +8,11 @@ public class KnockBack : MonoBehaviour
 
     private Animator anim;
     public bool active = false;
-    
+
+    //Teste p/ o Boss
+    public Rigidbody rigidBodyBossT;
+    public float jumpSpeedUpT;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -33,6 +37,8 @@ public class KnockBack : MonoBehaviour
                 direction.y = 0;
 
                 rb.AddForce(direction.normalized * knockbackStrength, ForceMode.Impulse);
+                //Jogar um pouquinho para cima
+                rigidBodyBossT.AddForce(Vector3.up * jumpSpeedUpT, ForceMode.VelocityChange);
             }
         }
     }

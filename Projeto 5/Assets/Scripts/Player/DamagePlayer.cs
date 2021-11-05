@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DamagePlayer : MonoBehaviour
 {
     vidaEnemy vidaEnemyScript;
+    vidaBoss vidaBossScript;
     FeedbackEnemy fbEnemyScript;
 
     public float damage1;
@@ -15,6 +16,7 @@ public class DamagePlayer : MonoBehaviour
     void Start()
     {
         vidaEnemyScript = FindObjectOfType<vidaEnemy>(); // CHAMANDO O SCRIPT "vidaEnemy"
+        vidaBossScript = FindObjectOfType<vidaBoss>(); // CHAMANDO O SCRIPT "vidaBoss"
         fbEnemyScript = FindObjectOfType<FeedbackEnemy>(); // CHAMANDO O SCRIPT "FeedbackEnemy"
     }
 
@@ -23,6 +25,7 @@ public class DamagePlayer : MonoBehaviour
     public void Dano1(GameObject enem)
     {
         enem.GetComponent<vidaEnemy>().life -= damage1; // REFERENCIA O OBJETO QUE FOI CRIADO A PARTIR DO COLLIDER DO INIMIGO
+        enem.GetComponent<vidaBoss>().life -= damage1; // REFERENCIA O OBJETO QUE FOI CRIADO A PARTIR DO COLLIDER DO BOSS
 
         enem.GetComponent<FeedbackEnemy>().damage = true; // ATIVA MUDANÇA DE COR DO INIMIGO ACERTADO
     }
@@ -35,7 +38,7 @@ public class DamagePlayer : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag ("Enemy"))
+        if (col.gameObject.CompareTag ("Enemy") || col.gameObject.CompareTag ("Boss"))
         {
             GameObject enemyIns = col.gameObject; // ASSOCIA O COLLIDER DO INIMIGO AO QUE ESTÁ SENDO ATACADO REALMENTE
             Dano1(enemyIns);

@@ -13,14 +13,12 @@ public class PlayerJump : MonoBehaviour
 
     private Animator animaPlayer;
 
-    // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
         animaPlayer = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && (onGround || MAX_JUMP > currentJump) && !cooldown)

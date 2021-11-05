@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class vidaEnemy : MonoBehaviour
 {
     public float life = 100f;
-    private int  dead = 0;
+    private int dead = 0;
 
     public AudioSource audioSourceMonster;
 
