@@ -103,8 +103,7 @@ public class KidController : MonoBehaviour
 
                 if (transicaoParaODia.ganchoTransicao >= 2)
                 {
-                    fadeScript.Transition("TutorialDia");
-                    Debug.Log("Transição");
+                    StartCoroutine(transicaoCorrotina());
                 }
             }
         }
@@ -158,5 +157,11 @@ public class KidController : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         GetComponent<Animator>().SetInteger("countStand", 1);
+    }
+
+    IEnumerator transicaoCorrotina()
+    {
+        yield return new WaitForSeconds(0.5f);
+        fadeScript.Transition("TutorialDia");
     }
 }
