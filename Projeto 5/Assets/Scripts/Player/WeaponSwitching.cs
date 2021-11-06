@@ -36,10 +36,8 @@ public class WeaponSwitching : MonoBehaviour
         int previousSelectedWeapon = selectedWeapon;
         if (canSwitch)
         {
-            if (swap == true)
+            if (swap && canSwitch)
             {
-
-
                 if (Input.GetAxis("Mouse ScrollWheel") > 0f && !animPlayer.GetCurrentAnimatorStateInfo(0).IsTag("Attacking"))
                 {
                     if (selectedWeapon >= transform.childCount - 1)

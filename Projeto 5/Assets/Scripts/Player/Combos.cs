@@ -44,6 +44,11 @@ public class Combos : MonoBehaviour
         animator.SetInteger("IdArma", weaponIdScript.selectedWeapon);
         AttackState();
 
+        if (clicks > 3)
+        {
+            clicks = 3;
+        }
+
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("standUp"))
         {
             movScript.enabled = false;
@@ -157,7 +162,7 @@ public class Combos : MonoBehaviour
         colliderArma2.enabled = false;
     }
 
-    public void AttackState()
+    public void AttackState() // Verifica em qual ataque está, independente da arma
     {
         if(animator.GetCurrentAnimatorStateInfo(0).IsName("AttackAxe_1") || animator.GetCurrentAnimatorStateInfo(0).IsName("AttackPipe_1"))
         {
