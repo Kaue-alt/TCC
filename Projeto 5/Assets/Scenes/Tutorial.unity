@@ -21588,11 +21588,11 @@ GameObject:
   - component: {fileID: 689552822}
   - component: {fileID: 689552821}
   - component: {fileID: 689552820}
-  - component: {fileID: 689552825}
   - component: {fileID: 689552827}
   - component: {fileID: 689552826}
   - component: {fileID: 689552828}
   - component: {fileID: 689552829}
+  - component: {fileID: 689552825}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -21617,12 +21617,14 @@ MonoBehaviour:
   danoCorteRapido: 2
   danoCortePuxao: 2
   jumpSpeedUp: 10
-  jumpSpeedRight: 8
-  jumpSpeedLeft: 8
+  jumpSpeedRight: 12
+  jumpSpeedLeft: 12
   jumpSpeedDown: 6
   speedCorte: 5
   speedDashCorte: 5
+  sugada: 100
   rigidBodyBoss: {fileID: 689552825}
+  rigidBodyPlayer: {fileID: 919132148921016494}
   danoDoCorte: 10
   danoDoCortePesado: 0
   danoDaInvestida: 0
@@ -21635,7 +21637,7 @@ BoxCollider:
   m_GameObject: {fileID: 689552819}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -21710,14 +21712,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689552819}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  m_Constraints: 120
+  m_CollisionDetection: 1
 --- !u!114 &689552826
 MonoBehaviour:
   m_ObjectHideFlags: 0

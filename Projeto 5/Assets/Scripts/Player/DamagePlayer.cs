@@ -20,17 +20,22 @@ public class DamagePlayer : MonoBehaviour
         fbEnemyScript = FindObjectOfType<FeedbackEnemy>(); // CHAMANDO O SCRIPT "FeedbackEnemy"
     }
 
-
     // ------------------------------------ ATAQUES PLAYER -----------------------------------------
     public void Dano1(GameObject enem)
     {
         enem.GetComponent<vidaEnemy>().life -= damage1; // REFERENCIA O OBJETO QUE FOI CRIADO A PARTIR DO COLLIDER DO INIMIGO
-        enem.GetComponent<vidaBoss>().life -= damage1; // REFERENCIA O OBJETO QUE FOI CRIADO A PARTIR DO COLLIDER DO BOSS
 
         enem.GetComponent<FeedbackEnemy>().damage = true; // ATIVA MUDANÇA DE COR DO INIMIGO ACERTADO
     }
-
+    
     // -----------------------------------------------------------------------------------------------
+    public void DanoBoss(GameObject goBoss)
+    {
+        goBoss.GetComponent<vidaBoss>().life -= damage1; // REFERENCIA O OBJETO QUE FOI CRIADO A PARTIR DO COLLIDER DO BOSS
+
+        goBoss.GetComponent<FeedbackEnemy>().damage = true; // ATIVA MUDANÇA DE COR DO BOSS
+    }
+
 
     void Update()
     {
@@ -38,10 +43,15 @@ public class DamagePlayer : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag ("Enemy") || col.gameObject.CompareTag ("Boss"))
+        if (col.gameObject.CompareTag ("Enemy"))
         {
             GameObject enemyIns = col.gameObject; // ASSOCIA O COLLIDER DO INIMIGO AO QUE ESTÁ SENDO ATACADO REALMENTE
             Dano1(enemyIns);
+        }
+        if (col.gameObject.CompareTag("Boss"))
+        {
+            GameObject bossIns = col.gameObject; // ASSOCIA O COLLIDER DO INIMIGO AO QUE ESTÁ SENDO ATACADO REALMENTE
+            DanoBoss(bossIns);
         }
     }
 }

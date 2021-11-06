@@ -9,6 +9,7 @@ public class Boss : MonoBehaviour
     feedbackPlayer fbPlayerScript;
     KnockBack kbScript;
     vidaBoss vidaDoBoss;
+    Movimentacao scriptMovimentacao;
 
     //private Transform posicaoDoJogador;
     public float velocidadeBoss;
@@ -29,7 +30,9 @@ public class Boss : MonoBehaviour
     public float jumpSpeedDown;
     public float speedCorte;
     public float speedDashCorte;
+    public float sugada;
     public Rigidbody rigidBodyBoss;
+    public Rigidbody rigidBodyPlayer;
 
     //Permissões
     private bool podePular = true;
@@ -51,12 +54,13 @@ public class Boss : MonoBehaviour
         fbPlayerScript = FindObjectOfType<feedbackPlayer>();
         kbScript = GetComponent<KnockBack>();
         vidaDoBoss = FindObjectOfType<vidaBoss>();
+        scriptMovimentacao = FindObjectOfType<Movimentacao>();
     }
 
     void Update()
     {
         //transform.Translate(Vector2.right * velocidadeBoss * )
-        if(vidaDoBoss.life >= 50)
+        if(vidaDoBoss.life >= 85)
         {
             Debug.Log("Vida acima de 50");
             //Pular para a direita
@@ -64,8 +68,6 @@ public class Boss : MonoBehaviour
             {
                 Debug.Log("Jogador - Boss if 1");
                 StartCoroutine(puloDireita());
-                //rigidBodyBoss.AddForce(Vector3.up * jumpSpeedBoss, ForceMode.VelocityChange);
-                //rigidBodyBoss.AddForce(Vector3.right * jumpSpeedRightBoss, ForceMode.VelocityChange);
                 StartCoroutine(cooldownPulo());
             }
 
@@ -74,8 +76,6 @@ public class Boss : MonoBehaviour
             {
                 Debug.Log("Jogador - Boss if 1");
                 StartCoroutine(puloEsquerda());
-                //rigidBodyBoss.AddForce(Vector3.up * jumpSpeedBoss, ForceMode.VelocityChange);
-                //rigidBodyBoss.AddForce(Vector3.right * jumpSpeedRightBoss, ForceMode.VelocityChange);
                 StartCoroutine(cooldownPulo());
             }
 
@@ -90,6 +90,19 @@ public class Boss : MonoBehaviour
         else
         {
             Debug.Log("Vida abaixo de 50, cuidado!");
+            if (podePular == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6 && posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) //FUNCIONA
+            {
+                Debug.Log("Pula p/ Esquerda");
+                StartCoroutine(puloEsquerda());
+                StartCoroutine(cooldownPulo());
+                StartCoroutine(ativaSugada());
+                //SCRIPT PROIBIDO COM WHILE
+                /*if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 10 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) //FUNCIONA
+                {
+                    Debug.Log("Ativa Sugada");
+                    StartCoroutine(ativaSugada());
+                }*/
+            }
         }      
     }
 
@@ -111,7 +124,7 @@ public class Boss : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
         rigidBodyBoss.AddForce(Vector3.down * jumpSpeedDown, ForceMode.VelocityChange);
     }
-
+    
     //Cooldown
     IEnumerator cooldownPulo()
     {
@@ -125,6 +138,17 @@ public class Boss : MonoBehaviour
         podeCortar = false;
         yield return new WaitForSecondsRealtime(2);
         podeCortar = true;
+    }
+
+    IEnumerator ativaSugada()
+    {
+        yield return new WaitForSecondsRealtime(2);
+
+        if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 10 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
+        {
+            rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
+            scriptMovimentacao.speed = 1;
+        }
     }
 
     public  void corteRapido ()
