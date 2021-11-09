@@ -37,6 +37,7 @@ public class Boss : MonoBehaviour
     //Permissões
     private bool podePular = true;
     private bool podeCortar = true;
+    public bool estaSugando = false;
 
     //Dano
     public float danoDoCorte;
@@ -69,6 +70,7 @@ public class Boss : MonoBehaviour
                 Debug.Log("Jogador - Boss if 1");
                 StartCoroutine(puloDireita());
                 StartCoroutine(cooldownPulo());
+                sugadaEsquerda();
             }
 
             //Pular para a esquerda
@@ -77,6 +79,7 @@ public class Boss : MonoBehaviour
                 Debug.Log("Jogador - Boss if 1");
                 StartCoroutine(puloEsquerda());
                 StartCoroutine(cooldownPulo());
+                sugadaEsquerda();
             }
 
             //Cortar
@@ -86,6 +89,12 @@ public class Boss : MonoBehaviour
                 corteRapido();
                 Debug.Log("cortou!");
             }
+
+            if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 10 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) //FUNCIONA
+             {
+                 Debug.Log("Ativa Sugada");
+                // StartCoroutine(ativaSugada());
+             }
         }
         else
         {
@@ -95,7 +104,7 @@ public class Boss : MonoBehaviour
                 Debug.Log("Pula p/ Esquerda");
                 StartCoroutine(puloEsquerda());
                 StartCoroutine(cooldownPulo());
-                StartCoroutine(ativaSugada());
+                //StartCoroutine(ativaSugada());
                 //SCRIPT PROIBIDO COM WHILE
                 /*if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 10 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) //FUNCIONA
                 {
@@ -123,6 +132,8 @@ public class Boss : MonoBehaviour
         rigidBodyBoss.AddForce(Vector3.left * jumpSpeedLeft, ForceMode.VelocityChange);
         yield return new WaitForSecondsRealtime(0.5f);
         rigidBodyBoss.AddForce(Vector3.down * jumpSpeedDown, ForceMode.VelocityChange);
+        yield return new WaitForSecondsRealtime(2);
+        StartCoroutine(ativaSugada());
     }
     
     //Cooldown
@@ -142,16 +153,24 @@ public class Boss : MonoBehaviour
 
     IEnumerator ativaSugada()
     {
-        yield return new WaitForSecondsRealtime(2);
-
-        if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 10 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
+        yield return new WaitForSecondsRealtime(0.5f);
+      
+        if (posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 2)
         {
-            rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
+            sugadaEsquerda();
             scriptMovimentacao.speed = 1;
+            Debug.Log("sugandoCorrotinaEsquerda");
         }
+        if (posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 2)
+        {
+            sugadaDireita();
+            scriptMovimentacao.speed = 1;
+            Debug.Log("sugandoCorrotinaDireita");
+
+        }      
     }
 
-    public  void corteRapido ()
+    private  void corteRapido ()
     {
         vidaPlayerScript.life -= danoDoCorte;
         kbScript.active = true;
@@ -160,21 +179,36 @@ public class Boss : MonoBehaviour
         //Dash p/ ataque em direção ao player
         if(posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
         {
+            //GetComponent<Animator>().SetInteger("CorteBoss", 1);
             rigidBodyBoss.AddForce(Vector3.right * speedDashCorte, ForceMode.VelocityChange);
         }
         else
         {
+            //GetComponent<Animator>().SetInteger("CorteBoss", 1);
             rigidBodyBoss.AddForce(Vector3.left * speedDashCorte, ForceMode.VelocityChange);
         }
     }
 
-    private void cortePuxao ()
+    private void cortePesado ()
     {
         if (posicaoDoJogador)
         {
 
         }
     }
+
+    private void sugadaEsquerda()
+    {
+        Debug.Log("Sugada esquerda");
+        rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
+    }
+
+    private void sugadaDireita()
+    {
+        Debug.Log("Sugada direita");
+        rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
+    }
+
     /* private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -183,30 +217,30 @@ public class Boss : MonoBehaviour
         }
     }
     */
-        /*Tela (transform) - Jogador 
-        if (Vector2.Distance(transform.position, posicaoDoJogador.position) > 5)
-        {
-            Debug.Log("Tela - Jogador > 5");
-        }
-        if (Vector2.Distance(transform.position, posicaoDoJogador.position) < 5)
-        {
-            Debug.Log("Tela - Jogador < 5");
-        }
+    /*Tela (transform) - Jogador 
+    if (Vector2.Distance(transform.position, posicaoDoJogador.position) > 5)
+    {
+        Debug.Log("Tela - Jogador > 5");
+    }
+    if (Vector2.Distance(transform.position, posicaoDoJogador.position) < 5)
+    {
+        Debug.Log("Tela - Jogador < 5");
+    }
 
-        //Jogador - Tela (transform)
-        if (Vector2.Distance(posicaoDoJogador.position, transform.position) > 5)
-        {
-            Debug.Log("Jogador-Tela > 5");
-        }
-        if (Vector2.Distance(posicaoDoJogador.position, transform.position) < 5)
-        {
-            Debug.Log("Jogador-Tela < 5");
-        }
+    //Jogador - Tela (transform)
+    if (Vector2.Distance(posicaoDoJogador.position, transform.position) > 5)
+    {
+        Debug.Log("Jogador-Tela > 5");
+    }
+    if (Vector2.Distance(posicaoDoJogador.position, transform.position) < 5)
+    {
+        Debug.Log("Jogador-Tela < 5");
+    }
 
-        //Boss - Jogador
-        if (Vector2.Distance(posicaoDoBoss.position, posicaoDoJogador.position) < 5)
-        {
-            Debug.Log("Boss - Jogador if 4");
-        }
-        */
+    //Boss - Jogador
+    if (Vector2.Distance(posicaoDoBoss.position, posicaoDoJogador.position) < 5)
+    {
+        Debug.Log("Boss - Jogador if 4");
+    }
+    */
 }

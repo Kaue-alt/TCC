@@ -21599,7 +21599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &689552820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21616,15 +21616,16 @@ MonoBehaviour:
   campoPercepcao: 2
   danoCorteRapido: 2
   danoCortePuxao: 2
-  jumpSpeedUp: 10
-  jumpSpeedRight: 12
-  jumpSpeedLeft: 12
-  jumpSpeedDown: 6
+  jumpSpeedUp: 16
+  jumpSpeedRight: 14
+  jumpSpeedLeft: 14
+  jumpSpeedDown: 10
   speedCorte: 5
   speedDashCorte: 5
   sugada: 100
   rigidBodyBoss: {fileID: 689552825}
   rigidBodyPlayer: {fileID: 919132148921016494}
+  estaSugando: 0
   danoDoCorte: 10
   danoDoCortePesado: 0
   danoDaInvestida: 0
@@ -21712,14 +21713,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689552819}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 15
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!114 &689552826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86450,7 +86451,7 @@ PrefabInstance:
     - target: {fileID: 7615267700635332541, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.91
+      value: 53.08
       objectReference: {fileID: 0}
     - target: {fileID: 7615267700635332541, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}
