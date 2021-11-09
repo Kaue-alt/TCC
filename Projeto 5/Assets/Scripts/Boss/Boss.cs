@@ -63,16 +63,16 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.L))
+        if (estaSugando == true)
         {
-            if (posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) //&& Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 2)
+            if (posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)
             {
                 rigidBodyPlayer.AddForce(Vector3.right * sugada, ForceMode.Acceleration);
                 scriptMovimentacao.speed = 1;
                 Debug.Log("sugandoCorrotinaEsquerda");
                 scriptDash.enabled = false;
             }
-            else //(posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)//&& Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 2)
+            else
             {
                 rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
                 scriptMovimentacao.speed = 1;
@@ -85,12 +85,14 @@ public class Boss : MonoBehaviour
             scriptDash.enabled = true;
             scriptMovimentacao.speed = 5;
         }
-        //transform.Translate(Vector2.right * velocidadeBoss * )
+
+        //Vida acima de 50%
         if (vidaDoBoss.life >= 85)
         {
             Debug.Log("Vida acima de 50");
+
             //Pular para a direita
-            if (podePular == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 10 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) //FUNCIONA
+            if (podePular == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 8 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) //FUNCIONA
             {
                 sorteiaAtaque();
                 if (chanceDeAtaque <= 7)
@@ -98,13 +100,10 @@ public class Boss : MonoBehaviour
                     StartCoroutine(puloDireita());
                     chanceDeAtaque = 0;
                 }
-
-                ///StartCoroutine(cooldownPulo());
-                //sugadaEsquerda();
             }
 
             //Pular para a esquerda
-            if (podePular == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 10 && posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) //FUNCIONA
+            if (podePular == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 8 && posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) //FUNCIONA
             {
                 sorteiaAtaque();
                 if (chanceDeAtaque <= 7)
@@ -112,9 +111,6 @@ public class Boss : MonoBehaviour
                     StartCoroutine(puloEsquerda());
                     chanceDeAtaque = 0;
                 }
-
-                //StartCoroutine(cooldownPulo());
-                //sugadaEsquerda();
             }
 
             //Cortar
@@ -124,26 +120,6 @@ public class Boss : MonoBehaviour
                 corteRapido();
                 Debug.Log("cortou!");
             }
-
-            if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 10 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) //FUNCIONA
-            {
-                Debug.Log("Ativa Sugada");
-                //StartCoroutine(puloEsquerda());
-                //StartCoroutine(cooldownPulo());
-                //StartCoroutine(ativaSugada());
-            }
-            /*if (podePular == true)
-            {
-                StartCoroutine(puloEsquerda());
-                StartCoroutine(cooldownPulo());
-            }*/
-            //Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 10 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) //FUNCIONA
-            /* {
-             Debug.Log("Ativa Sugada");
-             StartCoroutine(puloEsquerda());
-             //StartCoroutine(cooldownPulo());
-             StartCoroutine(ativaSugada());
-         }*/
         }
         else
         {
@@ -153,13 +129,12 @@ public class Boss : MonoBehaviour
                 Debug.Log("Pula p/ Esquerda");
                 StartCoroutine(puloEsquerda());
                 StartCoroutine(cooldownPulo());
-                //StartCoroutine(ativaSugada());
-                //SCRIPT PROIBIDO COM WHILE
-                /*if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 10 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) //FUNCIONA
-                {
-                    Debug.Log("Ativa Sugada");
-                    StartCoroutine(ativaSugada());
-                }*/
+            }
+            if (podePular == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
+            {
+                Debug.Log("Pula p/ Direita");
+                StartCoroutine(puloDireita());
+                StartCoroutine(cooldownPulo());
             }
         }
     }
@@ -178,7 +153,17 @@ public class Boss : MonoBehaviour
             rigidBodyBoss.AddForce(Vector3.down * jumpSpeedDown, ForceMode.VelocityChange);
             yield return new WaitForSecondsRealtime(2);
             rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
-            yield return new WaitForSecondsRealtime(2);
+            yield return new WaitForSecondsRealtime(1);
+            if (vidaDoBoss.life <= 85)
+            {
+                estaSugando = false;
+            }
+            /*if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3)
+                {
+                estaSugando = false;
+                }
+                */
+            yield return new WaitForSecondsRealtime(6);
             podePular = true;
         }
     }
@@ -194,12 +179,22 @@ public class Boss : MonoBehaviour
             rigidBodyBoss.AddForce(Vector3.left * jumpSpeedLeft, ForceMode.VelocityChange);
             yield return new WaitForSecondsRealtime(0.5f);
             rigidBodyBoss.AddForce(Vector3.down * jumpSpeedDown, ForceMode.VelocityChange);
-            yield return new WaitForSecondsRealtime(2);
-            sugadaDirecao();
-            yield return new WaitForSecondsRealtime(2);
+            yield return new WaitForSecondsRealtime(1);
+            if(vidaDoBoss.life <= 85)
+            {
+                estaSugando = false;
+            }
+            //estaSugando = true;
+            /*if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3)
+            {
+                estaSugando = false;
+            }
+            */
+            yield return new WaitForSecondsRealtime(6);
             podePular = true;
         }
     }
+
 
     //Cooldown
     IEnumerator cooldownPulo()
@@ -222,25 +217,6 @@ public class Boss : MonoBehaviour
         Debug.Log("Num: " + chanceDeAtaque);
     }
 
-    /*IEnumerator ativaSugada()
-    {
-        yield return new WaitForSecondsRealtime(0.5f);
-
-        if (posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 2)
-        {
-            sugadaEsquerda();
-            scriptMovimentacao.speed = 1;
-            Debug.Log("sugandoCorrotinaEsquerda");
-        }
-        if (posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 2)
-        {
-            sugadaDireita();
-            scriptMovimentacao.speed = 1;
-            Debug.Log("sugandoCorrotinaDireita");
-
-        }
-    }
-    */
     private void corteRapido()
     {
         vidaPlayerScript.life -= danoDoCorte;

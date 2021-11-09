@@ -30,7 +30,7 @@ public class EnemyBaby : MonoBehaviour
         // Inimigo encontra o player pela tag
         player = GameObject.FindWithTag("Player");
 
-        enemy.transform.Rotate(-90.0f, 0.0f, -90.0f);
+        //enemy.transform.Rotate(-90.0f, 0.0f, -90.0f);
     }
 
 
