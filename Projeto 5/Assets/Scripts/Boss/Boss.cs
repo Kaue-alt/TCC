@@ -10,6 +10,7 @@ public class Boss : MonoBehaviour
     KnockBack kbScript;
     vidaBoss vidaDoBoss;
     Movimentacao scriptMovimentacao;
+    dashMove scriptDash;
 
     //private Transform posicaoDoJogador;
     public float velocidadeBoss;
@@ -43,6 +44,7 @@ public class Boss : MonoBehaviour
     public float danoDoCorte;
     public float danoDoCortePesado;
     public float danoDaInvestida;
+    private int chanceDeAtaque;
 
     void Start()
     {
@@ -56,30 +58,63 @@ public class Boss : MonoBehaviour
         kbScript = GetComponent<KnockBack>();
         vidaDoBoss = FindObjectOfType<vidaBoss>();
         scriptMovimentacao = FindObjectOfType<Movimentacao>();
+        scriptDash = FindObjectOfType<dashMove>();
     }
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.L))
+        {
+            if (posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) //&& Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 2)
+            {
+                rigidBodyPlayer.AddForce(Vector3.right * sugada, ForceMode.Acceleration);
+                scriptMovimentacao.speed = 1;
+                Debug.Log("sugandoCorrotinaEsquerda");
+                scriptDash.enabled = false;
+            }
+            else //(posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)//&& Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 2)
+            {
+                rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
+                scriptMovimentacao.speed = 1;
+                Debug.Log("sugandoCorrotinaDireita");
+                scriptDash.enabled = false;
+            }
+        }
+        else
+        {
+            scriptDash.enabled = true;
+            scriptMovimentacao.speed = 5;
+        }
         //transform.Translate(Vector2.right * velocidadeBoss * )
-        if(vidaDoBoss.life >= 85)
+        if (vidaDoBoss.life >= 85)
         {
             Debug.Log("Vida acima de 50");
             //Pular para a direita
             if (podePular == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 10 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) //FUNCIONA
             {
-                Debug.Log("Jogador - Boss if 1");
-                StartCoroutine(puloDireita());
-                StartCoroutine(cooldownPulo());
-                sugadaEsquerda();
+                sorteiaAtaque();
+                if (chanceDeAtaque <= 7)
+                {
+                    StartCoroutine(puloDireita());
+                    chanceDeAtaque = 0;
+                }
+
+                ///StartCoroutine(cooldownPulo());
+                //sugadaEsquerda();
             }
 
             //Pular para a esquerda
             if (podePular == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 10 && posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) //FUNCIONA
             {
-                Debug.Log("Jogador - Boss if 1");
-                StartCoroutine(puloEsquerda());
-                StartCoroutine(cooldownPulo());
-                sugadaEsquerda();
+                sorteiaAtaque();
+                if (chanceDeAtaque <= 7)
+                {
+                    StartCoroutine(puloEsquerda());
+                    chanceDeAtaque = 0;
+                }
+
+                //StartCoroutine(cooldownPulo());
+                //sugadaEsquerda();
             }
 
             //Cortar
@@ -91,10 +126,24 @@ public class Boss : MonoBehaviour
             }
 
             if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 10 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) //FUNCIONA
-             {
-                 Debug.Log("Ativa Sugada");
-                // StartCoroutine(ativaSugada());
-             }
+            {
+                Debug.Log("Ativa Sugada");
+                //StartCoroutine(puloEsquerda());
+                //StartCoroutine(cooldownPulo());
+                //StartCoroutine(ativaSugada());
+            }
+            /*if (podePular == true)
+            {
+                StartCoroutine(puloEsquerda());
+                StartCoroutine(cooldownPulo());
+            }*/
+            //Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 10 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) //FUNCIONA
+            /* {
+             Debug.Log("Ativa Sugada");
+             StartCoroutine(puloEsquerda());
+             //StartCoroutine(cooldownPulo());
+             StartCoroutine(ativaSugada());
+         }*/
         }
         else
         {
@@ -112,36 +161,52 @@ public class Boss : MonoBehaviour
                     StartCoroutine(ativaSugada());
                 }*/
             }
-        }      
+        }
     }
 
     //Controlar direção dos pulos
     IEnumerator puloDireita()
     {
-        rigidBodyBoss.AddForce(Vector3.up * jumpSpeedUp, ForceMode.VelocityChange);
-        yield return new WaitForSecondsRealtime(0.3f);
-        rigidBodyBoss.AddForce(Vector3.right * jumpSpeedRight, ForceMode.VelocityChange);
-        yield return new WaitForSecondsRealtime(0.5f);
-        rigidBodyBoss.AddForce(Vector3.down * jumpSpeedDown, ForceMode.VelocityChange);
+        podePular = false;
+        if (podePular == false)
+        {
+            //yield return new WaitForSecondsRealtime(1);
+            rigidBodyBoss.AddForce(Vector3.up * jumpSpeedUp, ForceMode.VelocityChange);
+            yield return new WaitForSecondsRealtime(0.3f);
+            rigidBodyBoss.AddForce(Vector3.right * jumpSpeedRight, ForceMode.VelocityChange);
+            yield return new WaitForSecondsRealtime(0.5f);
+            rigidBodyBoss.AddForce(Vector3.down * jumpSpeedDown, ForceMode.VelocityChange);
+            yield return new WaitForSecondsRealtime(2);
+            rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
+            yield return new WaitForSecondsRealtime(2);
+            podePular = true;
+        }
     }
 
     IEnumerator puloEsquerda()
     {
-        rigidBodyBoss.AddForce(Vector3.up * jumpSpeedUp, ForceMode.VelocityChange);
-        yield return new WaitForSecondsRealtime(0.3f);
-        rigidBodyBoss.AddForce(Vector3.left * jumpSpeedLeft, ForceMode.VelocityChange);
-        yield return new WaitForSecondsRealtime(0.5f);
-        rigidBodyBoss.AddForce(Vector3.down * jumpSpeedDown, ForceMode.VelocityChange);
-        yield return new WaitForSecondsRealtime(2);
-        StartCoroutine(ativaSugada());
+        podePular = false;
+        if (podePular == false)
+        {
+            yield return new WaitForSecondsRealtime(1);
+            rigidBodyBoss.AddForce(Vector3.up * jumpSpeedUp, ForceMode.VelocityChange);
+            yield return new WaitForSecondsRealtime(0.3f);
+            rigidBodyBoss.AddForce(Vector3.left * jumpSpeedLeft, ForceMode.VelocityChange);
+            yield return new WaitForSecondsRealtime(0.5f);
+            rigidBodyBoss.AddForce(Vector3.down * jumpSpeedDown, ForceMode.VelocityChange);
+            yield return new WaitForSecondsRealtime(2);
+            sugadaDirecao();
+            yield return new WaitForSecondsRealtime(2);
+            podePular = true;
+        }
     }
-    
+
     //Cooldown
     IEnumerator cooldownPulo()
     {
         podePular = false;
         yield return new WaitForSecondsRealtime(8);
-        podePular = true;  
+        podePular = true;
     }
 
     IEnumerator cooldownCorte()
@@ -151,10 +216,16 @@ public class Boss : MonoBehaviour
         podeCortar = true;
     }
 
-    IEnumerator ativaSugada()
+    void sorteiaAtaque()
+    {
+        chanceDeAtaque = Random.Range(1, 11);
+        Debug.Log("Num: " + chanceDeAtaque);
+    }
+
+    /*IEnumerator ativaSugada()
     {
         yield return new WaitForSecondsRealtime(0.5f);
-      
+
         if (posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 2)
         {
             sugadaEsquerda();
@@ -167,17 +238,17 @@ public class Boss : MonoBehaviour
             scriptMovimentacao.speed = 1;
             Debug.Log("sugandoCorrotinaDireita");
 
-        }      
+        }
     }
-
-    private  void corteRapido ()
+    */
+    private void corteRapido()
     {
         vidaPlayerScript.life -= danoDoCorte;
         kbScript.active = true;
         fbPlayerScript.damage = true;
 
         //Dash p/ ataque em direção ao player
-        if(posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
+        if (posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
         {
             //GetComponent<Animator>().SetInteger("CorteBoss", 1);
             rigidBodyBoss.AddForce(Vector3.right * speedDashCorte, ForceMode.VelocityChange);
@@ -189,26 +260,40 @@ public class Boss : MonoBehaviour
         }
     }
 
-    private void cortePesado ()
+    private void cortePesado()
     {
-        if (posicaoDoJogador)
-        {
 
+    }
+
+
+
+    private void sugadaDirecao()
+    {
+        if (posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) //&& Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 2)
+        {
+            rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
+            scriptMovimentacao.speed = 1;
+            Debug.Log("sugandoCorrotinaEsquerda");
+        }
+        if (posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) //&& Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 2)
+        {
+            rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
+            scriptMovimentacao.speed = 1;
+            Debug.Log("sugandoCorrotinaDireita");
         }
     }
+    /* private void sugadaEsquerda()
+     {
+         Debug.Log("Sugada esquerda");
+         rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
+     }
 
-    private void sugadaEsquerda()
-    {
-        Debug.Log("Sugada esquerda");
-        rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
-    }
-
-    private void sugadaDireita()
-    {
-        Debug.Log("Sugada direita");
-        rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
-    }
-
+     private void sugadaDireita()
+     {
+         Debug.Log("Sugada direita");
+         rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
+     }
+     */
     /* private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
