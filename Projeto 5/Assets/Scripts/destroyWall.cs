@@ -7,18 +7,18 @@ public class destroyWall : MonoBehaviour
 {
 
     private Material mat;
+    private Color alpha;
     public GameObject wall;
-    float alf = 1;
-    int cont = 0;
 
     void Start()
     {
         mat = wall.GetComponent<MeshRenderer>().material;
+        alpha = mat.color;
     }
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.CompareTag("Player") && cont == 0)
+        if (col.CompareTag("Player"))
         {
             StartCoroutine(destroyObj());
         }
@@ -26,9 +26,12 @@ public class destroyWall : MonoBehaviour
 
     IEnumerator destroyObj()
     {
-        mat.color = Color.magenta;
-        yield return new WaitForSecondsRealtime(0.5f);
-        DestroyObject(wall);
-        //StartCoroutine(destroyObj());
+        alpha.a -= 0.2f;
+        mat.color = alpha;
+        yield return new WaitForSecondsRealtime(0.05f);
+        if(alpha.a > 0)
+        {
+            StartCoroutine(destroyObj());
+        }
     }
 }

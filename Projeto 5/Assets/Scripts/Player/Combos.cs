@@ -74,11 +74,13 @@ public class Combos : MonoBehaviour
         if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attacking"))
         {
             movScript.enabled = false;
+            jumpScript.enabled = false;
             GetComponent<AudioSource>().Stop();
         }
         else
         {
             movScript.enabled = true;
+            jumpScript.enabled = true;
         }
 
         if (Input.GetMouseButtonDown(0))
