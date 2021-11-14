@@ -24,6 +24,7 @@ public class Boss : MonoBehaviour
     //public GameObject player;
     //private posicaoJogador;
 
+    
     //Controle de pulo
     public float jumpSpeedUp;
     public float jumpSpeedRight;
@@ -46,11 +47,18 @@ public class Boss : MonoBehaviour
     public float danoDaInvestida;
     private int chanceDeAtaque;
 
+    //Animacoes
+    public GameObject modelBoss;
+    private Animator animaBoss;
+    private int contAnimLife = 0;
+
     void Start()
     {
         //Pegar posição do Player e Boss
         posicaoDoJogador = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         posicaoDoBoss = GameObject.FindGameObjectWithTag("Boss").GetComponent<Transform>();
+
+        animaBoss = modelBoss.GetComponent<Animator>();
 
         //Invocar Scripts
         vidaPlayerScript = FindObjectOfType<vidaPlayer>();
@@ -63,6 +71,15 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
+        if (posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+
         if (estaSugando == true)
         {
             if (posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)
@@ -124,6 +141,12 @@ public class Boss : MonoBehaviour
         else
         {
             Debug.Log("Vida abaixo de 50, cuidado!");
+            if(contAnimLife == 0)
+            {
+                animaBoss.SetInteger("HalfLife", 1);
+                contAnimLife++;
+            }
+
             if (podePular == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6 && posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) //FUNCIONA
             {
                 Debug.Log("Pula p/ Esquerda");
@@ -145,6 +168,8 @@ public class Boss : MonoBehaviour
         podePular = false;
         if (podePular == false)
         {
+            animaBoss.SetBool("bJump", true);
+
             //yield return new WaitForSecondsRealtime(1);
             rigidBodyBoss.AddForce(Vector3.up * jumpSpeedUp, ForceMode.VelocityChange);
             yield return new WaitForSecondsRealtime(0.3f);
@@ -154,6 +179,9 @@ public class Boss : MonoBehaviour
             yield return new WaitForSecondsRealtime(2);
             rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
             yield return new WaitForSecondsRealtime(1);
+
+            animaBoss.SetBool("bJump", false);
+
             if (vidaDoBoss.life <= 85)
             {
                 estaSugando = false;
@@ -173,6 +201,8 @@ public class Boss : MonoBehaviour
         podePular = false;
         if (podePular == false)
         {
+            animaBoss.SetBool("bJump", true);
+
             yield return new WaitForSecondsRealtime(1);
             rigidBodyBoss.AddForce(Vector3.up * jumpSpeedUp, ForceMode.VelocityChange);
             yield return new WaitForSecondsRealtime(0.3f);
@@ -180,7 +210,10 @@ public class Boss : MonoBehaviour
             yield return new WaitForSecondsRealtime(0.5f);
             rigidBodyBoss.AddForce(Vector3.down * jumpSpeedDown, ForceMode.VelocityChange);
             yield return new WaitForSecondsRealtime(1);
-            if(vidaDoBoss.life <= 85)
+
+            animaBoss.SetBool("bJump", false);
+
+            if (vidaDoBoss.life <= 85)
             {
                 estaSugando = false;
             }
@@ -245,6 +278,7 @@ public class Boss : MonoBehaviour
 
     private void sugadaDirecao()
     {
+        animaBoss.SetBool("bPull", true);
         if (posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) //&& Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 2)
         {
             rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
@@ -257,6 +291,7 @@ public class Boss : MonoBehaviour
             scriptMovimentacao.speed = 1;
             Debug.Log("sugandoCorrotinaDireita");
         }
+        animaBoss.SetBool("bPull", false);
     }
     /* private void sugadaEsquerda()
      {
