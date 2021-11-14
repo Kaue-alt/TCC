@@ -17,8 +17,7 @@ public class SpawnJuninho : MonoBehaviour
     void Start()
     {
         transicaoParaODia = FindObjectOfType<TransicaoParaODia>();
-
-        
+     
     }
 
     void OnTriggerStay(Collider other)

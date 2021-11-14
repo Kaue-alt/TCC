@@ -1481,6 +1481,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898619202}
   m_Mesh: {fileID: -2470049803449725478, guid: 605cc4791c4307c48bb2c35ff703b797, type: 3}
+--- !u!1 &931212932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1633656058, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 1498910022}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1049175541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,6 +1883,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7573251499357003006, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
+      propertyPath: iconePlayer
+      value: 
+      objectReference: {fileID: 931212932}
+    - target: {fileID: 7573251499357003006, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
+      propertyPath: _textPensamento
+      value: 
+      objectReference: {fileID: 1281222496}
+    - target: {fileID: 7573251499357003006, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
+      propertyPath: painelDialogoSozinho
+      value: 
+      objectReference: {fileID: 1498910023}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d62ad47ebd2fa54cb2ae059c7841178, type: 3}
 --- !u!1 &1213722043 stripped
@@ -2078,6 +2099,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275780398}
   m_Mesh: {fileID: 2548050693592174194, guid: 605cc4791c4307c48bb2c35ff703b797, type: 3}
+--- !u!1 &1281222496 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1980433962, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 1498910022}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1371930234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,6 +2481,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1980433964, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_Text
+      value: oooo
+      objectReference: {fileID: 0}
     - target: {fileID: 4146330743361587094, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_Name
@@ -2586,6 +2617,12 @@ PrefabInstance:
       objectReference: {fileID: 1482052380}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+--- !u!1 &1498910023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 790791710, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 1498910022}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1605309815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2921,6 +2958,10 @@ MonoBehaviour:
   life: 100
   audioSourceBoss: {fileID: 0}
   bossMorto: 0
+  painelDialogoSozinho: {fileID: 0}
+  iconePlayer: {fileID: 0}
+  pensamentoTrueFalse: 1
+  _textPensamento: {fileID: 0}
 --- !u!114 &1769370050
 MonoBehaviour:
   m_ObjectHideFlags: 0
