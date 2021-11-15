@@ -44,6 +44,7 @@ public class Boss : MonoBehaviour
     //Dano
     public float danoDoCorteLeve;
     public float danoDoCortePesado;
+    public float danoDoCorteDuplo;
     public float danoDaInvestida;
     private int chanceDeAtaque;
 
@@ -82,6 +83,7 @@ public class Boss : MonoBehaviour
 
         if (estaSugando == true)
         {
+            animaBoss.SetBool("bPull", true);
             if (posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) //&& (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 1))
             {
                 rigidBodyPlayer.AddForce(Vector3.right * sugada, ForceMode.Acceleration);
@@ -132,29 +134,30 @@ public class Boss : MonoBehaviour
                 cortePesado();
                 Debug.Log("cortou Pesado!");
         }
-
-        else
+        if(contAnimLife == 0 && vidaDoBoss.life <= 50)
         {
-            Debug.Log("Vida abaixo de 50, cuidado!");
-            if(contAnimLife == 0)
-            {
                 animaBoss.SetInteger("HalfLife", 1);
                 contAnimLife++;
-            }
+        }
+        if (vidaDoBoss.life <= 0)
+        {
+            animaBoss.SetInteger("HalfLife", 1);
+            contAnimLife++;
+        }
 
-            if (podePular == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6 && posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) //FUNCIONA
-            {
+        /*if (podePular == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6 && posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) //FUNCIONA
+        {
                 Debug.Log("Pula p/ Esquerda");
                 StartCoroutine(puloEsquerda());
                 StartCoroutine(cooldownPulo());
-            }
-            if (podePular == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
-            {
+        }
+        if (podePular == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
+        {
                 Debug.Log("Pula p/ Direita");
                 StartCoroutine(puloDireita());
                 StartCoroutine(cooldownPulo());
-            }
         }
+        */
     }
 
     //Controlar direção dos pulos
@@ -169,10 +172,10 @@ public class Boss : MonoBehaviour
             rigidBodyBoss.AddForce(Vector3.up * jumpSpeedUp, ForceMode.VelocityChange);
             yield return new WaitForSecondsRealtime(0.3f);
             rigidBodyBoss.AddForce(Vector3.right * jumpSpeedRight, ForceMode.VelocityChange);
-            yield return new WaitForSecondsRealtime(0.5f);
+            yield return new WaitForSecondsRealtime(0.65f);
             rigidBodyBoss.AddForce(Vector3.down * jumpSpeedDown, ForceMode.VelocityChange);
-            yield return new WaitForSecondsRealtime(2);
-            rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
+            //yield return new WaitForSecondsRealtime(2);
+            //rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
             yield return new WaitForSecondsRealtime(0.5f);
 
             animaBoss.SetBool("bJump", false);
@@ -199,13 +202,13 @@ public class Boss : MonoBehaviour
         {
             animaBoss.SetBool("bJump", true);
 
-            yield return new WaitForSecondsRealtime(1);
+            //yield return new WaitForSecondsRealtime(1);
             rigidBodyBoss.AddForce(Vector3.up * jumpSpeedUp, ForceMode.VelocityChange);
             yield return new WaitForSecondsRealtime(0.3f);
             rigidBodyBoss.AddForce(Vector3.left * jumpSpeedLeft, ForceMode.VelocityChange);
-            yield return new WaitForSecondsRealtime(0.5f);
+            yield return new WaitForSecondsRealtime(0.65f);
             rigidBodyBoss.AddForce(Vector3.down * jumpSpeedDown, ForceMode.VelocityChange);
-            yield return new WaitForSecondsRealtime(1);
+            yield return new WaitForSecondsRealtime(0.5f);
 
             animaBoss.SetBool("bJump", false);
 
@@ -236,7 +239,10 @@ public class Boss : MonoBehaviour
     IEnumerator cooldownCorte()
     {
         podeCortar = false;
-        yield return new WaitForSecondsRealtime(2);
+        animaBoss.SetBool("bPull", false);
+        yield return new WaitForSecondsRealtime(0.5f);
+        animaBoss.SetInteger("Attack", 0);
+        yield return new WaitForSecondsRealtime(1.5f);
         podeCortar = true;
     }
 
@@ -254,15 +260,36 @@ public class Boss : MonoBehaviour
 
         //Dash p/ ataque em direção ao player
         if (posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
-        {
-            //GetComponent<Animator>().SetInteger("CorteBoss", 1);
+        {          
+            animaBoss.SetInteger("Attack", 1);
             rigidBodyBoss.AddForce(Vector3.right * speedDashCorte, ForceMode.VelocityChange);
         }
         else
         {
-            //GetComponent<Animator>().SetInteger("CorteBoss", 1);
+            animaBoss.SetInteger("Attack", 1);
             rigidBodyBoss.AddForce(Vector3.left * speedDashCorte, ForceMode.VelocityChange);
         }
+        
+    }
+
+    private void corteDuplo()
+    {
+        vidaPlayerScript.life -= danoDoCorteDuplo;
+        kbScript.active = true;
+        fbPlayerScript.damage = true;
+
+        //Dash p/ ataque em direção ao player
+        if (posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
+        {
+            animaBoss.SetInteger("Attack", 3);
+            rigidBodyBoss.AddForce(Vector3.right * speedDashCorte, ForceMode.VelocityChange);
+        }
+        else
+        {
+            animaBoss.SetInteger("Attack", 3);
+            rigidBodyBoss.AddForce(Vector3.left * speedDashCorte, ForceMode.VelocityChange);
+        }
+
     }
 
     private void cortePesado()
@@ -274,13 +301,13 @@ public class Boss : MonoBehaviour
         //Dash p/ ataque em direção ao player
         if (posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
         {
-            //GetComponent<Animator>().SetInteger("CorteBoss", 1);
+            animaBoss.SetInteger("Attack", 2);
             rigidBodyBoss.AddForce(Vector3.right * speedDashCorte, ForceMode.VelocityChange);
             estaSugando = false;
         }
         else
         {
-            //GetComponent<Animator>().SetInteger("CorteBoss", 1);
+            animaBoss.SetInteger("Attack", 2);
             rigidBodyBoss.AddForce(Vector3.left * speedDashCorte, ForceMode.VelocityChange);
             estaSugando = false;
         }

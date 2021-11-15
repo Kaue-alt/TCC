@@ -31,7 +31,7 @@ public class vidaBoss : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (life <= 0f)
+        if (life <= 0)
         {
             dead++;
             //GetComponent<Animator>().SetInteger("Death", dead);
@@ -49,7 +49,8 @@ public class vidaBoss : MonoBehaviour
 
     IEnumerator enemyDeath()
     {
-        //GetComponent<Animator>().SetInteger("Death", dead);;
+        //animaBoss.SetBool("bDeath", true);
+
         yield return new WaitForSecondsRealtime(1);
         painelDialogoSozinho.SetActive(true);
         iconePlayer.SetActive(true);
