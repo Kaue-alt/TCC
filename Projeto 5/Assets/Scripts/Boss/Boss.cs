@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class Boss : MonoBehaviour
@@ -134,15 +135,12 @@ public class Boss : MonoBehaviour
                 cortePesado();
                 Debug.Log("cortou Pesado!");
         }
+
         if(contAnimLife == 0 && vidaDoBoss.life <= 50)
-        {
-                animaBoss.SetInteger("HalfLife", 1);
-                contAnimLife++;
-        }
-        if (vidaDoBoss.life <= 0)
         {
             animaBoss.SetInteger("HalfLife", 1);
             contAnimLife++;
+            StartCoroutine(animaHalfLife());
         }
 
         /*if (podePular == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6 && posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) //FUNCIONA
@@ -313,8 +311,6 @@ public class Boss : MonoBehaviour
         }
     }
 
-
-
     private void sugadaDirecao()
     {
         animaBoss.SetBool("bPull", true);
@@ -332,6 +328,14 @@ public class Boss : MonoBehaviour
         }
         animaBoss.SetBool("bPull", false);
     }
+
+    IEnumerator animaHalfLife()
+    {
+        yield return new WaitForSecondsRealtime(0.75f);
+        animaBoss.SetInteger("ContLife", contAnimLife);
+    }
+
+
     /* private void sugadaEsquerda()
      {
          Debug.Log("Sugada esquerda");

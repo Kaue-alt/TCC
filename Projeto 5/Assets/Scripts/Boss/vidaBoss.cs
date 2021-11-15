@@ -21,10 +21,20 @@ public class vidaBoss : MonoBehaviour
     public GameObject _textPensamento;
     public Fade fadeScript;
 
+    //Animacoes
+    public GameObject modelBoss;
+    private Animator animaBoss;
+    private int contDeath = 0;
+
+    Boss bossScript;
 
     private void Start()
     {
         _textPensamento.SetActive(true);
+
+        animaBoss = modelBoss.GetComponent<Animator>();
+
+        bossScript = FindObjectOfType<Boss>();
 
         //player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -34,7 +44,6 @@ public class vidaBoss : MonoBehaviour
         if (life <= 0)
         {
             dead++;
-            //GetComponent<Animator>().SetInteger("Death", dead);
 
             bossMorto = true;
             //StartCoroutine(aparecerPensamento());
@@ -49,7 +58,13 @@ public class vidaBoss : MonoBehaviour
 
     IEnumerator enemyDeath()
     {
-        //animaBoss.SetBool("bDeath", true);
+        if(contDeath == 0)
+        {
+            animaBoss.SetBool("bDeath", true);
+            contDeath++;
+            StartCoroutine(animaDeath());
+        }
+        
 
         yield return new WaitForSecondsRealtime(1);
         painelDialogoSozinho.SetActive(true);
@@ -65,6 +80,15 @@ public class vidaBoss : MonoBehaviour
         */
         yield return new WaitForSecondsRealtime(1);
         //audioSourceBoss.Play();
+    }
+
+    IEnumerator animaDeath()
+    {
+        yield return new WaitForSecondsRealtime(0.02f);
+        animaBoss.SetInteger("ContDeath", 1);
+        bossScript.enabled = false;
+        yield return new WaitForSecondsRealtime(4.3f);
+        animaBoss.enabled = false;
     }
 
     /*IEnumerator aparecerPensamento()
