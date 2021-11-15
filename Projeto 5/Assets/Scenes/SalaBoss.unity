@@ -1487,6 +1487,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1498910022}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &974960423 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 7573251499357003003, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+    type: 3}
+  m_PrefabInstance: {fileID: 1147521305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1049175541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,14 +1806,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7573251499357002998, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
         type: 3}
+      propertyPath: sugada
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573251499357002998, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
       propertyPath: modelBoss
       value: 
       objectReference: {fileID: 1213722043}
     - target: {fileID: 7573251499357002998, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
         type: 3}
+      propertyPath: speedCorte
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573251499357002998, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
+      propertyPath: jumpSpeedUp
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573251499357002998, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
+      propertyPath: jumpSpeedDown
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573251499357002998, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
+      propertyPath: speedDashCorte
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573251499357002998, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
+      propertyPath: danoDoCorteLeve
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573251499357002998, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
       propertyPath: rigidBodyPlayer
       value: 
       objectReference: {fileID: 674988285}
+    - target: {fileID: 7573251499357002998, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
+      propertyPath: danoDoCortePesado
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 7573251499357002999, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
         type: 3}
       propertyPath: m_Size.x
@@ -1820,6 +1861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7573251499357002999, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
         type: 3}
+      propertyPath: m_Size.z
+      value: 2.677192
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573251499357002999, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
       propertyPath: m_Center.x
       value: -0.053365707
       objectReference: {fileID: 0}
@@ -1828,6 +1874,16 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: -0.051139068
       objectReference: {fileID: 0}
+    - target: {fileID: 7573251499357002999, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.075630784
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573251499357003001, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
+      propertyPath: rigidBodyBossT
+      value: 
+      objectReference: {fileID: 974960423}
     - target: {fileID: 7573251499357003002, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
         type: 3}
       propertyPath: m_RootOrder
@@ -2939,7 +2995,7 @@ MonoBehaviour:
   rigidBodyBoss: {fileID: 1769370047}
   rigidBodyPlayer: {fileID: 674988285}
   estaSugando: 0
-  danoDoCorte: 10
+  danoDoCorteLeve: 0
   danoDoCortePesado: 0
   danoDaInvestida: 0
   modelBoss: {fileID: 0}
@@ -2962,6 +3018,7 @@ MonoBehaviour:
   iconePlayer: {fileID: 0}
   pensamentoTrueFalse: 1
   _textPensamento: {fileID: 0}
+  fadeScript: {fileID: 0}
 --- !u!114 &1769370050
 MonoBehaviour:
   m_ObjectHideFlags: 0

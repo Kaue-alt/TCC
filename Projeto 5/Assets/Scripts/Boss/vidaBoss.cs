@@ -19,6 +19,7 @@ public class vidaBoss : MonoBehaviour
     public GameObject iconePlayer;
     public bool pensamentoTrueFalse = true;
     public GameObject _textPensamento;
+    public Fade fadeScript;
 
 
     private void Start()
@@ -53,15 +54,16 @@ public class vidaBoss : MonoBehaviour
         painelDialogoSozinho.SetActive(true);
         iconePlayer.SetActive(true);
         yield return new WaitForSecondsRealtime(4);
-        if(pensamentoTrueFalse == true)
+        //fadeScript.Transition("frenteLab");
+        /*if(pensamentoTrueFalse == true)
         {
             painelDialogoSozinho.SetActive(false);
             iconePlayer.SetActive(false);
             pensamentoTrueFalse = false;
         }
+        */
         yield return new WaitForSecondsRealtime(1);
         //audioSourceBoss.Play();
-        Destroy(gameObject);
     }
 
     /*IEnumerator aparecerPensamento()
