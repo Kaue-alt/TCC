@@ -869,6 +869,12 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 403707016}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &727142172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 727142172, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 1498910022}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &731014293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,6 +1533,18 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 1147521305}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &989898536 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 989898536, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 1498910022}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1049175541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,6 +2001,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7573251499357003006, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
         type: 3}
+      propertyPath: BossLife
+      value: 
+      objectReference: {fileID: 727142172}
+    - target: {fileID: 7573251499357003006, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
       propertyPath: modelBoss
       value: 
       objectReference: {fileID: 1213722043}
@@ -1996,6 +2019,11 @@ PrefabInstance:
       propertyPath: iconePlayer
       value: 
       objectReference: {fileID: 931212932}
+    - target: {fileID: 7573251499357003006, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
+        type: 3}
+      propertyPath: lifeBarBoss
+      value: 
+      objectReference: {fileID: 989898536}
     - target: {fileID: 7573251499357003006, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
         type: 3}
       propertyPath: _textPensamento
@@ -2589,10 +2617,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1980433964, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
-      propertyPath: m_Text
-      value: oooo
-      objectReference: {fileID: 0}
     - target: {fileID: 4146330743361587094, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_Name
@@ -3079,6 +3103,8 @@ MonoBehaviour:
   life: 100
   audioSourceBoss: {fileID: 0}
   bossMorto: 0
+  lifeBarBoss: {fileID: 0}
+  BossLife: {fileID: 0}
   painelDialogoSozinho: {fileID: 0}
   iconePlayer: {fileID: 0}
   pensamentoTrueFalse: 1

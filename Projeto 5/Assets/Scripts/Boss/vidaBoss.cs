@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class vidaBoss : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class vidaBoss : MonoBehaviour
 
     private GameObject player;
     public bool bossMorto = false;
+
+    public Image lifeBarBoss;
+    public GameObject BossLife;
+
     //private GameObject player;
 
     //Pensamento
@@ -36,6 +41,8 @@ public class vidaBoss : MonoBehaviour
 
         bossScript = FindObjectOfType<Boss>();
 
+        BossLife.SetActive(true);
+
         //player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -52,8 +59,17 @@ public class vidaBoss : MonoBehaviour
         if (bossMorto == true)
         {
             bossMorto = false;
+            BossLife.SetActive(false);
             StartCoroutine(enemyDeath());
+
         }
+    }
+
+    void Update()
+    {
+        // Movimenta a barra de vida
+        life = Mathf.Clamp(life, 0, 100);
+        lifeBarBoss.fillAmount = life / 100;
     }
 
     IEnumerator enemyDeath()
