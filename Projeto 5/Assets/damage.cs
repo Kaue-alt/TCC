@@ -39,9 +39,7 @@ public class damage : MonoBehaviour
             {
                 Dano1();
                 Debug.Log("Recebeu dano1");
-                kbScript.active = true;
-
-                
+                kbScript.active = true;             
             }
         }
         else
@@ -50,10 +48,7 @@ public class damage : MonoBehaviour
             {
                 Dano2();
                 Debug.Log("Recebeu dano2");
-                kbScript.active = true;
-
-                
-                
+                kbScript.active = true;            
             }
         }
        
