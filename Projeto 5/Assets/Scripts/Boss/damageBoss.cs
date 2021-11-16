@@ -7,6 +7,8 @@ public class damageBoss : MonoBehaviour
     vidaPlayer vidaPlayerScript;
     feedbackPlayer fbPlayerScript;
     KnockBack kbScript;
+    public Fade fadeScript;
+
     public float damage1;
     public float damage2;
     public bool canDmg = false;

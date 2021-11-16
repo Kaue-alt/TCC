@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class vidaBoss : MonoBehaviour
 {
@@ -24,7 +25,10 @@ public class vidaBoss : MonoBehaviour
     public GameObject iconePlayer;
     public bool pensamentoTrueFalse = true;
     public GameObject _textPensamento;
+
+    //Transição
     public Fade fadeScript;
+    TransicaoParaODia transicaoParaODia;
 
     //Animacoes
     public GameObject modelBoss;
@@ -32,6 +36,12 @@ public class vidaBoss : MonoBehaviour
     private int contDeath = 0;
 
     Boss bossScript;
+
+    //Player
+    Movimentacao movScript;
+    Combos combosScript;
+    dashMove dashScript;
+    PlayerJump jumpScript;
 
     private void Start()
     {
@@ -44,6 +54,31 @@ public class vidaBoss : MonoBehaviour
         BossLife.SetActive(true);
 
         //player = GameObject.FindGameObjectWithTag("Player");
+
+        //CHAMAR TRANSIÇÃO
+        transicaoParaODia = FindObjectOfType<TransicaoParaODia>();
+        if (SceneManager.GetActiveScene().name == "SalaBoss")
+        {
+            GetComponent<Animator>().SetBool("bSalaBoss", true);
+
+            if (GetComponent<Animator>().GetInteger("countStand") == 0)
+            {
+                StartCoroutine(waitStand());
+            }
+
+            GetComponent<Animator>().SetBool("bStretch", true);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("bSalaBoss", false);
+        }
+        fadeScript = FindObjectOfType<Fade>();
+
+        //Scripts player
+        movScript = FindObjectOfType<Movimentacao>();
+        combosScript = FindObjectOfType<Combos>();
+        dashScript = FindObjectOfType<dashMove>();
+        jumpScript = FindObjectOfType<PlayerJump>();
     }
 
     void FixedUpdate()
@@ -61,6 +96,10 @@ public class vidaBoss : MonoBehaviour
             bossMorto = false;
             BossLife.SetActive(false);
             StartCoroutine(enemyDeath());
+            movScript.enabled = false;
+            combosScript.enabled = false;
+            jumpScript.enabled = false;
+            dashScript.enabled = false;
 
         }
     }
@@ -80,13 +119,12 @@ public class vidaBoss : MonoBehaviour
             contDeath++;
             StartCoroutine(animaDeath());
         }
-        
 
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSecondsRealtime(0.5f);
         painelDialogoSozinho.SetActive(true);
         iconePlayer.SetActive(true);
         yield return new WaitForSecondsRealtime(4);
-        //fadeScript.Transition("frenteLab");
+        fadeScript.Transition("posBoss");
         /*if(pensamentoTrueFalse == true)
         {
             painelDialogoSozinho.SetActive(false);
@@ -96,6 +134,12 @@ public class vidaBoss : MonoBehaviour
         */
         yield return new WaitForSecondsRealtime(1);
         //audioSourceBoss.Play();
+    }
+
+    IEnumerator waitStand()
+    {
+        yield return new WaitForSeconds(1.0f);
+        GetComponent<Animator>().SetInteger("countStand", 1);
     }
 
     IEnumerator animaDeath()
