@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1749646551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749646552}
+  m_Layer: 0
+  m_Name: ShootSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1749646552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749646551}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.005, y: 0.3933, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 347128675652974387}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &91378994674504350
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,9 +167,10 @@ GameObject:
   - component: {fileID: 2447973314730793477}
   - component: {fileID: 2264474715823244798}
   - component: {fileID: 8788521998509268280}
+  - component: {fileID: 5873101216919024849}
   m_Layer: 0
   m_Name: Baby@Orc Walk
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,10 +184,11 @@ Transform:
   m_GameObject: {fileID: 1124473962149309833}
   m_LocalRotation: {x: 0, y: -0.67880076, z: 0, w: 0.7343225}
   m_LocalPosition: {x: 40.67439, y: 0, z: -0.20676994}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 8916269261608241232}
   - {fileID: 5224577423150667687}
+  - {fileID: 1749646552}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -85.5, z: 0}
@@ -172,10 +204,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35cac41e74c04940b6c01a371898144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 8788521998509268280}
-  distance: 5
-  ProjetilPrefab: {fileID: 0}
-  enemy: {fileID: 1124473962149309833}
+  distTiro: 5
+  vomito: {fileID: 0}
+  shootPoint: {fileID: 1749646552}
+  enemyBaby: {fileID: 1124473962149309833}
 --- !u!114 &2264474715823244798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +247,25 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &5873101216919024849
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124473962149309833}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 855ac161a1b258d4c81deaba01278713, type: 3}
+  m_Controller: {fileID: 9100000, guid: 0e27e44e4de7e374a9c0e8d69fa642df, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1283235117957621557
 GameObject:
   m_ObjectHideFlags: 0

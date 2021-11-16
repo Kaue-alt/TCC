@@ -6,32 +6,29 @@ using UnityEngine.AI;
 
 public class EnemyBaby : MonoBehaviour
 {
-    private GameObject player;
-    public NavMeshAgent agent;
-    public float distance;
-
-    public GameObject ProjetilPrefab;
-    public Transform shotSpawn;
-    //public Transform enemyBaby;
-
-    public GameObject Babyenemy;
+    NavMeshAgent agent;
+    Transform goal;
+    public float distTiro;
+    public GameObject vomito;
+    public Transform shootPoint;
+    bool isShooting;
+    public GameObject enemyBaby;
 
     private Animator animaBaby;
 
 
     void Awake()
     {
-        //shotSpawn = transform.Find("shotSpawn");
-        //shotSpawn = transform.Find("enemyBaby");
+        
 
         
     }
 
     void Start()
     {
-        // Inimigo encontra o player pela tag
-        player = GameObject.FindWithTag("Player");
-        animaBaby = Babyenemy.GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
+        goal = GameObject.FindGameObjectWithTag("Player").transform;
+        animaBaby = enemyBaby.GetComponent<Animator>();
 
         animaBaby.SetBool("bIdle", true);
 
@@ -41,44 +38,44 @@ public class EnemyBaby : MonoBehaviour
 
     void Update()
     {
-        // ======================================= MOVIMENTAÇÃO DOS INIMIGOS =========================================
+        // ======================================= MOVIMENTAÇÃO DO INIMIGO =========================================
 
-        // Segue o jogador a partir de uma determinada distância
-        if (Vector3.Distance(transform.position, player.transform.position) <= distance)
+        
+        float distance = Vector3.Distance(transform.position, goal.position);
+        if(distance <= distTiro)
         {
-            agent.destination = player.transform.position;
-            agent.isStopped = false;
-            animaBaby.SetBool("bIdle", false);
+            agent.destination = goal.transform.position;
+
             animaBaby.SetBool("bRun", true);
+            animaBaby.SetBool("bIdle", false);
+
+            if (!isShooting)
+            {
+                InvokeRepeating("ShootBullet", 0f, 0.5f);
+                isShooting = true;
+                Destroy(vomito.gameObject, 6f);
+            }
             
-
-            ShootBullet();
         }
-        //else
-        //{
-            //animaBaby.SetBool("bRun", false);
-            //animaBaby.SetBool("bIdle", true);
-        //}
-
-        //if (GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsTag("Attacking")) // DEIXA O INIMIGO PARADO ENQUANTO ATACA
-        //{
-            //agent.isStopped = true;
-        //}
-
-        //if (Vector3.Distance(transform.position, player.transform.position) > distance)
-        //{
-            //GetComponent<Animator>().SetBool("bRun", false);
-           //GetComponent<Animator>().SetBool("bIdle", true);
-       // }
-
+        else
+        {
+            CancelInvoke("ShootBullet");
+            isShooting = false;
+            animaBaby.SetBool("bRun", false);
+            animaBaby.SetBool("bIdle", true);
+        }
+        
+       
+            
+     }
+        
         // =============================================================================================================
-    }
+ 
 
     void ShootBullet()
     {
-        Instantiate(ProjetilPrefab, shotSpawn.position, shotSpawn.rotation);
-        Destroy(ProjetilPrefab.gameObject, 8f);
-
-        //projetilobj.GetComponent<Projetil>().SetDirection(enemyBaby.GetForwardDirection());
+        Instantiate(vomito, shootPoint.position, shootPoint.rotation);
+        //Destroy(vomito.gameObject, 6f);
+ 
     }
 }
