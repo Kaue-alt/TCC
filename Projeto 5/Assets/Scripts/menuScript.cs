@@ -22,8 +22,7 @@ public class menuScript : MonoBehaviour
     //Clique no botao para alterar cena para jogo
     public void OnClickButtonPlay()
     {
-        fadeScript.Transition("Tutorial");
-        Cursor.lockState = CursorLockMode.Locked;
+        fadeScript.Transition("Introducao");
     }
 
     //Clique no botao para alterar cena para tela de opcoes

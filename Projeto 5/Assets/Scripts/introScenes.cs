@@ -6,11 +6,14 @@ using UnityEngine.UI;
 
 public class introScenes : MonoBehaviour
 {
-    public GameObject firstScene, secScene, thirdScene, fourthScene;
+    public GameObject firstScene, secScene, thirdScene, fourthScene, fifthScene;
     private int cont = 0;
     private bool cooldown = false;
 
     public Fade fadeScript;
+
+    public float fill = 0;
+    public Image load;
 
     void Start()
     {
@@ -18,11 +21,14 @@ public class introScenes : MonoBehaviour
         secScene.SetActive(true);
         thirdScene.SetActive(true);
         fourthScene.SetActive(true);
+        fifthScene.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        load.fillAmount = fill;
+
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log(cont);
@@ -47,7 +53,8 @@ public class introScenes : MonoBehaviour
             if (cont == 3 && !cooldown)
             {
                 StartCoroutine(fadeSprite(fourthScene));
-                StartCoroutine(endScene()); 
+                StartCoroutine(endScene());
+                StartCoroutine(loading());
                 cont++;
             }
         }
@@ -75,8 +82,15 @@ public class introScenes : MonoBehaviour
 
     IEnumerator endScene()
     {
+        fifthScene.SetActive(true);
         yield return new WaitForSecondsRealtime(1.6f);
         fadeScript.Transition("Tutorial");
         Cursor.lockState = CursorLockMode.Locked;
+    }
+    IEnumerator loading()
+    {
+        fill += 0.035f;
+        yield return new WaitForSecondsRealtime(0.1f);
+        StartCoroutine(loading());
     }
 }
