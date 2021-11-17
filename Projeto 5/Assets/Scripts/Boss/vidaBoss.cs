@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class vidaBoss : MonoBehaviour
 {
-    public float life = 100f;
+    public float life;
     private int dead = 0;
 
     public AudioSource audioSourceBoss;
@@ -32,6 +32,8 @@ public class vidaBoss : MonoBehaviour
 
     //Animacoes
     public GameObject modelBoss;
+    public GameObject bracoEsquerdoDoBoss;
+    public GameObject bracoDireitoDoBoss;
     private Animator animaBoss;
     private int contDeath = 0;
 
@@ -107,8 +109,8 @@ public class vidaBoss : MonoBehaviour
     void Update()
     {
         // Movimenta a barra de vida
-        life = Mathf.Clamp(life, 0, 100);
-        lifeBarBoss.fillAmount = life / 100;
+        life = Mathf.Clamp(life, 0, life);
+        lifeBarBoss.fillAmount = life / 500;
     }
 
     IEnumerator enemyDeath()
@@ -118,6 +120,7 @@ public class vidaBoss : MonoBehaviour
             animaBoss.SetBool("bDeath", true);
             contDeath++;
             StartCoroutine(animaDeath());
+            //GetComponent<CapsuleCollider>().gameObject.
         }
 
         yield return new WaitForSecondsRealtime(0.5f);

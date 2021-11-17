@@ -25,11 +25,6 @@ public class DamageBaby : MonoBehaviour
         
     }
 
-    void Update()
-    {
-
-    }
-
     // ------------------------------------ ATAQUES INIMIGO -----------------------------------------
     public void Dano()
     {
@@ -48,12 +43,15 @@ public class DamageBaby : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-        
+       
             Dano();
             Debug.Log("Recebeu dano");
-            //kbScript.active = true;
+            //kbScript.active = true;      
+        }
 
-         
+        if (collider.gameObject.tag != "Enemy")
+        {
+            Destroy(gameObject);
         }
     }
 

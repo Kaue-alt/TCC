@@ -8,6 +8,8 @@ public class EnemyBaby : MonoBehaviour
 {
     NavMeshAgent agent;
     Transform goal;
+    public Transform posicaoBaby;
+
     public float distTiro;
     public GameObject vomito;
     public Transform shootPoint;
@@ -15,6 +17,14 @@ public class EnemyBaby : MonoBehaviour
     public GameObject enemyBaby;
 
     private Animator animaBaby;
+
+    public Rigidbody rigidBodyVomito;
+    public float velocidadeDisparo;
+    
+     
+
+    GameObject clone;
+
 
 
     void Awake()
@@ -40,7 +50,6 @@ public class EnemyBaby : MonoBehaviour
     {
         // ======================================= MOVIMENTAÇÃO DO INIMIGO =========================================
 
-        
         float distance = Vector3.Distance(transform.position, goal.position);
         if(distance <= distTiro)
         {
@@ -49,11 +58,13 @@ public class EnemyBaby : MonoBehaviour
             animaBaby.SetBool("bRun", true);
             animaBaby.SetBool("bIdle", false);
 
+            
             if (!isShooting)
             {
-                InvokeRepeating("ShootBullet", 0f, 0.5f);
+                InvokeRepeating("ShootBullet", 1.5f, 2.5f);
+                //StartCoroutine(shootBullet2());
                 isShooting = true;
-                Destroy(vomito.gameObject, 6f);
+                //Destroy(vomito.gameObject, 6f);
             }
             
         }
@@ -74,8 +85,26 @@ public class EnemyBaby : MonoBehaviour
 
     void ShootBullet()
     {
-        Instantiate(vomito, shootPoint.position, shootPoint.rotation);
+        clone = Instantiate(vomito, shootPoint.position, shootPoint.rotation);
+        if (goal.transform.position.x > posicaoBaby.transform.position.x)
+        {
+            clone.GetComponent<Rigidbody>().AddForce(new Vector3(velocidadeDisparo, 3, 0), ForceMode.VelocityChange);
+        }
+        else
+        {
+            clone.GetComponent<Rigidbody>().AddForce(new Vector3(-velocidadeDisparo, 3 ,0), ForceMode.VelocityChange);
+        }
+        //rigidBodyVomito.AddForce(Vector3.right * velocidadeDisparo, ForceMode.VelocityChange);
         //Destroy(vomito.gameObject, 6f);
- 
     }
+    /*IEnumerator shootBullet2()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        Instantiate(vomito, shootPoint.position, shootPoint.rotation);
+        yield return new WaitForSecondsRealtime(0.25f);
+        //vomito.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(velocidadeDisparo, velocidadeDisparo, velocidadeDisparo));
+        rigidBodyVomito.AddForce(Vector3.right * velocidadeDisparo, ForceMode.VelocityChange);
+        Debug.Log("a");
+    }
+    */
 }

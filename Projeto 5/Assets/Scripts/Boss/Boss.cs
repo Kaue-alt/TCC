@@ -123,13 +123,13 @@ public class Boss : MonoBehaviour
         }
 
             //Cortar
-        if (vidaDoBoss.life >= 50 && podeCortar == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3)
+        if (vidaDoBoss.life >= 400 && podeCortar == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3)
         {
                 StartCoroutine(cooldownCorte());
                 corteRapido();
                 Debug.Log("cortou Leve!");
         }
-        if (vidaDoBoss.life < 50 && podeCortar == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3)
+        if (vidaDoBoss.life < 399 && podeCortar == true && Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3)
         {
                 StartCoroutine(cooldownCorte());
                 cortePesado();
@@ -157,6 +157,10 @@ public class Boss : MonoBehaviour
         }
         */
     }
+    void OnCollisionStay(Collision collider)
+    {
+
+    }
 
     //Controlar direção dos pulos
     IEnumerator puloDireita()
@@ -178,7 +182,7 @@ public class Boss : MonoBehaviour
 
             animaBoss.SetBool("bJump", false);
 
-            if (vidaDoBoss.life <= 50)
+            if (vidaDoBoss.life <= 400)
             {
                 estaSugando = true;
 
@@ -250,15 +254,12 @@ public class Boss : MonoBehaviour
         Debug.Log("Num: " + chanceDeAtaque);
     }
 
-    private void corteRapido()
+    public void corteRapido()
     {
-        vidaPlayerScript.life -= danoDoCorteLeve;
-        kbScript.active = true;
-        fbPlayerScript.damage = true;
 
         //Dash p/ ataque em direção ao player
         if (posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
-        {          
+        {
             animaBoss.SetInteger("Attack", 1);
             rigidBodyBoss.AddForce(Vector3.right * speedDashCorte, ForceMode.VelocityChange);
         }
@@ -267,13 +268,14 @@ public class Boss : MonoBehaviour
             animaBoss.SetInteger("Attack", 1);
             rigidBodyBoss.AddForce(Vector3.left * speedDashCorte, ForceMode.VelocityChange);
         }
-        
+
+
     }
 
-    private void corteDuplo()
+    public void corteDuplo()
     {
         vidaPlayerScript.life -= danoDoCorteDuplo;
-        kbScript.active = true;
+        //kbScript.active = true;
         fbPlayerScript.damage = true;
 
         //Dash p/ ataque em direção ao player
@@ -290,12 +292,8 @@ public class Boss : MonoBehaviour
 
     }
 
-    private void cortePesado()
+    public void cortePesado()
     {
-        vidaPlayerScript.life -= danoDoCortePesado;
-        kbScript.active = true;
-        fbPlayerScript.damage = true;
-
         //Dash p/ ataque em direção ao player
         if (posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
         {
@@ -336,50 +334,50 @@ public class Boss : MonoBehaviour
     }
 
 
-    /* private void sugadaEsquerda()
-     {
-         Debug.Log("Sugada esquerda");
-         rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
-     }
+        /* private void sugadaEsquerda()
+         {
+             Debug.Log("Sugada esquerda");
+             rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
+         }
 
-     private void sugadaDireita()
-     {
-         Debug.Log("Sugada direita");
-         rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
-     }
-     */
-    /* private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
+         private void sugadaDireita()
+         {
+             Debug.Log("Sugada direita");
+             rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
+         }
+         */
+        /* private void OnCollisionEnter(Collision collision)
         {
-            corteRapido();
+            if (collision.gameObject.tag == "Player")
+            {
+                corteRapido();
+            }
         }
-    }
-    */
-    /*Tela (transform) - Jogador 
-    if (Vector2.Distance(transform.position, posicaoDoJogador.position) > 5)
-    {
-        Debug.Log("Tela - Jogador > 5");
-    }
-    if (Vector2.Distance(transform.position, posicaoDoJogador.position) < 5)
-    {
-        Debug.Log("Tela - Jogador < 5");
-    }
+        */
+        /*Tela (transform) - Jogador 
+        if (Vector2.Distance(transform.position, posicaoDoJogador.position) > 5)
+        {
+            Debug.Log("Tela - Jogador > 5");
+        }
+        if (Vector2.Distance(transform.position, posicaoDoJogador.position) < 5)
+        {
+            Debug.Log("Tela - Jogador < 5");
+        }
 
-    //Jogador - Tela (transform)
-    if (Vector2.Distance(posicaoDoJogador.position, transform.position) > 5)
-    {
-        Debug.Log("Jogador-Tela > 5");
-    }
-    if (Vector2.Distance(posicaoDoJogador.position, transform.position) < 5)
-    {
-        Debug.Log("Jogador-Tela < 5");
-    }
+        //Jogador - Tela (transform)
+        if (Vector2.Distance(posicaoDoJogador.position, transform.position) > 5)
+        {
+            Debug.Log("Jogador-Tela > 5");
+        }
+        if (Vector2.Distance(posicaoDoJogador.position, transform.position) < 5)
+        {
+            Debug.Log("Jogador-Tela < 5");
+        }
 
-    //Boss - Jogador
-    if (Vector2.Distance(posicaoDoBoss.position, posicaoDoJogador.position) < 5)
-    {
-        Debug.Log("Boss - Jogador if 4");
+        //Boss - Jogador
+        if (Vector2.Distance(posicaoDoBoss.position, posicaoDoJogador.position) < 5)
+        {
+            Debug.Log("Boss - Jogador if 4");
+        }
+        */
     }
-    */
-}

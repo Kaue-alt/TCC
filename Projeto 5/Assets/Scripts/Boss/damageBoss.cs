@@ -4,67 +4,50 @@ using UnityEngine;
 
 public class damageBoss : MonoBehaviour
 {
+    public Animator bossAnimator;
+
+    //Danos
+
+
+    //Declarar scripts
+    Boss bossScript;
     vidaPlayer vidaPlayerScript;
     feedbackPlayer fbPlayerScript;
     KnockBack kbScript;
-    public Fade fadeScript;
 
-    public float damage1;
-    public float damage2;
-    public bool canDmg = false;
-    //public float waitAttack;
-    public GameObject player;
-
-    private int aleatorio;
-    //private float speedEnemy;
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        vidaPlayerScript = FindObjectOfType<vidaPlayer>(); // CHAMANDO O SCRIPT "vidaPlayer"
+        //Invocar Scripts
+        bossScript = FindObjectOfType<Boss>();
+        vidaPlayerScript = FindObjectOfType<vidaPlayer>();
         fbPlayerScript = FindObjectOfType<feedbackPlayer>();
         kbScript = GetComponent<KnockBack>();
-
-        //speedEnemy = GetComponent<NavMeshAgent>().speed;
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter (Collider collider)
     {
-        aleatorio = Random.Range(0, 2);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player" && canDmg)
+        if (bossAnimator.GetCurrentAnimatorStateInfo(0).IsName("BossSimpleSlash"))
         {
-             Dano1();
-             Debug.Log("Recebeu dano1");
-             kbScript.active = true;
+            if(collider.gameObject.tag == "Player")
+            {
+                Debug.Log("Chamou método1");
+                bossScript.corteRapido();
+                vidaPlayerScript.life -= bossScript.danoDoCorteLeve;
+                kbScript.active = true;
+                fbPlayerScript.damage = true;
+            }
         }
-        if (collision.gameObject.tag == "Player" && canDmg) // LIMITA UM DANO CAUSADO POR ANIMAÇÃO DE ATAQUE
+        if (bossAnimator.GetCurrentAnimatorStateInfo(0).IsName("BossSlowSlash"))
         {
-              Dano2();
-              Debug.Log("Recebeu dano2");
-              kbScript.active = true;
-        
+            if(collider.gameObject.tag == "Player")
+            {
+                Debug.Log("Chamou método2");
+                bossScript.cortePesado();
+                vidaPlayerScript.life -= bossScript.danoDoCortePesado;
+                kbScript.active = true;
+                fbPlayerScript.damage = true;
+            }
         }
 
-    }
-    public void Dano1()
-    {
-        vidaPlayerScript.life -= damage1;
-        CameraShake.instance.ShakeLeve();
 
-        kbScript.active = true;
-        fbPlayerScript.damage = true;
-    }
-
-    public void Dano2()
-    {
-        vidaPlayerScript.life -= damage2;
-        CameraShake.instance.ShakeForte();
-
-        kbScript.active = true;
-        fbPlayerScript.damage = true;
     }
 }
