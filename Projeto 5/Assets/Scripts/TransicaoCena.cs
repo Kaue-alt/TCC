@@ -73,6 +73,12 @@ public class TransicaoCena : MonoBehaviour
                     fadeScript.Transition("FaseCidadeQuebrada");
                 }
                 break;
+            case "Boss":
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    fadeScript.Transition("SalaBoss");
+                }
+                break;
         }
     }
 
