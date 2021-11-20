@@ -32,8 +32,6 @@ public class vidaBoss : MonoBehaviour
 
     //Animacoes
     public GameObject modelBoss;
-    public GameObject bracoEsquerdoDoBoss;
-    public GameObject bracoDireitoDoBoss;
     private Animator animaBoss;
     private int contDeath = 0;
 

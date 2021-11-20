@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class damageBoss : MonoBehaviour
 {
@@ -15,6 +17,7 @@ public class damageBoss : MonoBehaviour
     feedbackPlayer fbPlayerScript;
     KnockBack kbScript;
 
+
     private void Start()
     {
         //Invocar Scripts
@@ -27,27 +30,33 @@ public class damageBoss : MonoBehaviour
     {
         if (bossAnimator.GetCurrentAnimatorStateInfo(0).IsName("BossSimpleSlash"))
         {
-            if(collider.gameObject.tag == "Player")
+            //StartCoroutine(liberaKnockBack());
+            if (collider.gameObject.tag == "Player")
             {
                 Debug.Log("Chamou método1");
                 bossScript.corteRapido();
                 vidaPlayerScript.life -= bossScript.danoDoCorteLeve;
-                kbScript.active = true;
-                fbPlayerScript.damage = true;
+                cameraShakeBoss.instance.ShakeLeve();
             }
         }
         if (bossAnimator.GetCurrentAnimatorStateInfo(0).IsName("BossSlowSlash"))
         {
-            if(collider.gameObject.tag == "Player")
+            //StartCoroutine(liberaKnockBack());
+            if (collider.gameObject.tag == "Player")
             {
                 Debug.Log("Chamou método2");
                 bossScript.cortePesado();
                 vidaPlayerScript.life -= bossScript.danoDoCortePesado;
-                kbScript.active = true;
-                fbPlayerScript.damage = true;
+                cameraShakeBoss.instance.ShakeForte();
             }
         }
 
 
+    }
+    IEnumerator liberaKnockBack()
+    {
+        kbScript.active = true;
+        yield return new WaitForSecondsRealtime(0.3f);
+        kbScript.active = false;
     }
 }
