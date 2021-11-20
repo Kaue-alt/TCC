@@ -10,13 +10,17 @@ public class menuScript : MonoBehaviour
     public gameManager gameManagerScript;
     public GameObject MenuOpcoes;
     vidaPlayer vidaPlayerScript;
+    //public GameObject logo;
+    //public GameObject capa;
+    //public Text mensagem;
     //gameManagerScript = FindObjectOfType<gameManager>();
-   
+
     private void Start()
     {
         MenuOpcoes.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         vidaPlayerScript = FindObjectOfType<vidaPlayer>();
+        
         //vidaPlayerScript.death = 0;
     }
     //Clique no botao para alterar cena para jogo
@@ -39,5 +43,13 @@ public class menuScript : MonoBehaviour
     public void OnClickButtonLoad()
     {
         gameManagerScript.Load();
+    }
+    private void Update()
+    {
+        if (Input.anyKeyDown)
+        {
+            //capa.SetActive(false);
+            //logo.color = new Color(capa.color.r, capa.color.g, capa.color.b, 0.1f);
+        }
     }
 }
