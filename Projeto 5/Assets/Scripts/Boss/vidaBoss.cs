@@ -18,6 +18,8 @@ public class vidaBoss : MonoBehaviour
     public Image lifeBarBoss;
     public GameObject BossLife;
 
+    public GameObject agradecimento;
+
     //private GameObject player;
 
     //Pensamento
@@ -125,6 +127,8 @@ public class vidaBoss : MonoBehaviour
         painelDialogoSozinho.SetActive(true);
         iconePlayer.SetActive(true);
         yield return new WaitForSecondsRealtime(7);
+        agradecimento.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
         //fadeScript.Transition("posBoss");
         //fadeScript.Transition("CreditosAvisos");
 
