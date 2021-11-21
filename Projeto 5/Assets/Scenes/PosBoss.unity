@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &20445717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4146330743278051475, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 322689130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &58670772
 Animator:
   serializedVersion: 3
@@ -510,6 +516,31 @@ PrefabInstance:
       propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 162677339738000685, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1910
+      objectReference: {fileID: 0}
+    - target: {fileID: 162677339738000685, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 712
+      objectReference: {fileID: 0}
+    - target: {fileID: 162677339738000685, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 162677339738000685, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 162677339738000685, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -189.5
+      objectReference: {fileID: 0}
     - target: {fileID: 246323288835118998, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_IsActive
@@ -523,27 +554,32 @@ PrefabInstance:
     - target: {fileID: 1761560704829712867, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1026.65
+      value: 1025
       objectReference: {fileID: 0}
     - target: {fileID: 1761560704829712867, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 236.2
+      value: 255
       objectReference: {fileID: 0}
     - target: {fileID: 1761560704829712867, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.21
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1761560704829712867, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 941.71
+      value: 942
       objectReference: {fileID: 0}
     - target: {fileID: 1761560704829712867, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -386.5
+      value: -360
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768873511969754651, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1768873511969754651, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
@@ -561,6 +597,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4146330742955053346, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146330743278051475, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -728,27 +769,42 @@ PrefabInstance:
     - target: {fileID: 4208933719231665939, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1026.65
+      value: 1025
       objectReference: {fileID: 0}
     - target: {fileID: 4208933719231665939, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 236.2
+      value: 255
       objectReference: {fileID: 0}
     - target: {fileID: 4208933719231665939, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.21
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4208933719231665939, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 941.71
+      value: 942
       objectReference: {fileID: 0}
     - target: {fileID: 4208933719231665939, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -386.5
+      value: -360
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229509695777608824, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229509695777608824, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229509695777608824, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -215
       objectReference: {fileID: 0}
     - target: {fileID: 7839987548282532136, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
@@ -3331,12 +3387,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 322689130}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1777692171 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1633656058, guid: b206d5ac344e6f042a1fed0939cf8626,
-    type: 3}
-  m_PrefabInstance: {fileID: 322689130}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1852137116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3367,7 +3417,7 @@ PrefabInstance:
     - target: {fileID: 7615267700635332541, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.04
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: 7615267700635332541, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}
@@ -3741,7 +3791,7 @@ MonoBehaviour:
   animator: {fileID: 1852137129}
   runSound: {fileID: 1852137118}
   textoComandante: {fileID: 796687557}
-  IconePlayer: {fileID: 1777692171}
+  IconePlayer: {fileID: 20445717}
   IconeComandante: {fileID: 1700155744}
 --- !u!4 &2039141235
 Transform:

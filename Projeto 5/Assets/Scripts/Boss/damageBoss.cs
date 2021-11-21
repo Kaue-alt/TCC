@@ -30,7 +30,7 @@ public class damageBoss : MonoBehaviour
     {
         if (bossAnimator.GetCurrentAnimatorStateInfo(0).IsName("BossSimpleSlash"))
         {
-            //StartCoroutine(liberaKnockBack());
+            StartCoroutine(liberaKnockBack());
             if (collider.gameObject.tag == "Player")
             {
                 Debug.Log("Chamou método1");
@@ -41,7 +41,7 @@ public class damageBoss : MonoBehaviour
         }
         if (bossAnimator.GetCurrentAnimatorStateInfo(0).IsName("BossSlowSlash"))
         {
-            //StartCoroutine(liberaKnockBack());
+            StartCoroutine(liberaKnockBack());
             if (collider.gameObject.tag == "Player")
             {
                 Debug.Log("Chamou método2");
@@ -50,8 +50,6 @@ public class damageBoss : MonoBehaviour
                 cameraShakeBoss.instance.ShakeForte();
             }
         }
-
-
     }
     IEnumerator liberaKnockBack()
     {

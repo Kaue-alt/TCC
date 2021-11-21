@@ -820,7 +820,7 @@ PrefabInstance:
     - target: {fileID: 7615267700635332541, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.23
+      value: 30.1
       objectReference: {fileID: 0}
     - target: {fileID: 7615267700635332541, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}
@@ -2534,7 +2534,7 @@ PrefabInstance:
     - target: {fileID: 7573251499357002998, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
         type: 3}
       propertyPath: speedCorte
-      value: 2.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7573251499357002998, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
         type: 3}
@@ -2559,12 +2559,12 @@ PrefabInstance:
     - target: {fileID: 7573251499357002998, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
         type: 3}
       propertyPath: speedDashCorte
-      value: 2.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7573251499357002998, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
         type: 3}
       propertyPath: danoDoCorteLeve
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7573251499357002998, guid: 0d62ad47ebd2fa54cb2ae059c7841178,
         type: 3}
@@ -3500,6 +3500,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 790791710, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119615660, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633656058, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980433962, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980433964, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_Text
+      value: "QUE MERDA ERA ESSA? Parece que aqui \xE9 o local de origem... Preciso
+        falar com a comandante V urgente!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980433964, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980433964, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996126214, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4146330743361587094, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_Name
@@ -3630,6 +3663,11 @@ PrefabInstance:
       propertyPath: fadeScript
       value: 
       objectReference: {fileID: 1482052380}
+    - target: {fileID: 4146330743517871920, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
 --- !u!1 &1498910023 stripped
@@ -4574,6 +4612,8 @@ MonoBehaviour:
   sugada: 55
   rigidBodyBoss: {fileID: 1769370047}
   rigidBodyPlayer: {fileID: 674988285}
+  podePular: 1
+  podeCortar: 1
   estaSugando: 0
   danoDoCorteLeve: 0
   danoDoCortePesado: 0

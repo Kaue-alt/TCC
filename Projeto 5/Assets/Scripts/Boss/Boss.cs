@@ -30,8 +30,8 @@ public class Boss : MonoBehaviour
     public Rigidbody rigidBodyPlayer;
 
     //Permissões
-    private bool podePular = true;
-    private bool podeCortar = true;
+    public bool podePular = true;
+    public bool podeCortar = true;
     public bool estaSugando = false;
 
     //Dano
@@ -65,6 +65,11 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
+        /*if(animaBoss.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        {
+            StartCoroutine(cooldownPulo());
+        }
+        */
         if (posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
@@ -104,31 +109,30 @@ public class Boss : MonoBehaviour
         //Pular para a direita
         if (podePular == true)
         {
-            if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) //FUNCIONA
+            if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
             {
                 StartCoroutine(puloDireita());
                 Debug.Log("Pulou p/ Direita");
             }
 
             //Pular para a esquerda
-            if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6 && posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) //FUNCIONA
+            if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6 && posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)
             {
                 StartCoroutine(puloEsquerda());
                 Debug.Log("Pulou p/ Esquerda");
             }
         }
         
-
         //Cortar
         if (podeCortar == true)
         {
             if (vidaDoBoss.life > 350)
             {
-                if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 4)
+                if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3.6f)
                 {
                     StartCoroutine(cooldownCorte());
-                    //corteRapido();
-                    cortePesado();
+                    corteRapido();
+                    //cortePesado();
                     Debug.Log("cortou Leve!");
                 }
             }
@@ -136,13 +140,14 @@ public class Boss : MonoBehaviour
             {
                 animaBoss.SetInteger("HalfLife", 1);
                 contAnimLife++;
-                StartCoroutine(animaHalfLife());
+                StartCoroutine(animaHalfLife()); 
+
                 //Chamar Som
-                if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 2.5f) // Só funciona se pular(???)
+                if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3.6f) // Só funciona se pular(???)
                 {
                     StartCoroutine(cooldownCorte());
-                    //cortePesado();
-                    corteRapido();
+                    cortePesado();
+                    //corteRapido();
                     Debug.Log("cortou Pesado!");
                 }
             }
@@ -205,18 +210,20 @@ public class Boss : MonoBehaviour
             {
                 estaSugando = true;
             }
-            yield return new WaitForSecondsRealtime(8);
+            yield return new WaitForSecondsRealtime(9);
             podePular = true;
         }
     }
 
     //Cooldown
-    IEnumerator cooldownPulo()
+    /*IEnumerator cooldownPulo()
     {
         podePular = false;
-        yield return new WaitForSecondsRealtime(8);
+        yield return new WaitForSecondsRealtime(3);
         podePular = true;
     }
+    */
+    
 
     IEnumerator cooldownCorte()
     {
@@ -224,7 +231,7 @@ public class Boss : MonoBehaviour
         animaBoss.SetBool("bPull", false);
         yield return new WaitForSecondsRealtime(0.5f);
         animaBoss.SetInteger("Attack", 0);
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(2.25f);
         podeCortar = true;
     }
 

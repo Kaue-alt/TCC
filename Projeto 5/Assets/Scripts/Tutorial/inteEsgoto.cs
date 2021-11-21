@@ -29,8 +29,10 @@ public class inteEsgoto : MonoBehaviour
             Debug.Log("Está dentro do Pensamento");
             textoInteragirEsgoto.enabled = true;
             tutorialBackgrounddddd.enabled = true;
-            //runSound.Stop();
-        }
+            _textInteragirEsgoto.SetActive(true);
+            _tutorialBackgrounddddd.SetActive(true);
+    //runSound.Stop();
+}
     }
 
     //void OnTriggerEnter(Collider other)

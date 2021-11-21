@@ -124,15 +124,10 @@ public class vidaBoss : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
         painelDialogoSozinho.SetActive(true);
         iconePlayer.SetActive(true);
-        yield return new WaitForSecondsRealtime(4);
-        fadeScript.Transition("posBoss");
-        /*if(pensamentoTrueFalse == true)
-        {
-            painelDialogoSozinho.SetActive(false);
-            iconePlayer.SetActive(false);
-            pensamentoTrueFalse = false;
-        }
-        */
+        yield return new WaitForSecondsRealtime(7);
+        //fadeScript.Transition("posBoss");
+        //fadeScript.Transition("CreditosAvisos");
+
         yield return new WaitForSecondsRealtime(1);
         //audioSourceBoss.Play();
     }

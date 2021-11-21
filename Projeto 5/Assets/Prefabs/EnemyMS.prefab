@@ -74,7 +74,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 261132095980922236}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.06
   m_Height: 0.3
   m_Direction: 1
@@ -135,7 +135,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 919132149387433995}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.19
   m_Height: 0.73
   m_Direction: 0
@@ -771,8 +771,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cfaf0aa4e0a7b249884264c7d5e065d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage1: 0
-  damage2: 0
+  damage1: 10
+  damage2: 5
   canDmg: 0
   player: {fileID: 0}
   waitAttack: 2
