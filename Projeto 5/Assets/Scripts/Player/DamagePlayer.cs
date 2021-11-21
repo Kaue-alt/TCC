@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DamagePlayer : MonoBehaviour
 {
     vidaEnemy vidaEnemyScript;
+    VidaBaby vidaBabyScript;
     vidaBoss vidaBossScript;
     FeedbackEnemy fbEnemyScript;
 
@@ -17,6 +18,7 @@ public class DamagePlayer : MonoBehaviour
     {
         vidaEnemyScript = FindObjectOfType<vidaEnemy>(); // CHAMANDO O SCRIPT "vidaEnemy"
         vidaBossScript = FindObjectOfType<vidaBoss>(); // CHAMANDO O SCRIPT "vidaBoss"
+        vidaBabyScript = FindObjectOfType<VidaBaby>(); // CHAMANDO O SCRIPT "VidaBaby"
         fbEnemyScript = FindObjectOfType<FeedbackEnemy>(); // CHAMANDO O SCRIPT "FeedbackEnemy"
     }
 
@@ -27,7 +29,15 @@ public class DamagePlayer : MonoBehaviour
 
         enem.GetComponent<FeedbackEnemy>().damage = true; // ATIVA MUDANÇA DE COR DO INIMIGO ACERTADO
     }
-    
+
+    // -----------------------------------------------------------------------------------------------
+    public void DanoBaby(GameObject enembaby)
+    {
+        enembaby.GetComponent<VidaBaby>().life -= damage1; // REFERENCIA O OBJETO QUE FOI CRIADO A PARTIR DO COLLIDER DO INIMIGO
+
+        enembaby.GetComponent<FeedbackEnemy>().damage = true; // ATIVA MUDANÇA DE COR DO INIMIGO ACERTADO
+    }
+
     // -----------------------------------------------------------------------------------------------
     public void DanoBoss(GameObject goBoss)
     {
@@ -48,6 +58,13 @@ public class DamagePlayer : MonoBehaviour
             GameObject enemyIns = col.gameObject; // ASSOCIA O COLLIDER DO INIMIGO AO QUE ESTÁ SENDO ATACADO REALMENTE
             Dano1(enemyIns);
         }
+
+        if (col.gameObject.CompareTag("Baby"))
+        {
+            GameObject babyIns = col.gameObject; // ASSOCIA O COLLIDER DO INIMIGO AO QUE ESTÁ SENDO ATACADO REALMENTE
+            DanoBaby(babyIns);
+        }
+
         if (col.gameObject.CompareTag("Boss"))
         {
             GameObject bossIns = col.gameObject; // ASSOCIA O COLLIDER DO INIMIGO AO QUE ESTÁ SENDO ATACADO REALMENTE

@@ -1491,6 +1491,7 @@ GameObject:
   - component: {fileID: 7936579344247992592}
   - component: {fileID: 7936579344247992593}
   - component: {fileID: 919132148921016495}
+  - component: {fileID: 2966403174890643556}
   m_Layer: 0
   m_Name: PlayerPrince
   m_TagString: Player
@@ -1885,7 +1886,7 @@ MonoBehaviour:
   lifeBar: {fileID: 0}
   tempoAparecer: 3
   player: {fileID: 7126116334054651143}
-  reset: {fileID: 0}
+  reset: {fileID: 4646127493067646671, guid: 01842f467c803414b8f0397599a455c7, type: 3}
   death: 0
   audioSourceDeath: {fileID: 7936579344247992603}
   audioSouceRun: {fileID: 7936579344247992602}
@@ -1985,6 +1986,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnKid: {fileID: 0}
   kidGame: {fileID: 0}
+--- !u!114 &2966403174890643556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7126116334054651143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d8ae036ea9204da04907e8e32f91b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeScript: {fileID: 0}
 --- !u!1 &7295568429930359817
 GameObject:
   m_ObjectHideFlags: 0

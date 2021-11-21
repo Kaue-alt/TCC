@@ -30,7 +30,7 @@ public class vidaEnemy : MonoBehaviour
         if (life <= 0f)
         {
             dead++;
-            //GetComponent<Animator>().SetInteger("Death", dead);
+            GetComponent<Animator>().SetInteger("Death", dead);
             
             StartCoroutine(enemyDeath(2.0f));
             inimigoMorto = true;
