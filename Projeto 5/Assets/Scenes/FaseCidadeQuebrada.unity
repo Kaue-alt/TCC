@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.60840446, g: 0.6037939, b: 0.611015, a: 1}
+  m_IndirectSpecularColor: {r: 0.60817903, g: 0.60381377, b: 0.6110985, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3183,6 +3183,9 @@ MonoBehaviour:
   textoMendigo: {fileID: 322689135}
   IconePlayer: {fileID: 1911845869}
   IconeMendigo: {fileID: 1996126214}
+  hudVida: {fileID: 768455640}
+  hudDash: {fileID: 1923432300}
+  hudArmas: {fileID: 1129848976}
 --- !u!1 &260249812
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,7 +3688,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 518143489, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 790791710, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538414426, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -3991,6 +4002,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Vida Vazia
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146330743748840878, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7428965630016591364, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
@@ -9864,6 +9880,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766528809}
   m_Mesh: {fileID: -206718591657111132, guid: e924beb16a124914ab41f81ea4e0aa1b, type: 3}
+--- !u!1 &768455640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4146330743748840878, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 322689130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &790551281
 GameObject:
   m_ObjectHideFlags: 0
@@ -13562,6 +13584,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126546822}
   m_Mesh: {fileID: -8367231247473855917, guid: e924beb16a124914ab41f81ea4e0aa1b, type: 3}
+--- !u!1 &1129848976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 518143489, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 322689130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1131670420
 GameObject:
   m_ObjectHideFlags: 0
@@ -17166,7 +17194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b09ef93d7e0325489c7f45db106a6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoIntereacao: {fileID: 0}
   fadeScript: {fileID: 1540063635}
 --- !u!65 &1379158254
 BoxCollider:
@@ -21880,6 +21907,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920018804}
   m_Mesh: {fileID: -6729966136774203426, guid: e924beb16a124914ab41f81ea4e0aa1b, type: 3}
+--- !u!1 &1923432300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1538414426, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 322689130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1925390187
 GameObject:
   m_ObjectHideFlags: 0
@@ -23132,7 +23165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2039141234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23140,7 +23173,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039141233}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71a4a945d3932694ea9d6919fe8696b1, type: 3}
   m_Name: 
@@ -23154,6 +23187,9 @@ MonoBehaviour:
   textoComandante: {fileID: 796687557}
   IconePlayer: {fileID: 1777692171}
   IconeComandante: {fileID: 1700155744}
+  hudVida: {fileID: 768455640}
+  hudDash: {fileID: 1923432300}
+  hudArmas: {fileID: 1129848976}
 --- !u!4 &2039141235
 Transform:
   m_ObjectHideFlags: 0

@@ -27,6 +27,8 @@ public class VelhoController : MonoBehaviour
 
     public GameObject textoNPC, IconeVelho, IconePlayer;
 
+    public GameObject hudVida, hudDash, hudArmas;
+
     void Start()
     {
         movScript = FindObjectOfType<Movimentacao>();
@@ -42,16 +44,25 @@ public class VelhoController : MonoBehaviour
         {
             IconeVelho.SetActive(false);
             IconePlayer.SetActive(false);
+            hudVida.SetActive(true);
+            hudArmas.SetActive(true);
+            hudDash.SetActive(true);
         }
         if (textoNPC.activeInHierarchy)
         {
             IconeVelho.SetActive(true);
             IconePlayer.SetActive(false);
+            hudVida.SetActive(false);
+            hudArmas.SetActive(false);
+            hudDash.SetActive(false);
         }
         else if (!textoNPC.activeInHierarchy && painelDeDialogoVelho.activeInHierarchy)
         {
             IconeVelho.SetActive(false);
             IconePlayer.SetActive(true);
+            hudVida.SetActive(false);
+            hudArmas.SetActive(false);
+            hudDash.SetActive(false);
         }
 
         if (Input.GetMouseButtonDown(0) && falaAtiva)

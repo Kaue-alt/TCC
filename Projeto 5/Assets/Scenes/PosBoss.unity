@@ -437,7 +437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &258292443
 Transform:
   m_ObjectHideFlags: 0
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258292442}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 890865373818df24595317e9e60ad3c7, type: 3}
   m_Name: 
@@ -473,6 +473,9 @@ MonoBehaviour:
   textoMendigo: {fileID: 322689135}
   IconePlayer: {fileID: 1911845869}
   IconeMendigo: {fileID: 1996126214}
+  hudVida: {fileID: 0}
+  hudDash: {fileID: 0}
+  hudArmas: {fileID: 0}
 --- !u!1001 &322689130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -480,6 +483,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 518143489, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538414426, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 71660586039054395, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_Type
@@ -760,6 +771,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Vida Vazia
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146330743748840878, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4184229545143131996, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
@@ -1619,6 +1635,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &867789069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1538414426, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 322689130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1106199523
 GameObject:
   m_ObjectHideFlags: 0
@@ -3280,6 +3302,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1638204428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 518143489, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 322689130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1661076803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3793,6 +3821,9 @@ MonoBehaviour:
   textoComandante: {fileID: 796687557}
   IconePlayer: {fileID: 20445717}
   IconeComandante: {fileID: 1700155744}
+  hudVida: {fileID: 1394104212}
+  hudDash: {fileID: 867789069}
+  hudArmas: {fileID: 1638204428}
 --- !u!4 &2039141235
 Transform:
   m_ObjectHideFlags: 0

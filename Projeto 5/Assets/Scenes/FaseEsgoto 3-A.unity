@@ -3464,6 +3464,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651536292}
   m_CullTransparentMesh: 1
+--- !u!1 &652027004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1538414426, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 866139272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &653491114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4116,6 +4122,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721551309}
   m_CullTransparentMesh: 1
+--- !u!1 &812185052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4146330743748840878, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 866139272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &823495907
 GameObject:
   m_ObjectHideFlags: 0
@@ -4321,6 +4333,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 518143489, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538414426, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 162677339738000685, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -4698,6 +4718,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Vida Vazia
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146330743748840878, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4146330743764362926, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
@@ -6853,6 +6878,9 @@ MonoBehaviour:
   textoComandante: {fileID: 1933255026}
   IconePlayer: {fileID: 1438280000}
   IconeComandante: {fileID: 612787126}
+  hudVida: {fileID: 812185052}
+  hudDash: {fileID: 652027004}
+  hudArmas: {fileID: 1987619492}
 --- !u!20 &1345081516 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5500083890729432953, guid: 0f24d0274e47bfa4f90912c4b2a4fca6,
@@ -9247,6 +9275,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971544139}
   m_CullTransparentMesh: 1
+--- !u!1 &1987619492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 518143489, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 866139272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2008185896
 GameObject:
   m_ObjectHideFlags: 0

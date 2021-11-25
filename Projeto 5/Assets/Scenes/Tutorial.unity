@@ -9816,6 +9816,12 @@ Transform:
   m_Father: {fileID: 479520298}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 36.655, y: 414.063, z: 9.607}
+--- !u!1 &894306958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4146330743748840878, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 4146330743903425161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &904428731
 GameObject:
   m_ObjectHideFlags: 0
@@ -10963,6 +10969,9 @@ MonoBehaviour:
   textoNPC: {fileID: 1315702043}
   IconeCrianca: {fileID: 1333860550}
   IconePlayer: {fileID: 923594169}
+  hudVida: {fileID: 894306958}
+  hudDash: {fileID: 2042381944}
+  hudArmas: {fileID: 2126355211}
 --- !u!4 &1027427687
 Transform:
   m_ObjectHideFlags: 0
@@ -21394,6 +21403,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1412971888}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2042381944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1538414426, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 4146330743903425161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2042683515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23111,6 +23126,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2767072, y: 2.8485239, z: 3.3363814}
   m_Center: {x: 0.25534368, y: 1.522417, z: 0.7110556}
+--- !u!1 &2126355211 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 518143489, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 4146330743903425161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2132083024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0d96037ddb81cf3419ca395c4af70055,
@@ -26303,6 +26324,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 518143489, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538414426, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1980433964, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
       propertyPath: m_Text
       value: "Um mar de monstros... N\xE3o tem como sair por aqui."
@@ -26550,6 +26579,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -360
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146330743748840878, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4146330744268941684, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}

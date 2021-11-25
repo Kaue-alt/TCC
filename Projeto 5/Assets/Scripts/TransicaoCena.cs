@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class TransicaoCena : MonoBehaviour
 {
-    public GameObject textoIntereacao;
+    //public GameObject textoIntereacao;
 
     public Fade fadeScript;
 

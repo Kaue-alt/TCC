@@ -4296,6 +4296,9 @@ MonoBehaviour:
   textoNPC: {fileID: 2101214670}
   IconeVelho: {fileID: 923594169}
   IconePlayer: {fileID: 956183589}
+  hudVida: {fileID: 0}
+  hudDash: {fileID: 0}
+  hudArmas: {fileID: 0}
 --- !u!4 &134165191
 Transform:
   m_ObjectHideFlags: 0
@@ -27107,6 +27110,9 @@ MonoBehaviour:
   textoNPC: {fileID: 1315702043}
   IconeCrianca: {fileID: 637252122}
   IconePlayer: {fileID: 1333860550}
+  hudVida: {fileID: 0}
+  hudDash: {fileID: 0}
+  hudArmas: {fileID: 0}
 --- !u!4 &1027427687
 Transform:
   m_ObjectHideFlags: 0
@@ -30408,6 +30414,9 @@ MonoBehaviour:
   textoComandante: {fileID: 831467999}
   IconePlayer: {fileID: 323053131}
   IconeComandante: {fileID: 996651353}
+  hudVida: {fileID: 0}
+  hudDash: {fileID: 0}
+  hudArmas: {fileID: 0}
 --- !u!4 &1160402985
 Transform:
   m_ObjectHideFlags: 0
@@ -68906,6 +68915,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 518143489, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538414426, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3258691553965264366, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_IsActive
@@ -69250,6 +69267,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Vida Vazia
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146330743748840878, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4146330743764362924, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}

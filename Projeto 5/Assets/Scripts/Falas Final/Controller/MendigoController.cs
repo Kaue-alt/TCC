@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MendigoController : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class MendigoController : MonoBehaviour
 
     public GameObject textoMendigo, IconePlayer, IconeMendigo;
 
+    public GameObject hudVida, hudDash, hudArmas;
+
     void Start()
     {
         movScript = FindObjectOfType<Movimentacao>();
@@ -42,16 +45,25 @@ public class MendigoController : MonoBehaviour
         {
             IconeMendigo.SetActive(false);
             IconePlayer.SetActive(false);
+            hudVida.SetActive(true);
+            hudArmas.SetActive(true);
+            hudDash.SetActive(true);
         }
         if (textoMendigo.activeInHierarchy)
         {
             IconeMendigo.SetActive(true);
             IconePlayer.SetActive(false);
+            hudVida.SetActive(false);
+            hudArmas.SetActive(false);
+            hudDash.SetActive(false);
         }
         else if (!textoMendigo.activeInHierarchy && painelDeDialogoMendigo.activeInHierarchy)
         {
             IconeMendigo.SetActive(false);
             IconePlayer.SetActive(true);
+            hudVida.SetActive(false);
+            hudArmas.SetActive(false);
+            hudDash.SetActive(false);
         }
 
         if (Input.GetMouseButtonDown(0) && falaAtivaMendigo)

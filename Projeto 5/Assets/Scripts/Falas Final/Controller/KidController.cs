@@ -32,7 +32,9 @@ public class KidController : MonoBehaviour
 
     public GameObject textoNPC, IconeCrianca, IconePlayer;
 
-    
+    public GameObject hudVida, hudDash, hudArmas;
+
+
 
     void Start()
     {
@@ -42,7 +44,7 @@ public class KidController : MonoBehaviour
         dashScript = FindObjectOfType<dashMove>();
         jumpScript = FindObjectOfType<PlayerJump>();
         pauseScript = FindObjectOfType<pauseInGame>();
-        
+
 
         //CHAMAR TRANSIÇÃO
         transicaoParaODia = FindObjectOfType<TransicaoParaODia>();
@@ -62,7 +64,7 @@ public class KidController : MonoBehaviour
             GetComponent<Animator>().SetBool("bTutorial", false);
         }
         fadeScript = FindObjectOfType<Fade>();
-        
+
     }
 
     void Update()
@@ -71,16 +73,25 @@ public class KidController : MonoBehaviour
         {
             IconeCrianca.SetActive(false);
             IconePlayer.SetActive(false);
+            hudVida.SetActive(true);
+            hudArmas.SetActive(true);
+            hudDash.SetActive(true);
         }
         if (textoNPC.activeInHierarchy)
         {
             IconeCrianca.SetActive(true);
-            IconePlayer.SetActive(false);          
+            IconePlayer.SetActive(false);
+            hudVida.SetActive(false);
+            hudArmas.SetActive(false);
+            hudDash.SetActive(false);
         }
         else if (!textoNPC.activeInHierarchy && painelDeDialogo.activeInHierarchy)
         {
             IconeCrianca.SetActive(false);
             IconePlayer.SetActive(true);
+            hudVida.SetActive(false);
+            hudArmas.SetActive(false);
+            hudDash.SetActive(false);
         }
 
         if (Input.GetMouseButtonDown(0) && falaAtiva)
@@ -99,6 +110,7 @@ public class KidController : MonoBehaviour
                 jumpScript.enabled = true;
                 dashScript.enabled = true;
                 pauseScript.enabled = true;
+
                 Cursor.lockState = CursorLockMode.Locked;
 
                 if (transicaoParaODia.ganchoTransicao >= 2)
@@ -114,7 +126,7 @@ public class KidController : MonoBehaviour
         falaNPC.gameObject.SetActive(false);
         falaAtiva = false;
 
-        for (int i = 0; i < falas.respostas.Length; i++ )
+        for (int i = 0; i < falas.respostas.Length; i++)
         {
             GameObject tempResposta = Instantiate(resposta, painelDeDialogo.transform) as GameObject;
             tempResposta.GetComponent<Text>().text = falas.respostas[i].resposta;
@@ -138,7 +150,7 @@ public class KidController : MonoBehaviour
 
         falaAtiva = true;
         painelDeDialogo.SetActive(true);
-        falaNPC.gameObject.SetActive(true); 
+        falaNPC.gameObject.SetActive(true);
 
         falaNPC.text = falas.fala;
     }

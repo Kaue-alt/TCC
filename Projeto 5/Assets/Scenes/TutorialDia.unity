@@ -4296,6 +4296,9 @@ MonoBehaviour:
   textoNPC: {fileID: 2101214670}
   IconeVelho: {fileID: 956183589}
   IconePlayer: {fileID: 923594169}
+  hudVida: {fileID: 189900745}
+  hudDash: {fileID: 1315715052}
+  hudArmas: {fileID: 219843872}
 --- !u!4 &134165191
 Transform:
   m_ObjectHideFlags: 0
@@ -5445,6 +5448,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189194608}
   m_Mesh: {fileID: 8477954407177425810, guid: e924beb16a124914ab41f81ea4e0aa1b, type: 3}
+--- !u!1 &189900745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4146330743748840878, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 4146330743903425161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &192887580
 GameObject:
   m_ObjectHideFlags: 0
@@ -5978,6 +5987,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212341548}
   m_Mesh: {fileID: 732718856769938602, guid: e924beb16a124914ab41f81ea4e0aa1b, type: 3}
+--- !u!1 &219843872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 518143489, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 4146330743903425161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &223836264
 GameObject:
   m_ObjectHideFlags: 0
@@ -27140,6 +27155,9 @@ MonoBehaviour:
   textoNPC: {fileID: 1315702043}
   IconeCrianca: {fileID: 1333860550}
   IconePlayer: {fileID: 637252122}
+  hudVida: {fileID: 0}
+  hudDash: {fileID: 0}
+  hudArmas: {fileID: 0}
 --- !u!4 &1027427687
 Transform:
   m_ObjectHideFlags: 0
@@ -35305,6 +35323,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1315715052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1538414426, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 4146330743903425161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1318419194
 GameObject:
   m_ObjectHideFlags: 0
@@ -68528,6 +68552,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 518143489, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538414426, guid: b206d5ac344e6f042a1fed0939cf8626, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3258691553965264366, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
       propertyPath: m_IsActive
@@ -68977,6 +69009,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Vida Vazia
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146330743748840878, guid: b206d5ac344e6f042a1fed0939cf8626,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4146330743764362924, guid: b206d5ac344e6f042a1fed0939cf8626,
         type: 3}
@@ -76751,7 +76788,7 @@ PrefabInstance:
     - target: {fileID: 7615267700635332541, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -47.97
+      value: 20.8
       objectReference: {fileID: 0}
     - target: {fileID: 7615267700635332541, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}

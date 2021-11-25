@@ -27,6 +27,8 @@ public class ComandanteController : MonoBehaviour
 
     public GameObject textoComandante, IconePlayer, IconeComandante;
 
+    public GameObject hudVida, hudDash, hudArmas;
+
     void Start()
     {
         movScript = FindObjectOfType<Movimentacao>();
@@ -42,16 +44,25 @@ public class ComandanteController : MonoBehaviour
         {
             IconeComandante.SetActive(false);
             IconePlayer.SetActive(false);
+            hudVida.SetActive(true);
+            hudArmas.SetActive(true);
+            hudDash.SetActive(true);
         }
         if (textoComandante.activeInHierarchy)
         {
             IconeComandante.SetActive(true);
             IconePlayer.SetActive(false);
+            hudVida.SetActive(false);
+            hudArmas.SetActive(false);
+            hudDash.SetActive(false);
         }
         else if (!textoComandante.activeInHierarchy && painelDeDialogoComandante.activeInHierarchy)
         {
             IconeComandante.SetActive(false);
             IconePlayer.SetActive(true);
+            hudVida.SetActive(false);
+            hudArmas.SetActive(false);
+            hudDash.SetActive(false);
         }
 
         if (Input.GetMouseButtonDown(0) && falaAtivaComandante)
