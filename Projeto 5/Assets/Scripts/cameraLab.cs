@@ -7,7 +7,8 @@ public class cameraLab : MonoBehaviour
 {
     cameraFollowPlayer camScript;
     public GameObject nextCol;
-    public float add;
+    private bool change = false;
+    public int cont;
 
     void Start()
     {
@@ -17,7 +18,15 @@ public class cameraLab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (change && cont == 0)
+        {
+            camScript.horizontal++;
+        }
+
+        if (change && cont == 1)
+        {
+            camScript.horizontal--;
+        }
     }
 
     void OnTriggerEnter(Collider col)
@@ -31,38 +40,9 @@ public class cameraLab : MonoBehaviour
 
     IEnumerator changeDirection()
     {
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
-        camScript.horizontal += add;
-        yield return new WaitForSecondsRealtime(0.04f);
+        change = true;
+        yield return new WaitForSecondsRealtime(0.065f);
+        change = false;
         Destroy(this);
     }
 }

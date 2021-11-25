@@ -43,7 +43,7 @@ public class DamagePlayer : MonoBehaviour
     {
         goBoss.GetComponent<vidaBoss>().life -= damage1; // REFERENCIA O OBJETO QUE FOI CRIADO A PARTIR DO COLLIDER DO BOSS
 
-        goBoss.GetComponent<FeedbackEnemy>().damage = true; // ATIVA MUDANÇA DE COR DO BOSS
+        goBoss.GetComponent<feedbackBoss>().damage = true; // ATIVA MUDANÇA DE COR DO BOSS
     }
 
 
