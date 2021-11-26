@@ -27,6 +27,8 @@ public class Boss : MonoBehaviour
     public float sugada;
     public Rigidbody rigidBodyBoss;
     public Rigidbody rigidBodyPlayer;
+    public GameObject effectL;
+    public GameObject effectR;
 
     //Permissões
     public bool podePular = true;
@@ -101,6 +103,7 @@ public class Boss : MonoBehaviour
                 scriptMovimentacao.speed = 1;
                 Debug.Log("sugandoCorrotinaEsquerda");
                 scriptDash.enabled = false;
+                effectR.SetActive(true);
             }
             else
             {
@@ -108,12 +111,15 @@ public class Boss : MonoBehaviour
                 scriptMovimentacao.speed = 1;
                 Debug.Log("sugandoCorrotinaDireita");
                 scriptDash.enabled = false;
+                effectL.SetActive(true);
             }
         }
         else
         {
             scriptDash.enabled = true;
             scriptMovimentacao.speed = 5;
+            effectL.SetActive(false);
+            effectR.SetActive(false);
         }
 
         //ATAQUES
@@ -319,15 +325,18 @@ public class Boss : MonoBehaviour
         {
             rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
             scriptMovimentacao.speed = 1;
+            
             Debug.Log("sugandoCorrotinaEsquerda");
         }
         if (posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) //&& Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 2)
         {
             rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
             scriptMovimentacao.speed = 1;
+         
             Debug.Log("sugandoCorrotinaDireita");
         }
         animaBoss.SetBool("bPull", false);
+        
     }
 
     IEnumerator animaHalfLife()
