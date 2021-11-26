@@ -11,25 +11,43 @@ public class TransicaoCena : MonoBehaviour
 
     public Fade fadeScript;
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+ 
+    }
+
     void Start()
     {
         if (SceneManager.GetActiveScene().name == "Tutorial")
         {
             GetComponent<Animator>().SetBool("bTutorial", true);
 
-            if(GetComponent<Animator>().GetInteger("countStand") == 0)
+            if (GetComponent<Animator>().GetInteger("countStand") == 0)
             {
                 StartCoroutine(waitStand());
             }
-
         }
         else
         {
             GetComponent<Animator>().SetBool("bTutorial", false);
         }
 
+        if (SceneManager.GetActiveScene().name == "TutorialDia")
+        {
+            GetComponent<Animator>().SetBool("bTDia", true);
+
+            if (GetComponent<Animator>().GetInteger("countStrech") == 0)
+            {
+                StartCoroutine(waitStrech());
+            }
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("bTDia", false);
+        }
+
         fadeScript = FindObjectOfType<Fade>();
+
     }
 
     // Update is called once per frame
@@ -84,7 +102,13 @@ public class TransicaoCena : MonoBehaviour
 
     IEnumerator waitStand()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.2f);
         GetComponent<Animator>().SetInteger("countStand", 1);
+    }
+
+    IEnumerator waitStrech()
+    {
+        yield return new WaitForSeconds(0.2f);
+        GetComponent<Animator>().SetInteger("countStrech", 1);
     }
 }

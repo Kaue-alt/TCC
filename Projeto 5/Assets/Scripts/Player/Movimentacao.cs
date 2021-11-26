@@ -90,41 +90,6 @@ public class Movimentacao : MonoBehaviour
             GetComponent<AudioSource>().Stop();
             playingRunAudio = false;
         }
-
-
-        // PULO ANTIGO
-        /*
-
-        isGrounded = Physics.Raycast (transform.position, - Vector3.up, distToGround + 0.1f);
-        
-        if (Input.GetButtonDown("Jump") && isGrounded == true)
-        {
-                canDoubleJump = true;
-                rb.AddForce(Vector3.up * jumpForce);
-                this.animator.SetBool("bRun", false);
-                this.animator.SetBool("bIdle", false);
-                this.animator.SetBool("bJump", true);
-                this.animator.SetBool("bDash", false);
-
-        }
-        else
-        {
-            if (Input.GetButtonDown("Jump") && canDoubleJump)
-            {
-                rb.AddForce(Vector3.up * jumpForce * doubleJumpMultiplier);
-                canDoubleJump = false;
-            }
-        }
-
-        if (!isGrounded && !this.animator.GetBool("bJump"))
-        {
-            this.animator.SetBool("bFall", true);
-        }
-        else
-        {
-            this.animator.SetBool("bFall", false);
-        }
-        */
     }
 
 

@@ -49,7 +49,7 @@ public class Combos : MonoBehaviour
             clicks = 3;
         }
 
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("standUp"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("standUp") || animator.GetCurrentAnimatorStateInfo(0).IsName("Strech"))
         {
             movScript.enabled = false;
             jumpScript.enabled = false;
@@ -62,7 +62,7 @@ public class Combos : MonoBehaviour
             dashScript.enabled = true;
         }
 
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jump") || animator.GetCurrentAnimatorStateInfo(0).IsName("standUp") || Time.timeScale == 0)
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jump") || animator.GetCurrentAnimatorStateInfo(0).IsName("standUp") || animator.GetCurrentAnimatorStateInfo(0).IsName("Strech") || Time.timeScale == 0)
         {
             canClick = false;
         }
