@@ -16,5 +16,16 @@ public class cameraFollowPlayer : MonoBehaviour
     void Update()
     {
         holder.transform.SetPositionAndRotation(new Vector3(player.transform.position.x + horizontal, player.transform.position.y + vertical, player.transform.position.z), Quaternion.Euler(0.0f, 0.0f, 0.0f));
+
+        /*
+        if(horizontal > 5)
+        {
+            horizontal = 3;
+        }
+
+        if (horizontal < -5)
+        {
+            horizontal = -5;
+        }*/
     }
 }

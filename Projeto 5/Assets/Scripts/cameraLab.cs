@@ -16,14 +16,14 @@ public class cameraLab : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (change && cont == 0)
+        if (change && cont == 0 && camScript.horizontal < 3)
         {
             camScript.horizontal++;
         }
 
-        if (change && cont == 1)
+        if (change && cont == 1 && camScript.horizontal > -5)
         {
             camScript.horizontal--;
         }
@@ -41,7 +41,7 @@ public class cameraLab : MonoBehaviour
     IEnumerator changeDirection()
     {
         change = true;
-        yield return new WaitForSecondsRealtime(0.065f);
+        yield return new WaitForSecondsRealtime(0.4f);
         change = false;
         Destroy(this);
     }
