@@ -83,12 +83,12 @@ public class Boss : MonoBehaviour
         }
         */
 
-        if ((posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) && !animaBoss.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        if ((posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)) // && !animaBoss.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
-        if((posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) && !animaBoss.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        if((posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)) // && !animaBoss.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
         }

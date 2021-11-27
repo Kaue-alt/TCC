@@ -15,11 +15,11 @@ C:/Users/kaueu/OneDrive/Documentos/GitHub/TCC/Projeto 5
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62344
+60931
 Successfully changed project path to: C:/Users/kaueu/OneDrive/Documentos/GitHub/TCC/Projeto 5
 C:/Users/kaueu/OneDrive/Documentos/GitHub/TCC/Projeto 5
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 43.02 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 42.90 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.7f1 (c53830e277f1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Resources/UnitySubsystems
@@ -35,523 +35,208 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56280
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56468
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001733 seconds.
+Registered in 0.001868 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 42.47 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 42.06 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.995 seconds
+- Completed reload, in  0.979 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001148 seconds.
+Registered in 0.001101 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000024960491B20 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-000002327B8ECE30 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 41.79 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 43.95 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.875 seconds
+- Completed reload, in  0.876 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2020 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 105.0 MB.
 System memory in use after: 105.1 MB.
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2483.
-Total: 2.085300 ms (FindLiveObjects: 0.232100 ms CreateObjectMapping: 0.101500 ms MarkObjects: 1.631400 ms  DeleteObjects: 0.118800 ms)
+Total: 2.561600 ms (FindLiveObjects: 0.444200 ms CreateObjectMapping: 0.203200 ms MarkObjects: 1.803500 ms  DeleteObjects: 0.109200 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Animations/New Animator Controller.controller
-  artifactKey: Guid(a2f086f8e4852f14898cf61658403163) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/New Animator Controller.controller using Guid(a2f086f8e4852f14898cf61658403163) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcff809e9e4bf70179f23a6bf38a1519') in 0.037467 seconds
-  Import took 0.042649 seconds .
+  path: Assets/menuController.cs
+  artifactKey: Guid(2d45ab97772fc6a40804b6e3c9e3526f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/menuController.cs using Guid(2d45ab97772fc6a40804b6e3c9e3526f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed7e74ea44f27a9f3e55be176152af1e') in 0.031990 seconds
+  Import took 0.035298 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.592335 seconds.
-  path: Assets/Scenes/Animations/Fade.controller
-  artifactKey: Guid(3e7f50af881b61743b49a40ad3f6dc5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Fade.controller using Guid(3e7f50af881b61743b49a40ad3f6dc5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a302a1d0c1e22a8ccf68c35b0be6965') in 0.010897 seconds
-  Import took 0.014309 seconds .
+  Time since last request: 11.452532 seconds.
+  path: Assets/mainMenuController.cs
+  artifactKey: Guid(7a42a749a3b86e341aa9ec2e95c6b2f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/mainMenuController.cs using Guid(7a42a749a3b86e341aa9ec2e95c6b2f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27aae010c1b4da24874ea9108300f152') in 0.010864 seconds
+  Import took 0.014849 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.162596 seconds.
-  path: Assets/Scenes/Animations/Fade_End.anim
-  artifactKey: Guid(d4837ed344850504cadeaaf78a4d6b86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Fade_End.anim using Guid(d4837ed344850504cadeaaf78a4d6b86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666bac1ae52d7c9da8a2e33441ebb488') in 0.010001 seconds
-  Import took 0.013839 seconds .
+  Time since last request: 0.001793 seconds.
+  path: Assets/mainMenuController.cs
+  artifactKey: Guid(7a42a749a3b86e341aa9ec2e95c6b2f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/mainMenuController.cs using Guid(7a42a749a3b86e341aa9ec2e95c6b2f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27aae010c1b4da24874ea9108300f152') in 0.004111 seconds
+  Import took 0.008780 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000735 seconds.
-  path: Assets/Scenes/Animations/Fade_End.anim
-  artifactKey: Guid(d4837ed344850504cadeaaf78a4d6b86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Fade_End.anim using Guid(d4837ed344850504cadeaaf78a4d6b86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666bac1ae52d7c9da8a2e33441ebb488') in 0.003130 seconds
-  Import took 0.007965 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.536792 seconds.
-  path: Assets/Scenes/Animations/Fade_Start.anim
-  artifactKey: Guid(0177541b237363e4596ee29529fbfebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Fade_Start.anim using Guid(0177541b237363e4596ee29529fbfebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb7ed26b98b32129c66be9ac964b8be2') in 0.007395 seconds
-  Import took 0.011142 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003247 seconds.
-  path: Assets/Scenes/Animations/Fade_Start.anim
-  artifactKey: Guid(0177541b237363e4596ee29529fbfebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Fade_Start.anim using Guid(0177541b237363e4596ee29529fbfebd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb7ed26b98b32129c66be9ac964b8be2') in 0.003735 seconds
-  Import took 0.007833 seconds .
+  Time since last request: 0.989469 seconds.
+  path: Assets/lightController.cs
+  artifactKey: Guid(ab4f9023759889041a7565d530ed383e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/lightController.cs using Guid(ab4f9023759889041a7565d530ed383e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc71ff2f298153e4975c2b42b33e4adb') in 0.008826 seconds
+  Import took 0.013577 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001047 seconds.
+Registered in 0.001337 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000024AFBBBC6C0 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-0000023276C92A20 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.803 seconds
+- Completed reload, in  0.841 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 102.6 MB.
 System memory in use after: 102.7 MB.
 
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2486.
-Total: 2.135300 ms (FindLiveObjects: 0.335900 ms CreateObjectMapping: 0.121600 ms MarkObjects: 1.652300 ms  DeleteObjects: 0.023600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 77.795985 seconds.
-  path: Assets/Scenes/Animations/Transparencia.controller
-  artifactKey: Guid(b10d33b4a89fefb408ea313388eef180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Transparencia.controller using Guid(b10d33b4a89fefb408ea313388eef180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19b659cf9d037e18961d6f89d859a876') in 0.050592 seconds
-  Import took 0.054051 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 227.054653 seconds.
-  path: Assets/Scenes/Animations/Flick.controller
-  artifactKey: Guid(3ac949291db33854db6af485abc4b45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Flick.controller using Guid(3ac949291db33854db6af485abc4b45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c32f78731390ef4e830c9a90f647865') in 0.007898 seconds
-  Import took 0.011996 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 108.463547 seconds.
-  path: Assets/Scenes/Animations/Flicking.anim
-  artifactKey: Guid(d12fefb6383d9e341a7066373ffaf506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Flicking.anim using Guid(d12fefb6383d9e341a7066373ffaf506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '896b8777f20c92b9afb62c1e9f8559cd') in 0.008561 seconds
-  Import took 0.012149 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002422 seconds.
-  path: Assets/Scenes/Animations/Flicking.anim
-  artifactKey: Guid(d12fefb6383d9e341a7066373ffaf506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Flicking.anim using Guid(d12fefb6383d9e341a7066373ffaf506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '896b8777f20c92b9afb62c1e9f8559cd') in 0.002883 seconds
-  Import took 0.007035 seconds .
+Total: 2.230800 ms (FindLiveObjects: 0.347100 ms CreateObjectMapping: 0.131000 ms MarkObjects: 1.705500 ms  DeleteObjects: 0.045500 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001185 seconds.
+Registered in 0.001826 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000024965CFF450 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-000002327E71C480 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.875 seconds
+- Completed reload, in  0.853 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 102.6 MB.
 System memory in use after: 102.7 MB.
 
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2489.
-Total: 3.729200 ms (FindLiveObjects: 0.499100 ms CreateObjectMapping: 0.152200 ms MarkObjects: 2.981400 ms  DeleteObjects: 0.024400 ms)
+Total: 1.870800 ms (FindLiveObjects: 0.209300 ms CreateObjectMapping: 0.070900 ms MarkObjects: 1.573500 ms  DeleteObjects: 0.015700 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001169 seconds.
+Registered in 0.001658 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000249606DD030 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-000002327E71C480 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.60 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.390 seconds
+- Completed reload, in  0.837 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.86 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.6 MB.
+System memory in use after: 102.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2492.
+Total: 15.324600 ms (FindLiveObjects: 3.843000 ms CreateObjectMapping: 0.196900 ms MarkObjects: 11.176200 ms  DeleteObjects: 0.092100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001090 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000230E8101010 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.911 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 102.6 MB.
 System memory in use after: 102.8 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2492.
-Total: 4.199100 ms (FindLiveObjects: 0.450100 ms CreateObjectMapping: 0.172200 ms MarkObjects: 3.550100 ms  DeleteObjects: 0.023800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001064 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000249640A5010 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.857 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.7 MB.
-System memory in use after: 102.8 MB.
-
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2495.
-Total: 3.547500 ms (FindLiveObjects: 0.340100 ms CreateObjectMapping: 0.124900 ms MarkObjects: 3.055700 ms  DeleteObjects: 0.024800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 268.556926 seconds.
-  path: Assets/Scenes/Animations/Fading.anim
-  artifactKey: Guid(c428752927f657a41a5c903e7e16bf2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Fading.anim using Guid(c428752927f657a41a5c903e7e16bf2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5f618067ba05d2b9bbfe557486da858') in 0.021278 seconds
-  Import took 0.025687 seconds .
+Total: 3.948700 ms (FindLiveObjects: 0.369700 ms CreateObjectMapping: 0.154000 ms MarkObjects: 3.402200 ms  DeleteObjects: 0.021100 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001141 seconds.
+Registered in 0.001147 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000249640A5010 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-00000232A249E020 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.821 seconds
+- Completed reload, in  1.186 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 102.7 MB.
 System memory in use after: 102.8 MB.
 
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2498.
-Total: 2.035300 ms (FindLiveObjects: 0.196500 ms CreateObjectMapping: 0.074100 ms MarkObjects: 1.749600 ms  DeleteObjects: 0.013900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 162.474084 seconds.
-  path: Assets/Scenes/Animations/Transparencia.controller
-  artifactKey: Guid(b10d33b4a89fefb408ea313388eef180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Transparencia.controller using Guid(b10d33b4a89fefb408ea313388eef180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e553451270afa506c64d992cd44545d6') in 0.055120 seconds
-  Import took 0.060133 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.092244 seconds.
-  path: Assets/Scenes/Animations/Fade_Out.controller
-  artifactKey: Guid(463ad7321706e524185ac63fca6e0a24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Fade_Out.controller using Guid(463ad7321706e524185ac63fca6e0a24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '273e7efdaa6e0ad1cfd5624e329c55a7') in 0.007658 seconds
-  Import took 0.012204 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 102.408728 seconds.
-  path: Assets/Scenes/Animations/Fade.controller
-  artifactKey: Guid(3e7f50af881b61743b49a40ad3f6dc5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Fade.controller using Guid(3e7f50af881b61743b49a40ad3f6dc5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b377c508be96a3df9f59758ba1b31720') in 0.007444 seconds
-  Import took 0.011747 seconds .
+Total: 3.989100 ms (FindLiveObjects: 0.974700 ms CreateObjectMapping: 0.084800 ms MarkObjects: 2.858800 ms  DeleteObjects: 0.038100 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001101 seconds.
+Registered in 0.001381 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000024965CFF450 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.851 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.7 MB.
-System memory in use after: 102.8 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2501.
-Total: 3.697900 ms (FindLiveObjects: 0.515800 ms CreateObjectMapping: 0.181400 ms MarkObjects: 2.971900 ms  DeleteObjects: 0.026100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001075 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000249640A5010 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.899 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.03 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.7 MB.
-System memory in use after: 102.8 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2504.
-Total: 2.819400 ms (FindLiveObjects: 0.431600 ms CreateObjectMapping: 0.151000 ms MarkObjects: 2.214300 ms  DeleteObjects: 0.020100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 60.629098 seconds.
-  path: Assets/Scenes/Animations/Fading.anim
-  artifactKey: Guid(c428752927f657a41a5c903e7e16bf2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Fading.anim using Guid(c428752927f657a41a5c903e7e16bf2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b971d2d83c210415af5938b0df7ae5d') in 0.049863 seconds
-  Import took 0.053301 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.860219 seconds.
-  path: Assets/Scenes/Animations/Flick.controller
-  artifactKey: Guid(3ac949291db33854db6af485abc4b45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Flick.controller using Guid(3ac949291db33854db6af485abc4b45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c26aa09fb1a0fc5438416c8d9feed71') in 0.007327 seconds
-  Import took 0.010865 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001636 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-000002496B6CE010 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.820 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.7 MB.
-System memory in use after: 102.8 MB.
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2507.
-Total: 1.974800 ms (FindLiveObjects: 0.213700 ms CreateObjectMapping: 0.078000 ms MarkObjects: 1.664400 ms  DeleteObjects: 0.017700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 27.532786 seconds.
-  path: Assets/Scenes/Animations/AnimationControllers
-  artifactKey: Guid(cf47a55d627e92d45bf9c56d619b1c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/AnimationControllers using Guid(cf47a55d627e92d45bf9c56d619b1c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c74f36b849b9e402239f55924b14b91') in 0.007709 seconds
-  Import took 0.010869 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.351693 seconds.
-  path: Assets/Scenes/Animations/Fade_out.anim
-  artifactKey: Guid(29a4ed973fb18d64b9d3b552b0a1571c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Fade_out.anim using Guid(29a4ed973fb18d64b9d3b552b0a1571c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5520fa308f9ac3ca661c11499b658d8') in 0.046104 seconds
-  Import took 0.049816 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.313503 seconds.
-  path: Assets/Scenes/Animations/Fade_out 1.anim
-  artifactKey: Guid(e6b18646fe97f34429f85d69d42b3d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Fade_out 1.anim using Guid(e6b18646fe97f34429f85d69d42b3d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81e12dc8201b45e1bc5bbef0d44544a9') in 0.006502 seconds
-  Import took 0.010644 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.738207 seconds.
-  path: Assets/Scenes/Animations/No_Fade_out.anim
-  artifactKey: Guid(e6b18646fe97f34429f85d69d42b3d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/No_Fade_out.anim using Guid(e6b18646fe97f34429f85d69d42b3d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13a5d1f3877b66c563d063964045902a') in 0.008632 seconds
-  Import took 0.013375 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000648 seconds.
-  path: Assets/Scenes/Animations/No_Fade_out.anim
-  artifactKey: Guid(e6b18646fe97f34429f85d69d42b3d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/No_Fade_out.anim using Guid(e6b18646fe97f34429f85d69d42b3d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13a5d1f3877b66c563d063964045902a') in 0.002886 seconds
-  Import took 0.007087 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.943058 seconds.
-  path: Assets/Scenes/Animations/Fading 1.anim
-  artifactKey: Guid(a158c8057e5b5134abbf8f977ca2f9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Fading 1.anim using Guid(a158c8057e5b5134abbf8f977ca2f9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4940ab002cb37d68ecfb98c46eb9d35e') in 0.006743 seconds
-  Import took 0.010686 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.533867 seconds.
-  path: Assets/Scenes/Animations/No_Fading.anim
-  artifactKey: Guid(a158c8057e5b5134abbf8f977ca2f9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/No_Fading.anim using Guid(a158c8057e5b5134abbf8f977ca2f9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '824139f0210bb7de4392bf289cce6bcd') in 0.010529 seconds
-  Import took 0.016874 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.651439 seconds.
-  path: Assets/Scenes/Animations/Flicking.anim
-  artifactKey: Guid(d12fefb6383d9e341a7066373ffaf506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Flicking.anim using Guid(d12fefb6383d9e341a7066373ffaf506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcfb7d9c1f229e1beffe8f10bd000cfd') in 0.008334 seconds
-  Import took 0.012649 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001157 seconds.
-  path: Assets/Scenes/Animations/Flicking.anim
-  artifactKey: Guid(d12fefb6383d9e341a7066373ffaf506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Flicking.anim using Guid(d12fefb6383d9e341a7066373ffaf506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcfb7d9c1f229e1beffe8f10bd000cfd') in 0.002877 seconds
-  Import took 0.006493 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.621286 seconds.
-  path: Assets/Scenes/Animations/Flicking 1.anim
-  artifactKey: Guid(b368920b92ac87d4b8403738b84eeedc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Flicking 1.anim using Guid(b368920b92ac87d4b8403738b84eeedc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0daa7d0b3550824c9f34b9a29b884401') in 0.008556 seconds
-  Import took 0.013332 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.970916 seconds.
-  path: Assets/Scenes/Animations/No_Flicking.anim
-  artifactKey: Guid(b368920b92ac87d4b8403738b84eeedc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/No_Flicking.anim using Guid(b368920b92ac87d4b8403738b84eeedc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '140b2e6d06636547b5c14366de0f3f95') in 0.008910 seconds
-  Import took 0.012876 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.787818 seconds.
-  path: Assets/Scenes/Animations/No_Fade_out.anim
-  artifactKey: Guid(e6b18646fe97f34429f85d69d42b3d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/No_Fade_out.anim using Guid(e6b18646fe97f34429f85d69d42b3d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e6275883ed4b999e018dec5b0964018') in 0.008529 seconds
-  Import took 0.013731 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002731 seconds.
-  path: Assets/Scenes/Animations/No_Fade_out.anim
-  artifactKey: Guid(e6b18646fe97f34429f85d69d42b3d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/No_Fade_out.anim using Guid(e6b18646fe97f34429f85d69d42b3d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e6275883ed4b999e018dec5b0964018') in 0.003134 seconds
-  Import took 0.007376 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.066977 seconds.
-  path: Assets/Scenes/Animations/No_Fading.anim
-  artifactKey: Guid(a158c8057e5b5134abbf8f977ca2f9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/No_Fading.anim using Guid(a158c8057e5b5134abbf8f977ca2f9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd338e95d3fc535479b4739c8fa1736d6') in 0.008565 seconds
-  Import took 0.013099 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.011636 seconds.
-  path: Assets/Scenes/Animations/No_Fading.anim
-  artifactKey: Guid(a158c8057e5b5134abbf8f977ca2f9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/No_Fading.anim using Guid(a158c8057e5b5134abbf8f977ca2f9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd338e95d3fc535479b4739c8fa1736d6') in 0.003431 seconds
-  Import took 0.007941 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 50.701851 seconds.
-  path: Assets/Scenes/Animations/AnimationControllers/Fade_Out.controller
-  artifactKey: Guid(463ad7321706e524185ac63fca6e0a24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/AnimationControllers/Fade_Out.controller using Guid(463ad7321706e524185ac63fca6e0a24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '780d133054a61319346b2fd8b42f0d3e') in 0.009746 seconds
-  Import took 0.014172 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 47.507410 seconds.
-  path: Assets/Scenes/Animations/Fade_out.anim
-  artifactKey: Guid(29a4ed973fb18d64b9d3b552b0a1571c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Fade_out.anim using Guid(29a4ed973fb18d64b9d3b552b0a1571c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfb10c93969ac702a3b4e6fca098384d') in 0.008035 seconds
-  Import took 0.013159 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001663 seconds.
-  path: Assets/Scenes/Animations/Fade_out.anim
-  artifactKey: Guid(29a4ed973fb18d64b9d3b552b0a1571c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Animations/Fade_out.anim using Guid(29a4ed973fb18d64b9d3b552b0a1571c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfb10c93969ac702a3b4e6fca098384d') in 0.003922 seconds
-  Import took 0.007836 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001139 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000249640A5010 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-00000232A3487020 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
@@ -560,23 +245,23 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.834 seconds
+- Completed reload, in  0.876 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 102.7 MB.
 System memory in use after: 102.8 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2510.
-Total: 3.409700 ms (FindLiveObjects: 0.489200 ms CreateObjectMapping: 0.105900 ms MarkObjects: 2.793200 ms  DeleteObjects: 0.019300 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2501.
+Total: 2.939900 ms (FindLiveObjects: 0.274100 ms CreateObjectMapping: 0.113000 ms MarkObjects: 2.522200 ms  DeleteObjects: 0.028500 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001123 seconds.
+Registered in 0.001549 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000249640A5010 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-00000232A8E50020 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
@@ -585,65 +270,272 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.180 seconds
+- Completed reload, in  1.168 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.7 MB.
+System memory in use after: 102.8 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2504.
+Total: 4.175700 ms (FindLiveObjects: 0.446600 ms CreateObjectMapping: 0.173800 ms MarkObjects: 3.524000 ms  DeleteObjects: 0.029500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 575.131962 seconds.
+  path: Assets/Scenes/Animations/AnimationControllers/Fade_Out.controller
+  artifactKey: Guid(463ad7321706e524185ac63fca6e0a24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Animations/AnimationControllers/Fade_Out.controller using Guid(463ad7321706e524185ac63fca6e0a24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd76de5dacb44c087a61195741c63e9b8') in 0.041179 seconds
+  Import took 0.046019 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001246 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000230E86D5020 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.126 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.7 MB.
+System memory in use after: 102.8 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2507.
+Total: 2.468300 ms (FindLiveObjects: 0.265600 ms CreateObjectMapping: 0.091500 ms MarkObjects: 2.091000 ms  DeleteObjects: 0.018600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001256 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000232A249E020 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.958 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.7 MB.
+System memory in use after: 102.8 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2510.
+Total: 2.510400 ms (FindLiveObjects: 0.266900 ms CreateObjectMapping: 0.110000 ms MarkObjects: 2.108000 ms  DeleteObjects: 0.024400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003894 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000230E8E6E010 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.909 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 102.7 MB.
 System memory in use after: 102.8 MB.
 
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2513.
-Total: 2.362900 ms (FindLiveObjects: 0.246700 ms CreateObjectMapping: 0.096200 ms MarkObjects: 1.996300 ms  DeleteObjects: 0.021400 ms)
+Total: 3.786900 ms (FindLiveObjects: 0.442500 ms CreateObjectMapping: 0.212700 ms MarkObjects: 3.103000 ms  DeleteObjects: 0.026000 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001053 seconds.
+Registered in 0.001262 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000024B26322F40 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-00000230E8E6E010 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.875 seconds
+- Completed reload, in  0.822 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.59 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 102.7 MB.
 System memory in use after: 102.8 MB.
 
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2516.
-Total: 4.547300 ms (FindLiveObjects: 0.366200 ms CreateObjectMapping: 0.176100 ms MarkObjects: 3.978300 ms  DeleteObjects: 0.023600 ms)
+Total: 2.531600 ms (FindLiveObjects: 0.365800 ms CreateObjectMapping: 0.133400 ms MarkObjects: 2.005600 ms  DeleteObjects: 0.025300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 239.644728 seconds.
+  path: Assets/Scenes/Animations/Flicking.anim
+  artifactKey: Guid(d12fefb6383d9e341a7066373ffaf506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Animations/Flicking.anim using Guid(d12fefb6383d9e341a7066373ffaf506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b5e69f186705e62e37fb030b0f0383e') in 0.021924 seconds
+  Import took 0.027950 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000581 seconds.
+  path: Assets/Scenes/Animations/Flicking.anim
+  artifactKey: Guid(d12fefb6383d9e341a7066373ffaf506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Animations/Flicking.anim using Guid(d12fefb6383d9e341a7066373ffaf506) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b5e69f186705e62e37fb030b0f0383e') in 0.003940 seconds
+  Import took 0.008677 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002010 seconds.
+Registered in 0.001098 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-00000249640A5010 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-00000230E3F45050 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.775 seconds
+- Completed reload, in  0.876 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 102.7 MB.
 System memory in use after: 102.8 MB.
 
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2519.
-Total: 1.980000 ms (FindLiveObjects: 0.228700 ms CreateObjectMapping: 0.069600 ms MarkObjects: 1.663600 ms  DeleteObjects: 0.016900 ms)
+Total: 3.003100 ms (FindLiveObjects: 0.494100 ms CreateObjectMapping: 0.248100 ms MarkObjects: 2.242000 ms  DeleteObjects: 0.017200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.362949 seconds.
+  path: Assets/Scenes/Animations/AnimationControllers/Flick.controller
+  artifactKey: Guid(3ac949291db33854db6af485abc4b45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Animations/AnimationControllers/Flick.controller using Guid(3ac949291db33854db6af485abc4b45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43b2d72d3c4bce95c05d752617b2b19c') in 0.047330 seconds
+  Import took 0.052764 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001118 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000232A249E020 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.860 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.93 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.7 MB.
+System memory in use after: 102.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2522.
+Total: 4.857400 ms (FindLiveObjects: 0.325200 ms CreateObjectMapping: 0.239500 ms MarkObjects: 4.259800 ms  DeleteObjects: 0.030800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001104 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000230E3F45050 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.887 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.8 MB.
+System memory in use after: 102.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2525.
+Total: 3.256600 ms (FindLiveObjects: 0.311300 ms CreateObjectMapping: 0.130400 ms MarkObjects: 2.787600 ms  DeleteObjects: 0.024900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003747 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000232A249E020 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.883 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.60 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.8 MB.
+System memory in use after: 102.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2528.
+Total: 4.433800 ms (FindLiveObjects: 0.530500 ms CreateObjectMapping: 0.144900 ms MarkObjects: 3.726600 ms  DeleteObjects: 0.029000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001501 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000232B660D020 doesn't match image C:\Users\kaueu\OneDrive\Documentos\GitHub\TCC\Projeto 5\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.786 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.58 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.8 MB.
+System memory in use after: 102.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2531.
+Total: 3.029700 ms (FindLiveObjects: 0.412700 ms CreateObjectMapping: 0.164400 ms MarkObjects: 2.426500 ms  DeleteObjects: 0.023300 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

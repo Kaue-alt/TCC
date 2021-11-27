@@ -144,6 +144,9 @@ public class KidController : MonoBehaviour
         runSound.Stop();
         animator.SetBool("bIdle", true);
         animator.SetBool("bRun", false);
+        animator.SetBool("bDash", false);
+        animator.SetBool("bJump", false);
+        animator.SetBool("bFall", false);
         falas = fala;
 
         LimparRespostas();
