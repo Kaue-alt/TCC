@@ -7,6 +7,8 @@ public class pausaMovimento : MonoBehaviour
     Movimentacao scriptMovimentacao;
     dashMove scriptDash;
     Boss scriptBoss;
+    PlayerJump scriptJump;
+    vidaBoss scriptVidaDoBoss;
 
     public GameObject hudVida, hudDash, hudArmas;
 
@@ -17,15 +19,18 @@ public class pausaMovimento : MonoBehaviour
         scriptMovimentacao = FindObjectOfType<Movimentacao>();
         scriptDash = FindObjectOfType<dashMove>();
         scriptBoss = FindObjectOfType<Boss>();
+        scriptJump = FindObjectOfType<PlayerJump>();
+        scriptVidaDoBoss = FindObjectOfType<vidaBoss>();
     }
 
     void Update()
     {
-        if (travaMovimento == true)
+        if (travaMovimento == true || scriptVidaDoBoss.life == 300)
         {
             StartCoroutine(ativaMovimentos());
             scriptDash.enabled = false;
             scriptMovimentacao.enabled = false;
+            scriptJump.enabled = false;
             Debug.Log("Não se mova!");
         }
         else
@@ -33,8 +38,7 @@ public class pausaMovimento : MonoBehaviour
             hudVida.SetActive(true);
             hudArmas.SetActive(true);
             hudDash.SetActive(true);
-        }
-       
+        }     
     }
 
     IEnumerator ativaMovimentos()

@@ -127,14 +127,14 @@ public class Boss : MonoBehaviour
         //Pular para a direita
         if (podePular == true)
         {
-            if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6 && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
+            if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6.75f && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
             {
                 StartCoroutine(puloDireita());
                 Debug.Log("Pulou p/ Direita");
             }
 
             //Pular para a esquerda
-            if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6 && posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)
+            if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6.75f && posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)
             {
                 StartCoroutine(puloEsquerda());
                 Debug.Log("Pulou p/ Esquerda");
@@ -144,9 +144,9 @@ public class Boss : MonoBehaviour
         //Cortar
         if (podeCortar == true)
         {
-            if (vidaDoBoss.life > 350)
+            if (vidaDoBoss.life > 300)
             {
-                if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3.6f)
+                if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3.8f)
                 {
                     StartCoroutine(cooldownCorte());
                     corteRapido();
@@ -166,7 +166,7 @@ public class Boss : MonoBehaviour
                 StartCoroutine(animaHalfLife());
 
                 //Chamar Som
-                if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3.6f) // Só funciona se pular(???)
+                if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3.8f) // Só funciona se pular(???)
                 {
                     StartCoroutine(cooldownCorte());
                     cortePesado();
