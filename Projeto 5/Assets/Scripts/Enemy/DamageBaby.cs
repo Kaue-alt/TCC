@@ -49,7 +49,7 @@ public class DamageBaby : MonoBehaviour
             //kbScript.active = true;      
         }
 
-        if (collider.gameObject.tag != "Enemy")
+        if (collider.gameObject.tag != "Baby")
         {
             Destroy(gameObject);
         }
