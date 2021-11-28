@@ -1467,7 +1467,7 @@ PrefabInstance:
       objectReference: {fileID: 919132148921016479}
     - target: {fileID: 1561138122, guid: 40357f4120c249043ab6b67da39e59f5, type: 3}
       propertyPath: life
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1561138122, guid: 40357f4120c249043ab6b67da39e59f5, type: 3}
       propertyPath: audioSourceMonster
@@ -1542,6 +1542,11 @@ PrefabInstance:
         type: 3}
       propertyPath: damage2
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751729059570558420, guid: 40357f4120c249043ab6b67da39e59f5,
+        type: 3}
+      propertyPath: waitAttack
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3094380664512738604, guid: 40357f4120c249043ab6b67da39e59f5,
         type: 3}
@@ -2661,7 +2666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187168643}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -44.6, y: 0, z: -54.2}
+  m_LocalPosition: {x: -41.91, y: -0.16, z: -53.11}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 1442667434}
@@ -29761,7 +29766,7 @@ PrefabInstance:
     - target: {fileID: 7615267700635332541, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40.4
+      value: -45.89
       objectReference: {fileID: 0}
     - target: {fileID: 7615267700635332541, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}

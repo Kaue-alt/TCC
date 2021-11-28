@@ -69,7 +69,8 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
-        if(pausaBoss == true)
+        Debug.Log(Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position));
+        if (pausaBoss == true)
         {
             StartCoroutine(ativaMovimentos());
             Debug.Log("Esperando...");
@@ -82,103 +83,104 @@ public class Boss : MonoBehaviour
             StartCoroutine(cooldownPulo());
         }
         */
-
-        if ((posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)) // && !animaBoss.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        if(liberaAtaques == true)
         {
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        }
-
-        if((posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)) // && !animaBoss.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
-        {
-            transform.eulerAngles = new Vector3(0, 180, 0);
-        }
-
-        //Sugada
-        if (estaSugando == true)
-        {
-            animaBoss.SetBool("bPull", true);
-            if (posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)
+            if ((posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)) // && !animaBoss.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
             {
-                rigidBodyPlayer.AddForce(Vector3.right * sugada, ForceMode.Acceleration);
-                scriptMovimentacao.speed = 1;
-                Debug.Log("sugandoCorrotinaEsquerda");
-                scriptDash.enabled = false;
-                effectR.SetActive(true);
-            }
-            else
-            {
-                rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
-                scriptMovimentacao.speed = 1;
-                Debug.Log("sugandoCorrotinaDireita");
-                scriptDash.enabled = false;
-                effectL.SetActive(true);
-            }
-        }
-        else
-        {
-            scriptDash.enabled = true;
-            scriptMovimentacao.speed = 5;
-            effectL.SetActive(false);
-            effectR.SetActive(false);
-        }
-
-        //ATAQUES
-
-        //Pular para a direita
-        if (podePular == true)
-        {
-            if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6.75f && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
-            {
-                StartCoroutine(puloDireita());
-                Debug.Log("Pulou p/ Direita");
+                transform.eulerAngles = new Vector3(0, 0, 0);
             }
 
-            //Pular para a esquerda
-            if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 6.75f && posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)
+            if ((posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)) // && !animaBoss.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
             {
-                StartCoroutine(puloEsquerda());
-                Debug.Log("Pulou p/ Esquerda");
+                transform.eulerAngles = new Vector3(0, 180, 0);
             }
-        }
 
-        //Cortar
-        if (podeCortar == true)
-        {
-            if (vidaDoBoss.life > 300)
+            //Sugada
+            if (estaSugando == true)
             {
-                if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3.8f)
+                animaBoss.SetBool("bPull", true);
+                if (posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)
                 {
-                    StartCoroutine(cooldownCorte());
-                    corteRapido();
-                    //cortePesado();
-                    Debug.Log("cortou Leve!");
+                    rigidBodyPlayer.AddForce(Vector3.right * sugada, ForceMode.Acceleration);
+                    scriptMovimentacao.speed = 1;
+                    Debug.Log("sugandoCorrotinaEsquerda");
+                    scriptDash.enabled = false;
+                    effectR.SetActive(true);
+                }
+                else
+                {
+                    rigidBodyPlayer.AddForce(Vector3.left * sugada, ForceMode.Acceleration);
+                    scriptMovimentacao.speed = 1;
+                    Debug.Log("sugandoCorrotinaDireita");
+                    scriptDash.enabled = false;
+                    effectL.SetActive(true);
                 }
             }
             else
             {
-                animaBoss.SetInteger("HalfLife", 1);
+                scriptDash.enabled = true;
+                scriptMovimentacao.speed = 5;
+                effectL.SetActive(false);
+                effectR.SetActive(false);
+            }
 
-                if (contAnimLife < 5)
+            //ATAQUES
+
+            //Pular para a direita
+            if (podePular == true)
+            {
+                if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 7.5f && posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)
                 {
-                    contAnimLife++;
+                    StartCoroutine(puloDireita());
+                    Debug.Log("Pulou p/ Direita");
                 }
-                  
-                StartCoroutine(animaHalfLife());
 
-                //Chamar Som
-                if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3.8f) // Só funciona se pular(???)
+                //Pular para a esquerda
+                if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) > 7.5f && posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)
                 {
-                    StartCoroutine(cooldownCorte());
-                    cortePesado();
-                    //corteRapido();
-                    Debug.Log("cortou Pesado!");
+                    StartCoroutine(puloEsquerda());
+                    Debug.Log("Pulou p/ Esquerda");
                 }
             }
 
-            
+            //Cortar
+            if (podeCortar == true)
+            {
+                if (vidaDoBoss.life > 300)
+                {
+                    if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 4.1f)
+                    {
+                        StartCoroutine(cooldownCorte());
+                        corteRapido();
+                        //cortePesado();
+                        Debug.Log("cortou Leve!");
+                    }
+                }
+                else
+                {
+                    animaBoss.SetInteger("HalfLife", 1);
+
+                    if (contAnimLife < 5)
+                    {
+                        contAnimLife++;
+                    }
+
+                    StartCoroutine(animaHalfLife());
+
+                    //Chamar Som
+                    if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3f) // Só funciona se pular(???)
+                    {
+                        StartCoroutine(cooldownCorte());
+                        cortePesado();
+                        //corteRapido();
+                        Debug.Log("cortou Pesado!");
+                    }
+                }
+
+
+            }
         }
-
-
+     
             /*  if (contAnimLife == 0 && vidaDoBoss.life <= 50)
               {
                   animaBoss.SetInteger("HalfLife", 1);
@@ -256,7 +258,7 @@ public class Boss : MonoBehaviour
         animaBoss.SetBool("bPull", false);
         yield return new WaitForSecondsRealtime(0.5f);
         animaBoss.SetInteger("Attack", 0);
-        yield return new WaitForSecondsRealtime(2.25f);
+        yield return new WaitForSecondsRealtime(3);
         podeCortar = true;
     }
 
