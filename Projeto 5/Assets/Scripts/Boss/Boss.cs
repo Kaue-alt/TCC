@@ -69,7 +69,8 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position));
+        //Debug.Log(Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position));
+
         if (pausaBoss == true)
         {
             StartCoroutine(ativaMovimentos());
@@ -85,12 +86,12 @@ public class Boss : MonoBehaviour
         */
         if(liberaAtaques == true)
         {
-            if ((posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x)) // && !animaBoss.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+            if ((posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x) && !animaBoss.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
             }
 
-            if ((posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x)) // && !animaBoss.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+            if ((posicaoDoJogador.transform.position.x > posicaoDoBoss.transform.position.x) && !animaBoss.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
             {
                 transform.eulerAngles = new Vector3(0, 180, 0);
             }
@@ -259,6 +260,16 @@ public class Boss : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
         animaBoss.SetInteger("Attack", 0);
         yield return new WaitForSecondsRealtime(3);
+
+        if ((posicaoDoJogador.transform.position.x < posicaoDoBoss.transform.position.x))
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+
         podeCortar = true;
     }
 
