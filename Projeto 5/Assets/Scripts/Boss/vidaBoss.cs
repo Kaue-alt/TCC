@@ -10,7 +10,8 @@ public class vidaBoss : MonoBehaviour
     public float life;
     private int dead = 0;
 
-    public AudioSource audioSourceBoss;
+    public AudioSource middleFightScream;
+    public AudioSource deathScream;
 
     private GameObject player;
     public bool bossMorto = false;
@@ -133,6 +134,7 @@ public class vidaBoss : MonoBehaviour
         //fadeScript.Transition("CreditosAvisos");
 
         yield return new WaitForSecondsRealtime(1);
+        
         //audioSourceBoss.Play();
     }
 
@@ -146,6 +148,7 @@ public class vidaBoss : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.02f);
         animaBoss.SetInteger("ContDeath", 1);
+        
         bossScript.enabled = false;
         yield return new WaitForSecondsRealtime(4.3f);
         animaBoss.enabled = false;
