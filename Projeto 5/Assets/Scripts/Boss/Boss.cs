@@ -29,6 +29,7 @@ public class Boss : MonoBehaviour
     public Rigidbody rigidBodyPlayer;
     public GameObject effectL;
     public GameObject effectR;
+    public AudioSource middleFightScream;
 
     //Permissões
     public bool podePular = true;
@@ -167,6 +168,7 @@ public class Boss : MonoBehaviour
                     }
 
                     StartCoroutine(animaHalfLife());
+                    //middleFightScream.Play();
 
                     //Chamar Som
                     if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3f) // Só funciona se pular(???)
@@ -356,6 +358,7 @@ public class Boss : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.75f);
         animaBoss.SetInteger("ContLife", contAnimLife);
+        
 
     }
 
