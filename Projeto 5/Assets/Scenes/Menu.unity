@@ -2905,6 +2905,7 @@ GameObject:
   - component: {fileID: 1488535026}
   - component: {fileID: 1488535027}
   - component: {fileID: 1488535028}
+  - component: {fileID: 1488535029}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3075,6 +3076,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1488535029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488535021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a42a749a3b86e341aa9ec2e95c6b2f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  capa: {fileID: 1672968412}
+  logo: {fileID: 376542356}
+  text: {fileID: 2081606867}
+  capa_: {fileID: 1672968408}
+  logo_: {fileID: 376542352}
 --- !u!1 &1508836238
 GameObject:
   m_ObjectHideFlags: 0
@@ -3614,7 +3632,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1647480520}
   - component: {fileID: 1647480519}
-  - component: {fileID: 1647480521}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -3655,23 +3672,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1647480521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647480518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a42a749a3b86e341aa9ec2e95c6b2f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  capa: {fileID: 1672968412}
-  logo: {fileID: 376542356}
-  text: {fileID: 2081606867}
-  capa_: {fileID: 1672968408}
-  logo_: {fileID: 376542352}
 --- !u!1 &1648769336
 GameObject:
   m_ObjectHideFlags: 0

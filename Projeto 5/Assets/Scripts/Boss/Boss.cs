@@ -13,7 +13,7 @@ public class Boss : MonoBehaviour
     vidaBoss vidaDoBoss;
     Movimentacao scriptMovimentacao;
     dashMove scriptDash;
-
+    public bool halfLife = false;
     private Transform posicaoDoJogador;
     private Transform posicaoDoBoss;
 
@@ -161,15 +161,16 @@ public class Boss : MonoBehaviour
                 else
                 {
                     animaBoss.SetInteger("HalfLife", 1);
-
+                    
                     if (contAnimLife < 5)
                     {
                         contAnimLife++;
                     }
-
+                    
                     StartCoroutine(animaHalfLife());
-                    //middleFightScream.Play();
+                    //halfLife = true;
 
+                    
                     //Chamar Som
                     if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3f) // Só funciona se pular(???)
                     {
@@ -357,7 +358,14 @@ public class Boss : MonoBehaviour
     IEnumerator animaHalfLife()
     {
         yield return new WaitForSecondsRealtime(0.75f);
+       /*if (halfLife == true)
+        {
+            middleFightScream.Play();
+            halfLife = false;
+        }*/
+
         animaBoss.SetInteger("ContLife", contAnimLife);
+        
         
 
     }
