@@ -34,6 +34,8 @@ public class KidController : MonoBehaviour
 
     public GameObject hudVida, hudDash, hudArmas;
 
+    //Teste
+    RespostaKid respostaData;
 
 
     void Start()
@@ -126,12 +128,15 @@ public class KidController : MonoBehaviour
         falaNPC.gameObject.SetActive(false);
         falaAtiva = false;
 
-        for (int i = 0; i < falas.respostas.Length; i++)
+       for (int i = 0; i < falas.respostas.Length; i++)
         {
             GameObject tempResposta = Instantiate(resposta, painelDeDialogo.transform) as GameObject;
             tempResposta.GetComponent<Text>().text = falas.respostas[i].resposta;
+            //tempResposta.GetComponent<AnswerButtonKid>().Setup(falas.respostas[i]);
             tempResposta.GetComponent<AnswerButtonKid>().Setup(falas.respostas[i]);
         }
+
+        
     }
     public void ProximaFala(FalaNPC fala)
     {
@@ -158,6 +163,7 @@ public class KidController : MonoBehaviour
         falaNPC.text = falas.fala;
     }
 
+    
     void LimparRespostas()
     {
         AnswerButtonKid[] buttons = FindObjectsOfType<AnswerButtonKid>();
@@ -166,7 +172,7 @@ public class KidController : MonoBehaviour
             Destroy(button.gameObject);
         }
     }
-
+    
     //CHAMAR TRANSIÇÃO
     IEnumerator waitStand()
     {
@@ -179,4 +185,11 @@ public class KidController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         fadeScript.Transition("TutorialDia");
     }
+
+    //TESTE
+    /*public void Setup(RespostaKid resposta)
+    {
+        respostaData = resposta;
+    }
+    */
 }

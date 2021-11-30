@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ComandanteController : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class ComandanteController : MonoBehaviour
     dashMove dashScript;
     PlayerJump jumpScript;
     pauseInGame pauseScript;
+
+    //CHAMAR TRANSIÇÃO
+    TransicaoParaODia transicaoParaODia;
+    public Fade fadeScript;
 
     FalaComandante falasComandante;
 
@@ -36,10 +41,30 @@ public class ComandanteController : MonoBehaviour
         dashScript = FindObjectOfType<dashMove>();
         jumpScript = FindObjectOfType<PlayerJump>();
         pauseScript = FindObjectOfType<pauseInGame>();
+
+        //CHAMAR TRANSIÇÃO
+        transicaoParaODia = FindObjectOfType<TransicaoParaODia>();
+        if (SceneManager.GetActiveScene().name == "CenaFinal")
+        {
+            GetComponent<Animator>().SetBool("bCenaFinal", true);
+
+            if (GetComponent<Animator>().GetInteger("countStand") == 0)
+            {
+                StartCoroutine(waitStand());
+            }
+
+            GetComponent<Animator>().SetBool("bStretch", true);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("bArtesFinalizacao", false);
+        }
+        fadeScript = FindObjectOfType<Fade>();
     }
 
     void Update()
     {
+        //Debug.Log(transicaoParaODia.ganchoTransicao);
         if (!painelDeDialogoComandante.activeInHierarchy)
         {
             IconeComandante.SetActive(false);
@@ -82,7 +107,13 @@ public class ComandanteController : MonoBehaviour
                 dashScript.enabled = true;
                 pauseScript.enabled = true;
                 Cursor.lockState = CursorLockMode.Locked;
+
+                if (transicaoParaODia.ganchoTransicao >= 2)
+                {
+                    StartCoroutine(transicaoCorrotina());
+                }
             }
+
         }
     }
 
@@ -130,5 +161,19 @@ public class ComandanteController : MonoBehaviour
         {
             Destroy(button.gameObject);
         }
+    }
+
+
+    //CHAMAR TRANSIÇÃO
+    IEnumerator waitStand()
+    {
+        yield return new WaitForSeconds(1.0f);
+        GetComponent<Animator>().SetInteger("countStand", 1);
+    }
+
+    IEnumerator transicaoCorrotina()
+    {
+        yield return new WaitForSeconds(0.5f);
+        fadeScript.Transition("ArtesFinalizacao");
     }
 }

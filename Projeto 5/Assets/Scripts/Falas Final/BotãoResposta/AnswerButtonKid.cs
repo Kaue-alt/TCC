@@ -6,10 +6,16 @@ public class AnswerButtonKid : MonoBehaviour
 {
     RespostaKid respostaData;
 
-    public void ProximaFala()
+   public void ProximaFala()
     {
         FindObjectOfType<KidController>().ProximaFala(respostaData.proximaFala);
+        /*if(Input.GetMouseButtonDown(0))
+        {
+            FindObjectOfType<KidController>().ProximaFala(respostaData.proximaFala);
+        }
+        */
     }
+    
 
     public void Setup (RespostaKid resposta)
     {
