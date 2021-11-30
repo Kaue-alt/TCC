@@ -13,7 +13,6 @@ public class Boss : MonoBehaviour
     vidaBoss vidaDoBoss;
     Movimentacao scriptMovimentacao;
     dashMove scriptDash;
-    public bool halfLife = false;
     private Transform posicaoDoJogador;
     private Transform posicaoDoBoss;
 
@@ -29,7 +28,7 @@ public class Boss : MonoBehaviour
     public Rigidbody rigidBodyPlayer;
     public GameObject effectL;
     public GameObject effectR;
-    public AudioSource middleFightScream;
+    
 
     //Permissões
     public bool podePular = true;
@@ -37,7 +36,12 @@ public class Boss : MonoBehaviour
     public bool estaSugando = false;
     public bool liberaAtaques = false;
     public bool pausaBoss = true;
+    public bool halfLife = false;
 
+    //Sons
+    public GameObject musicPT1;
+    public GameObject musicPT2;
+    public GameObject middleFightScream;
     //Dano
     public float danoDoCorteLeve;
     public float danoDoCortePesado;
@@ -70,6 +74,7 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
+       
         //Debug.Log(Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position));
 
         if (pausaBoss == true)
@@ -166,7 +171,8 @@ public class Boss : MonoBehaviour
                     {
                         contAnimLife++;
                     }
-                    
+                    musicPT1.SetActive(false);
+                    musicPT2.SetActive(true);
                     StartCoroutine(animaHalfLife());
                     //halfLife = true;
 
@@ -358,12 +364,7 @@ public class Boss : MonoBehaviour
     IEnumerator animaHalfLife()
     {
         yield return new WaitForSecondsRealtime(0.75f);
-       /*if (halfLife == true)
-        {
-            middleFightScream.Play();
-            halfLife = false;
-        }*/
-
+        middleFightScream.SetActive(true);
         animaBoss.SetInteger("ContLife", contAnimLife);
         
         
