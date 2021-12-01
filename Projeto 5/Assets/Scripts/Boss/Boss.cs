@@ -364,10 +364,10 @@ public class Boss : MonoBehaviour
     IEnumerator animaHalfLife()
     {
         yield return new WaitForSecondsRealtime(0.75f);
-        middleFightScream.SetActive(true);
         animaBoss.SetInteger("ContLife", contAnimLife);
-        
-        
+        middleFightScream.SetActive(true);
+
+
 
     }
 

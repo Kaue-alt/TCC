@@ -149,7 +149,6 @@ public class vidaBoss : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.02f);
         animaBoss.SetInteger("ContDeath", 1);
         deathScream.Play();
-        
         bossScript.enabled = false;
         yield return new WaitForSecondsRealtime(4.3f);
         animaBoss.enabled = false;
