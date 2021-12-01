@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class finalScenes : MonoBehaviour
 {
-    public GameObject firstScene, secScene, thirdScene, fourthScene, fifthScene;
+    public GameObject firstScene, secScene, thirdScene, fourthScene, fifthScene, sixthScene;
     private int cont = 0;
     private bool cooldown = false;
 
@@ -16,7 +16,8 @@ public class finalScenes : MonoBehaviour
         secScene.SetActive(true);
         thirdScene.SetActive(true);
         fourthScene.SetActive(true);
-        fifthScene.SetActive(false);
+        fifthScene.SetActive(true);
+        sixthScene.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,6 +47,12 @@ public class finalScenes : MonoBehaviour
             if (cont == 3 && !cooldown)
             {
                 StartCoroutine(fadeSprite(fourthScene));
+                StartCoroutine(setCooldown());
+                cont++;
+            }
+            if (cont == 4 && !cooldown)
+            {
+                StartCoroutine(fadeSprite(fifthScene));
                 StartCoroutine(endScene());
                 cont++;
             }
@@ -74,8 +81,8 @@ public class finalScenes : MonoBehaviour
 
     IEnumerator endScene()
     {
-        fifthScene.SetActive(true);
-        yield return new WaitForSecondsRealtime(1.6f);
+        sixthScene.SetActive(true);
+        yield return new WaitForSecondsRealtime(0.8f);
         fadeScript.Transition("Menu");
     }
 }
