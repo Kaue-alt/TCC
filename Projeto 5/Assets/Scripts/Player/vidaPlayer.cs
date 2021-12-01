@@ -60,7 +60,6 @@ public class vidaPlayer : MonoBehaviour
         {
             audioSouceRun.Stop();
             audioSourceDeath.Play();
-            anima.SetBool("bDeath", true);
             
             Debug.Log("Game Over");
             death ++;
@@ -84,19 +83,22 @@ public class vidaPlayer : MonoBehaviour
 
     IEnumerator telaGameOver()
     {
-        comboScript.enabled = false;
-        movScript.enabled = false;
-        weaponIdScript.enabled = false;
-        dashScript.enabled = false;
-        jumpScript.enabled = false;
+        anima.SetBool("bDeath", true);
         anima.SetBool("bRun", false);
         anima.SetBool("bJump", false);
         anima.SetBool("bFall", false);
         anima.SetBool("bDash", false);
         anima.SetBool("bIdle", false);
-        yield return new WaitForSecondsRealtime(0.05f);
+
+        comboScript.enabled = false;
+        movScript.enabled = false;
+        weaponIdScript.enabled = false;
+        dashScript.enabled = false;
+        jumpScript.enabled = false;
+
+        yield return new WaitForSecondsRealtime(0.08f);
         anima.SetInteger("countDeath", 1);
-        yield return new WaitForSecondsRealtime(4f);
+        yield return new WaitForSecondsRealtime(3.8f);
         GameOverScript.openTelaGameOver();
     }
 

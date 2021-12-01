@@ -59,6 +59,15 @@ public class Movimentacao : MonoBehaviour
             this.animator.SetBool("bDash", false);
         }
 
+        if (this.animator.GetBool("bDeath"))
+        {
+            this.animator.SetBool("bRun", false);
+            this.animator.SetBool("bIdle", false);
+            this.animator.SetBool("bJump", false);
+            this.animator.SetBool("bDash", false);
+            this.animator.SetBool("bFall", false);
+        }
+
         // Espelha o personagem no sentido que está indo quando se movimentar
         if (Input.GetAxis("Horizontal") > 0)
         {

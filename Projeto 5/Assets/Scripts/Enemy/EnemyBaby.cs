@@ -38,26 +38,30 @@ public class EnemyBaby : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         goal = GameObject.FindGameObjectWithTag("Player").transform;
-        animaBaby = enemyBaby.GetComponent<Animator>();
-
-        animaBaby.SetBool("bIdle", true);
-
-        
+        animaBaby = enemyBaby.GetComponent<Animator>();   
     }
 
 
     void Update()
     {
+
+        if(agent.isStopped == true)
+        {
+            animaBaby.SetBool("bRun", false);
+            animaBaby.SetBool("bIdle", true);
+        }
+        else
+        {
+            animaBaby.SetBool("bRun", true);
+            animaBaby.SetBool("bIdle", false);
+        }
+
         // ======================================= MOVIMENTAÇÃO DO INIMIGO =========================================
 
         float distance = Vector3.Distance(transform.position, goal.position);
         if(distance <= distTiro)
         {
             agent.destination = goal.transform.position;
-
-            animaBaby.SetBool("bRun", true);
-            animaBaby.SetBool("bIdle", false);
-
             
             if (!isShooting)
             {
@@ -72,8 +76,6 @@ public class EnemyBaby : MonoBehaviour
         {
             CancelInvoke("ShootBullet");
             isShooting = false;
-            animaBaby.SetBool("bRun", false);
-            animaBaby.SetBool("bIdle", true);
         }
         
        
@@ -85,6 +87,7 @@ public class EnemyBaby : MonoBehaviour
 
     void ShootBullet()
     {
+        StartCoroutine(WaitMov());
         clone = Instantiate(vomito, shootPoint.position, shootPoint.rotation);
         if (goal.transform.position.x > posicaoBaby.transform.position.x)
         {
@@ -97,6 +100,15 @@ public class EnemyBaby : MonoBehaviour
         //rigidBodyVomito.AddForce(Vector3.right * velocidadeDisparo, ForceMode.VelocityChange);
         //Destroy(vomito.gameObject, 6f);
     }
+
+    IEnumerator WaitMov()
+    {
+        agent.isStopped = true;
+        yield return new WaitForSecondsRealtime(0.65f);
+        agent.isStopped = false;
+    }
+
+
     /*IEnumerator shootBullet2()
     {
         yield return new WaitForSecondsRealtime(0.5f);

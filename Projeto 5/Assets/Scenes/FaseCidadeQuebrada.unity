@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.60817903, g: 0.60381377, b: 0.6110985, a: 1}
+  m_IndirectSpecularColor: {r: 0.60840446, g: 0.6037939, b: 0.611015, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5486,7 +5486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &408424222
 Transform:
   m_ObjectHideFlags: 0
@@ -7761,6 +7761,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -7159236951463829038, guid: 3fae3ef208859e3468e19a97e6cd55b3,
+        type: 3}
+      propertyPath: m_StitchLightmapSeams
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7159236951463829038, guid: 3fae3ef208859e3468e19a97e6cd55b3,
         type: 3}
@@ -11758,7 +11763,22 @@ PrefabInstance:
     - target: {fileID: 1124473962149309833, guid: 43d8bae06cb88124289bedbf8de7798a,
         type: 3}
       propertyPath: m_Name
-      value: Baby@Orc Walk
+      value: EnemyBaby
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873101216919024849, guid: 43d8bae06cb88124289bedbf8de7798a,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788521998509268280, guid: 43d8bae06cb88124289bedbf8de7798a,
+        type: 3}
+      propertyPath: m_AutoBraking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788521998509268280, guid: 43d8bae06cb88124289bedbf8de7798a,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43d8bae06cb88124289bedbf8de7798a, type: 3}
@@ -15108,7 +15128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1164609178
 Transform:
   m_ObjectHideFlags: 0
@@ -18510,7 +18530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1417882356
 Transform:
   m_ObjectHideFlags: 0
@@ -22367,12 +22387,12 @@ PrefabInstance:
     - target: {fileID: 7615267700635332541, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.96
+      value: -1.94
       objectReference: {fileID: 0}
     - target: {fileID: 7615267700635332541, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.77
+      value: 0.99
       objectReference: {fileID: 0}
     - target: {fileID: 7615267700635332541, guid: a1e78e8fd576e3146a480eda446a0ddd,
         type: 3}
