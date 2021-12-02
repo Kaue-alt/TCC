@@ -7,6 +7,7 @@ public class vidaPlayer : MonoBehaviour
 {
     GameOver GameOverScript;
     Animator anima;
+    public gameManager gameManagerScript;
 
     Combos comboScript;
     Movimentacao movScript;
@@ -37,11 +38,18 @@ public class vidaPlayer : MonoBehaviour
         weaponIdScript = FindObjectOfType<WeaponSwitching>();
         dashScript = FindObjectOfType<dashMove>();
         jumpScript = FindObjectOfType<PlayerJump>();
+        gameManagerScript = FindObjectOfType<gameManager>();
 
         if (ValorCenas.vida != 0)
         {
             life = ValorCenas.vida;
         }
+
+        if (GameObject.Find("gameManager") != null && gameManagerScript.life != 0)
+        {
+            life = gameManagerScript.life;
+        }
+
     }
 
     
