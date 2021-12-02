@@ -128,9 +128,9 @@ public class vidaBoss : MonoBehaviour
         painelDialogoSozinho.SetActive(true);
         iconePlayer.SetActive(true);
         yield return new WaitForSecondsRealtime(7);
-        agradecimento.SetActive(true);
+        //agradecimento.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
-        //fadeScript.Transition("posBoss");
+        fadeScript.Transition("posBoss");
         //fadeScript.Transition("CreditosAvisos");
 
         yield return new WaitForSecondsRealtime(1);
