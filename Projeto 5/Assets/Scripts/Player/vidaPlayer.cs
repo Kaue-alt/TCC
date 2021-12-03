@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class vidaPlayer : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class vidaPlayer : MonoBehaviour
     public int death = 0;
 
     public AudioSource audioSourceDeath, audioSouceRun;
+    
 
     void Start()
     {
@@ -50,6 +52,18 @@ public class vidaPlayer : MonoBehaviour
             life = gameManagerScript.life;
         }
 
+        
+        /*if (GameObject.Find("gameManager") != null)
+        {
+            
+            Vector3 novaPosicaox = transform.position;
+            novaPosicaox.x = gameManagerScript.playerPosX;
+            transform.position = novaPosicaox;
+
+            Vector3 novaPosicaoy = transform.position;
+            novaPosicaoy.y = gameManagerScript.playerPosY;
+            transform.position = novaPosicaoy;
+        }*/
     }
 
     

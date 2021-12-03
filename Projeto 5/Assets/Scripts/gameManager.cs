@@ -13,6 +13,7 @@ class PlayerData
     public float playerPosX, playerPosY;
     public int[] weaponId;
     public int currentWeaponId;
+    public string cena;
 }
 public class gameManager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class gameManager : MonoBehaviour
     public float playerPosX, playerPosY;
     public int[] weaponId;
     public int currentWeaponId;
+    public string cena;
 
     public GameObject MensagemLoad;
 
@@ -43,6 +45,8 @@ public class gameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         filePath = Application.persistentDataPath + "/saveGame.dat"; //ficará salvo em: exemplo(C:\Users\T-Gamer\AppData\LocalLow\DefaultCompany\Projeto 5)
+
+        
     }
 
     public void Save()
@@ -57,6 +61,7 @@ public class gameManager : MonoBehaviour
         data.life = player.life;
         data.playerPosX = player.transform.position.x;
         data.playerPosY = player.transform.position.y;
+        data.cena = SceneManager.GetActiveScene().name;
 
         bf.Serialize(file, data);
         file.Close();
@@ -80,6 +85,7 @@ public class gameManager : MonoBehaviour
             life = data.life;
             playerPosX = data.playerPosX;
             playerPosY = data.playerPosY;
+            cena = data.cena;
 
             Debug.Log("Jogo carregado!");
 
