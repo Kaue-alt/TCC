@@ -11,6 +11,7 @@ public class inteEsgoto : MonoBehaviour
 
     public GameObject _tutorialBackgrounddddd;
     public GameObject _textInteragirEsgoto;
+    public GameObject botaoE;
 
     //public AudioSource runSound;
 
@@ -18,6 +19,7 @@ public class inteEsgoto : MonoBehaviour
     {
         tutorialBackgrounddddd.enabled = false;
         textoInteragirEsgoto.enabled = false;
+        botaoE.SetActive(false);
 
         _textInteragirEsgoto.SetActive(true);
     }
@@ -31,8 +33,9 @@ public class inteEsgoto : MonoBehaviour
             tutorialBackgrounddddd.enabled = true;
             _textInteragirEsgoto.SetActive(true);
             _tutorialBackgrounddddd.SetActive(true);
-    //runSound.Stop();
-}
+            botaoE.SetActive(true);
+            //runSound.Stop();
+        }
     }
 
     //void OnTriggerEnter(Collider other)

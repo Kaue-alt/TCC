@@ -11,6 +11,8 @@ public class ataqueTutorial : MonoBehaviour
 
     public GameObject _tutorialBackgrounddd;
     public GameObject _textAtacar;
+    public GameObject mouseEsq;
+    public GameObject botaoShift;
 
     dashMove dashScript;
     PlayerJump jumpScript;
@@ -48,6 +50,8 @@ public class ataqueTutorial : MonoBehaviour
 
                 tutorialBackgrounddd.enabled = false;
                 textoAtacar.enabled = false;
+                mouseEsq.SetActive(false);
+                botaoShift.SetActive(false);
 
                 jumpScript.enabled = true;
                 dashScript.enabled = true;
@@ -67,6 +71,8 @@ public class ataqueTutorial : MonoBehaviour
                 Time.timeScale = 0;
                 textoAtacar.enabled = true;
                 tutorialBackgrounddd.enabled = true;
+                mouseEsq.SetActive(true);
+                botaoShift.SetActive(true);
                 //runSound.Stop();
                 pauseddd = true;
                 Debug.Log("pausou");

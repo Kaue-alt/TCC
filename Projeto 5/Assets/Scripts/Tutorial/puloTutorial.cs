@@ -11,6 +11,7 @@ public class puloTutorial : MonoBehaviour
 
     public GameObject _tutorialBackgroundd;
     public GameObject _textPular;
+    public GameObject botaoEspaco;
 
     dashMove dashScript;
     PlayerJump jumpScript;
@@ -48,6 +49,7 @@ public class puloTutorial : MonoBehaviour
 
                 tutorialBackgroundd.enabled = false;
                 textoPular.enabled = false;
+                botaoEspaco.SetActive(false);
 
                 jumpScript.enabled = true;
                 dashScript.enabled = true;
@@ -67,6 +69,7 @@ public class puloTutorial : MonoBehaviour
                 Time.timeScale = 0;
                 textoPular.enabled = true;
                 tutorialBackgroundd.enabled = true;
+                botaoEspaco.SetActive(true);
                 //runSound.Stop();
                 pausedd = true;
                 Debug.Log("pausou");

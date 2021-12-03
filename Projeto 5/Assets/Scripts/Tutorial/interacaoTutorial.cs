@@ -11,6 +11,7 @@ public class interacaoTutorial : MonoBehaviour
 
     public GameObject _tutorialBackgroundddd;
     public GameObject _textInteragir;
+    public GameObject scroll;
 
     dashMove dashScript;
     PlayerJump jumpScript;
@@ -48,6 +49,7 @@ public class interacaoTutorial : MonoBehaviour
 
                 tutorialBackgroundddd.enabled = false;
                 textoInteragir.enabled = false;
+                scroll.SetActive(false);
 
                 jumpScript.enabled = true;
                 dashScript.enabled = true;
@@ -67,6 +69,7 @@ public class interacaoTutorial : MonoBehaviour
                 Time.timeScale = 0;
                 textoInteragir.enabled = true;
                 tutorialBackgroundddd.enabled = true;
+                scroll.SetActive(true);
                 //runSound.Stop();
                 pausedddd = true;
             }

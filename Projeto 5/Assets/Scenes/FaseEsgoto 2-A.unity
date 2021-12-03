@@ -1750,6 +1750,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46aceb0871d49b469f118d2f034cca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &946511524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1940622359733279360, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 946511520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &946511525 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4146330742650968252, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 946511520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1035754173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,7 +1956,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 946511520}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 946511525}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -2516,8 +2528,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialBackgrounddddd: {fileID: 1137574080}
   textoInteragirEsgoto: {fileID: 588049}
-  _tutorialBackgrounddddd: {fileID: 588047}
+  _tutorialBackgrounddddd: {fileID: 946511525}
   _textInteragirEsgoto: {fileID: 588047}
+  botaoE: {fileID: 946511524}
 --- !u!4 &1500256212
 Transform:
   m_ObjectHideFlags: 0

@@ -13,6 +13,8 @@ public class TutorialCanvas : MonoBehaviour
     public GameObject _tutorialBackground;
     public GameObject _textoAndar;
     public GameObject _textoPular;
+    public GameObject botaoA;
+    public GameObject botaoD;
 
     dashMove dashScript;
     PlayerJump jumpScript;
@@ -54,8 +56,10 @@ public class TutorialCanvas : MonoBehaviour
 
                 tutorialBackground.enabled = false;
                 textoAndar.enabled = false;
+                botaoA.SetActive(false);
+                botaoD.SetActive(false);
                 //_tutorialBackground.SetActive(false);
-               // _textoAndar.SetActive(false);
+                // _textoAndar.SetActive(false);
 
                 jumpScript.enabled = true;
                 dashScript.enabled = true;
@@ -76,6 +80,8 @@ public class TutorialCanvas : MonoBehaviour
                 Time.timeScale = 0;
                 textoAndar.enabled = true;
                 tutorialBackground.enabled = true;
+                botaoA.SetActive(true);
+                botaoD.SetActive(true);
                 //runSound.Stop();
                 paused = true;
                 Debug.Log("pausou");
