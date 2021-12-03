@@ -33,8 +33,6 @@ public class mainMenuController : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         capa_.SetActive(false);
-        logo_.SetActive(false);
-
-        
+        logo_.SetActive(false);        
     }
 }

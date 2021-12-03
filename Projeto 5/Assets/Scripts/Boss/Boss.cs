@@ -75,7 +75,7 @@ public class Boss : MonoBehaviour
     void Update()
     {
        
-        //Debug.Log(Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position));
+        Debug.Log("Distância do Boss: " + Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position));
 
         if (pausaBoss == true)
         {
@@ -159,7 +159,6 @@ public class Boss : MonoBehaviour
                     {
                         StartCoroutine(cooldownCorte());
                         corteRapido();
-                        //cortePesado();
                         Debug.Log("cortou Leve!");
                     }
                 }
@@ -178,26 +177,16 @@ public class Boss : MonoBehaviour
 
                     
                     //Chamar Som
-                    if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 3f) // Só funciona se pular(???)
+                    if (Vector2.Distance(posicaoDoJogador.position, posicaoDoBoss.position) < 4.1f) // Só funciona se pular(???)
                     {
                         StartCoroutine(cooldownCorte());
                         cortePesado();
-                        //corteRapido();
                         Debug.Log("cortou Pesado!");
                     }
                 }
 
-
             }
         }
-     
-            /*  if (contAnimLife == 0 && vidaDoBoss.life <= 50)
-              {
-                  animaBoss.SetInteger("HalfLife", 1);
-                  contAnimLife++;
-                  StartCoroutine(animaHalfLife());
-              }
-              */
     }
 
     //Controlar direção dos pulos
@@ -217,11 +206,13 @@ public class Boss : MonoBehaviour
             animaBoss.SetBool("bJump", false);
             //yield return new WaitForSecondsRealtime(1);
 
-            if (vidaDoBoss.life <= 350)
+            estaSugando = true;
+
+            /*if (vidaDoBoss.life <= 350)
             {
                 estaSugando = true;
 
-            }
+            }*/
             yield return new WaitForSecondsRealtime(8);
             podePular = true;
         }
@@ -243,10 +234,12 @@ public class Boss : MonoBehaviour
             animaBoss.SetBool("bJump", false);
             //yield return new WaitForSecondsRealtime(1);
 
-            if (vidaDoBoss.life <= 350)
+            estaSugando = true;
+
+            /*if (vidaDoBoss.life <= 350)
             {
                 estaSugando = true;
-            }
+            }*/
             yield return new WaitForSecondsRealtime(9);
             podePular = true;
         }
@@ -261,7 +254,6 @@ public class Boss : MonoBehaviour
     }
     */
     
-
     IEnumerator cooldownCorte()
     {
         podeCortar = false;
@@ -295,11 +287,13 @@ public class Boss : MonoBehaviour
         {
             animaBoss.SetInteger("Attack", 1);
             rigidBodyBoss.AddForce(Vector3.right * speedDashCorte, ForceMode.VelocityChange);
+            estaSugando = false;
         }
         else
         {
             animaBoss.SetInteger("Attack", 1);
             rigidBodyBoss.AddForce(Vector3.left * speedDashCorte, ForceMode.VelocityChange);
+            estaSugando = false;
         }
     }
 
@@ -366,9 +360,6 @@ public class Boss : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.75f);
         animaBoss.SetInteger("ContLife", contAnimLife);
         middleFightScream.SetActive(true);
-
-
-
     }
 
     IEnumerator ativaMovimentos()

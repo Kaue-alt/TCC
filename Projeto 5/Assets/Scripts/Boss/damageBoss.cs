@@ -39,6 +39,7 @@ public class damageBoss : MonoBehaviour
                 cameraShakeBoss.instance.ShakeLeve();
             }
         }
+
         if (bossAnimator.GetCurrentAnimatorStateInfo(0).IsName("BossSlowSlash"))
         {
             StartCoroutine(liberaKnockBack());

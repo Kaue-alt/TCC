@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc6b31bfa4702d54194dd6bc95728813, type: 3}
   m_Name: C3A
   m_EditorClassIdentifier: 
-  falaComandante: "Juntem todos os sobreviventes e se armem! S\xF3 assim para fugirmos
-    dessa cidade."
-  respostasComandante: []
+  falaComandante: "Depois quero que me explique com detalhes sua hist\xF3ria, mas
+    primeiro precisamos pensar em como sair daqui."
+  respostasComandante:
+  - respostaComandante: "Meu plano \xE9 o seguinte, n\xF3s juntamos todos sobreviventes
+      da cidade e vamos para cima..."
+    proximaFalaComandante: {fileID: 11400000, guid: 42cc1e58e8158324999396eac4fa1edf,
+      type: 2}
