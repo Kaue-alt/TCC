@@ -2950,7 +2950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f4d39c6678151418ce2d7bb0bd8a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeScript: {fileID: 0}
+  fadeScript: {fileID: 1732989625}
   gameManagerScript: {fileID: 1875248209}
   MenuOpcoes: {fileID: 1641471487}
 --- !u!114 &1488535027
@@ -3835,6 +3835,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5380558704347571745, guid: 511e1f5308e7bc240a4d2de88afba95c,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1636567240}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 511e1f5308e7bc240a4d2de88afba95c, type: 3}
 --- !u!114 &1732989625 stripped

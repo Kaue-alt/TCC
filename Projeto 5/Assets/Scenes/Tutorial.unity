@@ -2212,9 +2212,9 @@ MonoBehaviour:
   textoNPC: {fileID: 2101214670}
   IconeVelho: {fileID: 956183589}
   IconePlayer: {fileID: 923594169}
-  hudVida: {fileID: 0}
-  hudDash: {fileID: 0}
-  hudArmas: {fileID: 0}
+  hudVida: {fileID: 894306958}
+  hudDash: {fileID: 4146330743903425168}
+  hudArmas: {fileID: 4146330743903425167}
 --- !u!4 &134165191
 Transform:
   m_ObjectHideFlags: 0
@@ -8959,7 +8959,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4146330743903425161}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4146330743903425167}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -18259,7 +18259,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4146330743903425161}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4146330743903425168}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -27210,6 +27210,18 @@ RectTransform:
 --- !u!224 &4146330743903425166 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1451238139, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 4146330743903425161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4146330743903425167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 775145913, guid: b206d5ac344e6f042a1fed0939cf8626,
+    type: 3}
+  m_PrefabInstance: {fileID: 4146330743903425161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4146330743903425168 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1718143693, guid: b206d5ac344e6f042a1fed0939cf8626,
     type: 3}
   m_PrefabInstance: {fileID: 4146330743903425161}
   m_PrefabAsset: {fileID: 0}
